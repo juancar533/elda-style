@@ -1,535 +1,482 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Elda Style | Tienda Online</title>
-
-    <meta name="description"
-          content="Elda Style - Moda, accesorios y productos seleccionados. Compra fácilmente por WhatsApp.">
-
-    <style>
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            background: #f7f7f7;
-            color: #222;
-        }
-
-        /* =========================
-           HEADER
-        ========================= */
-
-        header {
-            background: #111;
-            color: white;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 3px 15px rgba(0,0,0,.15);
-        }
-
-        .header-container {
-            max-width: 1200px;
-            margin: auto;
-            padding: 18px 20px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 20px;
-        }
-
-        .logo {
-            font-size: 27px;
-            font-weight: bold;
-            letter-spacing: 1px;
-        }
-
-        .logo span {
-            font-weight: normal;
-        }
-
-        nav {
-            display: flex;
-            gap: 25px;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            font-size: 15px;
-            transition: .3s;
-        }
-
-        nav a:hover {
-            opacity: .7;
-        }
-
-        .cart-button {
-            background: white;
-            color: #111;
-            border: none;
-            padding: 10px 15px;
-            border-radius: 20px;
-            cursor: pointer;
-            font-weight: bold;
-        }
-
-        /* =========================
-           HERO
-        ========================= */
-
-        .hero {
-            min-height: 480px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-
-            background:
-                linear-gradient(rgba(0,0,0,.48), rgba(0,0,0,.48)),
-                url("https://images.unsplash.com/photo-1445205170230-053b83016050?auto=format&fit=crop&w=1600&q=80");
-
-            background-size: cover;
-            background-position: center;
-            color: white;
-        }
-
-        .hero-content {
-            max-width: 700px;
-            padding: 30px;
-        }
-
-        .hero h1 {
-            font-size: 58px;
-            margin-bottom: 15px;
-        }
-
-        .hero p {
-            font-size: 20px;
-            margin-bottom: 30px;
-        }
-
-        .hero-button {
-            display: inline-block;
-            padding: 14px 28px;
-            background: white;
-            color: #111;
-            text-decoration: none;
-            border-radius: 30px;
-            font-weight: bold;
-            transition: .3s;
-        }
-
-        .hero-button:hover {
-            transform: scale(1.05);
-        }
-
-        /* =========================
-           CONTENIDO
-        ========================= */
-
-        .container {
-            max-width: 1200px;
-            margin: auto;
-            padding: 50px 20px;
-        }
-
-        .section-title {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-
-        .section-title h2 {
-            font-size: 32px;
-            margin-bottom: 10px;
-        }
-
-        .section-title p {
-            color: #777;
-        }
-
-        /* =========================
-           BUSCADOR
-        ========================= */
-
-        .search-box {
-            max-width: 600px;
-            margin: 0 auto 25px;
-        }
-
-        .search-box input {
-            width: 100%;
-            padding: 15px 20px;
-            border: 1px solid #ddd;
-            border-radius: 30px;
-            font-size: 16px;
-            outline: none;
-        }
-
-        /* =========================
-           CATEGORIAS
-        ========================= */
-
-        .categories {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin-bottom: 35px;
-        }
-
-        .category-btn {
-            border: 1px solid #ddd;
-            background: white;
-            padding: 10px 18px;
-            border-radius: 25px;
-            cursor: pointer;
-            transition: .3s;
-        }
-
-        .category-btn:hover,
-        .category-btn.active {
-            background: #111;
-            color: white;
-        }
-
-        /* =========================
-           PRODUCTOS
-        ========================= */
-
-        .products {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 25px;
-        }
-
-        .product {
-            background: white;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 5px 20px rgba(0,0,0,.07);
-            transition: .3s;
-        }
-
-        .product:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0,0,0,.12);
-        }
-
-        .product-image {
-            width: 100%;
-            height: 260px;
-            object-fit: cover;
-        }
-
-        .product-info {
-            padding: 18px;
-        }
-
-        .product-category {
-            color: #888;
-            font-size: 12px;
-            text-transform: uppercase;
-            margin-bottom: 7px;
-        }
-
-        .product h3 {
-            font-size: 18px;
-            margin-bottom: 8px;
-        }
-
-        .product-description {
-            color: #777;
-            font-size: 14px;
-            line-height: 1.5;
-            min-height: 42px;
-        }
-
-        .product-price {
-            font-size: 21px;
-            font-weight: bold;
-            margin: 15px 0;
-        }
-
-        .product-buttons {
-            display: flex;
-            gap: 8px;
-        }
-
-        .add-cart,
-        .whatsapp-button {
-            flex: 1;
-            border: none;
-            padding: 11px;
-            border-radius: 8px;
-            cursor: pointer;
-            font-weight: bold;
-        }
-
-        .add-cart {
-            background: #111;
-            color: white;
-        }
-
-        .whatsapp-button {
-            background: #25D366;
-            color: white;
-        }
-
-        /* =========================
-           CARRITO
-        ========================= */
-
-        .cart {
-            position: fixed;
-            right: -420px;
-            top: 0;
-            width: 400px;
-            max-width: 100%;
-            height: 100vh;
-            background: white;
-            z-index: 2000;
-            box-shadow: -5px 0 25px rgba(0,0,0,.2);
-            transition: .4s;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .cart.open {
-            right: 0;
-        }
-
-        .cart-header {
-            padding: 20px;
-            border-bottom: 1px solid #ddd;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .close-cart {
-            border: none;
-            background: none;
-            font-size: 25px;
-            cursor: pointer;
-        }
-
-        .cart-items {
-            flex: 1;
-            overflow-y: auto;
-            padding: 20px;
-        }
-
-        .cart-item {
-            display: flex;
-            justify-content: space-between;
-            gap: 10px;
-            border-bottom: 1px solid #eee;
-            padding: 15px 0;
-        }
-
-        .cart-item h4 {
-            margin-bottom: 5px;
-        }
-
-        .cart-item p {
-            color: #777;
-            font-size: 14px;
-        }
-
-        .remove-item {
-            border: none;
-            background: none;
-            color: #c00;
-            cursor: pointer;
-        }
-
-        .cart-footer {
-            padding: 20px;
-            border-top: 1px solid #ddd;
-        }
-
-        .total {
-            display: flex;
-            justify-content: space-between;
-            font-size: 20px;
-            font-weight: bold;
-            margin-bottom: 15px;
-        }
-
-        .checkout {
-            width: 100%;
-            border: none;
-            padding: 15px;
-            border-radius: 10px;
-            background: #25D366;
-            color: white;
-            font-size: 16px;
-            font-weight: bold;
-            cursor: pointer;
-        }
-
-        /* =========================
-           SOBRE NOSOTROS
-        ========================= */
-
-        .about {
-            background: white;
-        }
-
-        .about-content {
-            max-width: 850px;
-            margin: auto;
-            text-align: center;
-            line-height: 1.8;
-            color: #555;
-        }
-
-        /* =========================
-           CONTACTO
-        ========================= */
-
-        .contact {
-            text-align: center;
-        }
-
-        .contact-whatsapp {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 15px 30px;
-            background: #25D366;
-            color: white;
-            text-decoration: none;
-            border-radius: 30px;
-            font-weight: bold;
-        }
-
-        /* =========================
-           FOOTER
-        ========================= */
-
-        footer {
-            background: #111;
-            color: white;
-            text-align: center;
-            padding: 30px 20px;
-        }
-
-        footer p {
-            color: #aaa;
-            margin-top: 8px;
-        }
-
-        /* =========================
-           BOTON WHATSAPP FLOTANTE
-        ========================= */
-
-        .floating-whatsapp {
-            position: fixed;
-            right: 25px;
-            bottom: 25px;
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            background: #25D366;
-            color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-decoration: none;
-            font-size: 28px;
-            box-shadow: 0 5px 20px rgba(0,0,0,.25);
-            z-index: 1500;
-        }
-
-        /* =========================
-           RESPONSIVE
-        ========================= */
-
-        @media (max-width: 1000px) {
-
-            .products {
-                grid-template-columns: repeat(3, 1fr);
-            }
-
-        }
-
-        @media (max-width: 750px) {
-
-            nav {
-                display: none;
-            }
-
-            .hero h1 {
-                font-size: 42px;
-            }
-
-            .hero p {
-                font-size: 17px;
-            }
-
-            .products {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .product-image {
-                height: 220px;
-            }
-
-        }
-
-        @media (max-width: 500px) {
-
-            .header-container {
-                padding: 15px;
-            }
-
-            .logo {
-                font-size: 22px;
-            }
-
-            .hero {
-                min-height: 420px;
-            }
-
-            .hero h1 {
-                font-size: 36px;
-            }
-
-            .products {
-                grid-template-columns: 1fr;
-            }
-
-            .product-image {
-                height: 300px;
-            }
-
-        }
-
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Elda Style | Tienda Online</title>
+
+<meta name="description"
+content="Elda Style - Moda, accesorios y productos seleccionados. Compra fácilmente por WhatsApp.">
+
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f7f7f7;
+    color: #222;
+}
+
+/* HEADER */
+
+header {
+    background: #111;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 3px 15px rgba(0,0,0,.15);
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 18px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.logo {
+    font-size: 27px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    font-weight: normal;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.cart-button {
+    background: white;
+    color: #111;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* HERO */
+
+.hero {
+    min-height: 480px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    background:
+        linear-gradient(rgba(0,0,0,.48), rgba(0,0,0,.48)),
+        url("https://images.unsplash.com/photo-1445205170230-053b83016050?auto=format&fit=crop&w=1600&q=80");
+
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+.hero-content {
+    max-width: 700px;
+    padding: 30px;
+}
+
+.hero h1 {
+    font-size: 58px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.hero-button {
+    display: inline-block;
+    padding: 14px 28px;
+    background: white;
+    color: #111;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+}
+
+/* CONTENIDO */
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 50px 20px;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.section-title h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.section-title p {
+    color: #777;
+}
+
+/* BUSCADOR */
+
+.search-box {
+    max-width: 600px;
+    margin: 0 auto 25px;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 15px 20px;
+    border: 1px solid #ddd;
+    border-radius: 30px;
+    font-size: 16px;
+    outline: none;
+}
+
+/* CATEGORIAS */
+
+.categories {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 35px;
+}
+
+.category-btn {
+    border: 1px solid #ddd;
+    background: white;
+    padding: 10px 18px;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.category-btn.active,
+.category-btn:hover {
+    background: #111;
+    color: white;
+}
+
+/* PRODUCTOS */
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.product {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0,0,0,.07);
+    transition: .3s;
+}
+
+.product:hover {
+    transform: translateY(-5px);
+}
+
+.product-image {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+}
+
+.product-info {
+    padding: 18px;
+}
+
+.product-category {
+    color: #888;
+    font-size: 12px;
+    text-transform: uppercase;
+    margin-bottom: 7px;
+}
+
+.product h3 {
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.product-description {
+    color: #777;
+    font-size: 14px;
+    line-height: 1.5;
+    min-height: 42px;
+}
+
+.product-price {
+    font-size: 21px;
+    font-weight: bold;
+    margin: 15px 0;
+}
+
+.product-code {
+    font-size: 13px;
+    color: #555;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.product-buttons {
+    display: flex;
+    gap: 8px;
+}
+
+.add-cart,
+.whatsapp-button {
+    flex: 1;
+    border: none;
+    padding: 11px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.add-cart {
+    background: #111;
+    color: white;
+}
+
+.whatsapp-button {
+    background: #25D366;
+    color: white;
+}
+
+/* CARRITO */
+
+.cart {
+    position: fixed;
+    right: -420px;
+    top: 0;
+    width: 400px;
+    max-width: 100%;
+    height: 100vh;
+    background: white;
+    z-index: 2000;
+    box-shadow: -5px 0 25px rgba(0,0,0,.2);
+    transition: .4s;
+    display: flex;
+    flex-direction: column;
+}
+
+.cart.open {
+    right: 0;
+}
+
+.cart-header {
+    padding: 20px;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.close-cart {
+    border: none;
+    background: none;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.cart-items {
+    flex: 1;
+    overflow-y: auto;
+    padding: 20px;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    border-bottom: 1px solid #eee;
+    padding: 15px 0;
+}
+
+.cart-item h4 {
+    margin-bottom: 5px;
+}
+
+.cart-item p {
+    color: #777;
+    font-size: 14px;
+}
+
+.remove-item {
+    border: none;
+    background: none;
+    color: #c00;
+    cursor: pointer;
+}
+
+.cart-footer {
+    padding: 20px;
+    border-top: 1px solid #ddd;
+}
+
+.total {
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.checkout {
+    width: 100%;
+    border: none;
+    padding: 15px;
+    border-radius: 10px;
+    background: #25D366;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* SOBRE NOSOTROS */
+
+.about {
+    background: white;
+}
+
+.about-content {
+    max-width: 850px;
+    margin: auto;
+    text-align: center;
+    line-height: 1.8;
+    color: #555;
+}
+
+/* CONTACTO */
+
+.contact {
+    text-align: center;
+}
+
+.contact-whatsapp {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 15px 30px;
+    background: #25D366;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+}
+
+/* BOTON FLOTANTE */
+
+.floating-whatsapp {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #25D366;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 28px;
+    box-shadow: 0 5px 20px rgba(0,0,0,.25);
+    z-index: 1500;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1000px) {
+    .products {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 750px) {
+    nav {
+        display: none;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .hero p {
+        font-size: 17px;
+    }
+
+    .products {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .product-image {
+        height: 220px;
+    }
+}
+
+@media (max-width: 500px) {
+    .header-container {
+        padding: 15px;
+    }
+
+    .logo {
+        font-size: 22px;
+    }
+
+    .hero {
+        min-height: 420px;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .products {
+        grid-template-columns: 1fr;
+    }
+
+    .product-image {
+        height: 300px;
+    }
+}
+
+</style>
 </head>
 
 <body>
 
-
-<!-- =========================
-     HEADER
-========================= -->
+<!-- HEADER -->
 
 <header>
-
     <div class="header-container">
 
         <div class="logo">
@@ -549,16 +496,11 @@
         </button>
 
     </div>
-
 </header>
 
-
-<!-- =========================
-     HERO
-========================= -->
+<!-- HERO -->
 
 <section class="hero" id="inicio">
-
     <div class="hero-content">
 
         <h1>Elda Style</h1>
@@ -573,40 +515,29 @@
         </a>
 
     </div>
-
 </section>
 
-
-<!-- =========================
-     PRODUCTOS
-========================= -->
+<!-- PRODUCTOS -->
 
 <section class="container" id="productos">
 
     <div class="section-title">
-
         <h2>Nuestros productos</h2>
 
         <p>
             Elegí tu producto y realizá tu pedido por WhatsApp.
         </p>
-
     </div>
-
 
     <!-- BUSCADOR -->
 
     <div class="search-box">
-
         <input
             type="text"
             id="search"
             placeholder="🔎 Buscar productos..."
-            onkeyup="searchProducts()"
-        >
-
+            onkeyup="searchProducts()">
     </div>
-
 
     <!-- CATEGORIAS -->
 
@@ -638,11 +569,9 @@
 
     </div>
 
-
     <!-- LISTA DE PRODUCTOS -->
 
     <div class="products" id="product-list">
-
 
         <!-- PRODUCTO 1 -->
 
@@ -661,9 +590,11 @@
                     Ropa
                 </div>
 
-                <h3>
-                 001   Vestido Elegance Talla "M"
-                </h3>
+                <div class="product-code">
+                    Código: ES-001
+                </div>
+
+                <h3>Vestido Elegance</h3>
 
                 <p class="product-description">
                     Vestido moderno y elegante para diferentes ocasiones.
@@ -677,22 +608,24 @@
 
                     <button
                         class="add-cart"
-                        onclick="addToCart('Vestido Elegance', 249)">
+                        onclick="addToCart('ES-001 - Vestido Elegance', 249)">
                         🛒 Agregar
                     </button>
 
                     <button
                         class="whatsapp-button"
-                        onclick="buyWhatsApp('Vestido Elegance', 249)">
+                        onclick="buyWhatsApp(
+                            'ES-001',
+                            'Vestido Elegance',
+                            249,
+                            'https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&w=700&q=80'
+                        )">
                         WhatsApp
                     </button>
 
                 </div>
-
             </div>
-
         </div>
-
 
         <!-- PRODUCTO 2 -->
 
@@ -711,9 +644,11 @@
                     Calzado
                 </div>
 
-                <h3>
-                 001  Zapatillas Urban Talla 45
-                </h3>
+                <div class="product-code">
+                    Código: ES-002
+                </div>
+
+                <h3>Zapatillas Urban</h3>
 
                 <p class="product-description">
                     Zapatillas cómodas para uso diario.
@@ -727,22 +662,24 @@
 
                     <button
                         class="add-cart"
-                        onclick="addToCart('Zapatillas Urban', 329)">
+                        onclick="addToCart('ES-002 - Zapatillas Urban', 329)">
                         🛒 Agregar
                     </button>
 
                     <button
                         class="whatsapp-button"
-                        onclick="buyWhatsApp('Zapatillas Urban', 329)">
+                        onclick="buyWhatsApp(
+                            'ES-002',
+                            'Zapatillas Urban',
+                            329,
+                            'https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=700&q=80'
+                        )">
                         WhatsApp
                     </button>
 
                 </div>
-
             </div>
-
         </div>
-
 
         <!-- PRODUCTO 3 -->
 
@@ -761,9 +698,11 @@
                     Accesorios
                 </div>
 
-                <h3>
-                    Bolso Classic
-                </h3>
+                <div class="product-code">
+                    Código: ES-003
+                </div>
+
+                <h3>Bolso Classic</h3>
 
                 <p class="product-description">
                     Bolso elegante para complementar tu estilo.
@@ -777,22 +716,24 @@
 
                     <button
                         class="add-cart"
-                        onclick="addToCart('Bolso Classic', 189)">
+                        onclick="addToCart('ES-003 - Bolso Classic', 189)">
                         🛒 Agregar
                     </button>
 
                     <button
                         class="whatsapp-button"
-                        onclick="buyWhatsApp('Bolso Classic', 189)">
+                        onclick="buyWhatsApp(
+                            'ES-003',
+                            'Bolso Classic',
+                            189,
+                            'https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=700&q=80'
+                        )">
                         WhatsApp
                     </button>
 
                 </div>
-
             </div>
-
         </div>
-
 
         <!-- PRODUCTO 4 -->
 
@@ -811,9 +752,11 @@
                     Ropa
                 </div>
 
-                <h3>
-                    Blusa Milano
-                </h3>
+                <div class="product-code">
+                    Código: ES-004
+                </div>
+
+                <h3>Blusa Milano</h3>
 
                 <p class="product-description">
                     Blusa casual con diseño moderno.
@@ -827,22 +770,24 @@
 
                     <button
                         class="add-cart"
-                        onclick="addToCart('Blusa Milano', 159)">
+                        onclick="addToCart('ES-004 - Blusa Milano', 159)">
                         🛒 Agregar
                     </button>
 
                     <button
                         class="whatsapp-button"
-                        onclick="buyWhatsApp('Blusa Milano', 159)">
+                        onclick="buyWhatsApp(
+                            'ES-004',
+                            'Blusa Milano',
+                            159,
+                            'https://images.unsplash.com/photo-1564257577054-8e1e9f0f8f6b?auto=format&fit=crop&w=700&q=80'
+                        )">
                         WhatsApp
                     </button>
 
                 </div>
-
             </div>
-
         </div>
-
 
         <!-- PRODUCTO 5 -->
 
@@ -861,9 +806,11 @@
                     Calzado
                 </div>
 
-                <h3>
-                    Sandalias Verona
-                </h3>
+                <div class="product-code">
+                    Código: ES-005
+                </div>
+
+                <h3>Sandalias Verona</h3>
 
                 <p class="product-description">
                     Sandalias cómodas y elegantes.
@@ -877,22 +824,24 @@
 
                     <button
                         class="add-cart"
-                        onclick="addToCart('Sandalias Verona', 199)">
+                        onclick="addToCart('ES-005 - Sandalias Verona', 199)">
                         🛒 Agregar
                     </button>
 
                     <button
                         class="whatsapp-button"
-                        onclick="buyWhatsApp('Sandalias Verona', 199)">
+                        onclick="buyWhatsApp(
+                            'ES-005',
+                            'Sandalias Verona',
+                            199,
+                            'https://images.unsplash.com/photo-1543163521-1bf539c55dd2?auto=format&fit=crop&w=700&q=80'
+                        )">
                         WhatsApp
                     </button>
 
                 </div>
-
             </div>
-
         </div>
-
 
         <!-- PRODUCTO 6 -->
 
@@ -911,9 +860,11 @@
                     Accesorios
                 </div>
 
-                <h3>
-                    Reloj Minimal
-                </h3>
+                <div class="product-code">
+                    Código: ES-006
+                </div>
+
+                <h3>Reloj Minimal</h3>
 
                 <p class="product-description">
                     Reloj de diseño minimalista y elegante.
@@ -927,22 +878,24 @@
 
                     <button
                         class="add-cart"
-                        onclick="addToCart('Reloj Minimal', 279)">
+                        onclick="addToCart('ES-006 - Reloj Minimal', 279)">
                         🛒 Agregar
                     </button>
 
                     <button
                         class="whatsapp-button"
-                        onclick="buyWhatsApp('Reloj Minimal', 279)">
+                        onclick="buyWhatsApp(
+                            'ES-006',
+                            'Reloj Minimal',
+                            279,
+                            'https://images.unsplash.com/photo-1524805444758-089113d48a6d?auto=format&fit=crop&w=700&q=80'
+                        )">
                         WhatsApp
                     </button>
 
                 </div>
-
             </div>
-
         </div>
-
 
         <!-- PRODUCTO 7 -->
 
@@ -961,9 +914,11 @@
                     Ropa
                 </div>
 
-                <h3>
-                    Chaqueta Urban
-                </h3>
+                <div class="product-code">
+                    Código: ES-007
+                </div>
+
+                <h3>Chaqueta Urban</h3>
 
                 <p class="product-description">
                     Chaqueta casual para un estilo urbano.
@@ -977,22 +932,24 @@
 
                     <button
                         class="add-cart"
-                        onclick="addToCart('Chaqueta Urban', 359)">
+                        onclick="addToCart('ES-007 - Chaqueta Urban', 359)">
                         🛒 Agregar
                     </button>
 
                     <button
                         class="whatsapp-button"
-                        onclick="buyWhatsApp('Chaqueta Urban', 359)">
+                        onclick="buyWhatsApp(
+                            'ES-007',
+                            'Chaqueta Urban',
+                            359,
+                            'https://images.unsplash.com/photo-1551028719-00167b16eac5?auto=format&fit=crop&w=700&q=80'
+                        )">
                         WhatsApp
                     </button>
 
                 </div>
-
             </div>
-
         </div>
-
 
         <!-- PRODUCTO 8 -->
 
@@ -1011,9 +968,11 @@
                     Accesorios
                 </div>
 
-                <h3>
-                    Lentes Fashion
-                </h3>
+                <div class="product-code">
+                    Código: ES-008
+                </div>
+
+                <h3>Lentes Fashion</h3>
 
                 <p class="product-description">
                     Lentes modernos para completar tu look.
@@ -1027,39 +986,36 @@
 
                     <button
                         class="add-cart"
-                        onclick="addToCart('Lentes Fashion', 129)">
+                        onclick="addToCart('ES-008 - Lentes Fashion', 129)">
                         🛒 Agregar
                     </button>
 
                     <button
                         class="whatsapp-button"
-                        onclick="buyWhatsApp('Lentes Fashion', 129)">
+                        onclick="buyWhatsApp(
+                            'ES-008',
+                            'Lentes Fashion',
+                            129,
+                            'https://images.unsplash.com/photo-1511499767150-a48a237f0083?auto=format&fit=crop&w=700&q=80'
+                        )">
                         WhatsApp
                     </button>
 
                 </div>
-
             </div>
-
         </div>
 
     </div>
-
 </section>
 
-
-<!-- =========================
-     SOBRE NOSOTROS
-========================= -->
+<!-- SOBRE NOSOTROS -->
 
 <section class="about" id="nosotros">
 
     <div class="container">
 
         <div class="section-title">
-
             <h2>Sobre Elda Style</h2>
-
         </div>
 
         <div class="about-content">
@@ -1078,15 +1034,10 @@
             </p>
 
         </div>
-
     </div>
-
 </section>
 
-
-<!-- =========================
-     CONTACTO
-========================= -->
+<!-- CONTACTO -->
 
 <section class="container contact" id="contacto">
 
@@ -1111,10 +1062,7 @@
 
 </section>
 
-
-<!-- =========================
-     CARRITO
-========================= -->
+<!-- CARRITO -->
 
 <div class="cart" id="cart">
 
@@ -1125,13 +1073,10 @@
         <button
             class="close-cart"
             onclick="closeCart()">
-
             ×
-
         </button>
 
     </div>
-
 
     <div class="cart-items" id="cart-items">
 
@@ -1140,7 +1085,6 @@
         </p>
 
     </div>
-
 
     <div class="cart-footer">
 
@@ -1166,10 +1110,7 @@
 
 </div>
 
-
-<!-- =========================
-     WHATSAPP FLOTANTE
-========================= -->
+<!-- WHATSAPP FLOTANTE -->
 
 <a
     href="https://wa.me/59162131042"
@@ -1180,10 +1121,7 @@
 
 </a>
 
-
-<!-- =========================
-     FOOTER
-========================= -->
+<!-- FOOTER -->
 
 <footer>
 
@@ -1195,370 +1133,261 @@
 
 </footer>
 
-
-<!-- =========================
-     JAVASCRIPT
-========================= -->
+<!-- JAVASCRIPT -->
 
 <script>
 
-    /*
-    ==========================================
-    CONFIGURACIÓN DE WHATSAPP
-    ==========================================
+/* CONFIGURACIÓN DE WHATSAPP */
 
-    CAMBIAR ESTE NÚMERO POR EL NÚMERO REAL.
+const WHATSAPP_NUMBER = "59162131042";
 
-    Bolivia utiliza el código +591.
+/* CARRITO */
 
-    Ejemplo:
-    59171234567
+let cart = [];
 
-    NO colocar:
-    + 
-    espacios
-    guiones
-    paréntesis
-    */
+function addToCart(name, price) {
 
-    const WHATSAPP_NUMBER = "59162131042";
+    const existingProduct = cart.find(
+        item => item.name === name
+    );
 
-
-    /*
-    ==========================================
-    CARRITO
-    ==========================================
-    */
-
-    let cart = [];
-
-
-    function addToCart(name, price) {
-
-        const existingProduct = cart.find(
-            item => item.name === name
-        );
-
-
-        if (existingProduct) {
-
-            existingProduct.quantity++;
-
-        } else {
-
-            cart.push({
-                name: name,
-                price: price,
-                quantity: 1
-            });
-
-        }
-
-
-        updateCart();
-
-        openCart();
-
+    if (existingProduct) {
+        existingProduct.quantity++;
+    } else {
+        cart.push({
+            name: name,
+            price: price,
+            quantity: 1
+        });
     }
 
+    updateCart();
+    openCart();
+}
 
-    function removeFromCart(index) {
+function removeFromCart(index) {
 
-        cart.splice(index, 1);
+    cart.splice(index, 1);
+    updateCart();
 
-        updateCart();
+}
 
+function updateCart() {
+
+    const cartItems = document.getElementById("cart-items");
+    const cartCount = document.getElementById("cart-count");
+    const cartTotal = document.getElementById("cart-total");
+
+    if (cart.length === 0) {
+
+        cartItems.innerHTML =
+            "<p>Tu carrito está vacío.</p>";
+
+        cartCount.innerText = "0";
+        cartTotal.innerText = "0";
+
+        return;
     }
 
+    let html = "";
+    let total = 0;
+    let quantityTotal = 0;
 
-    function updateCart() {
+    cart.forEach((item, index) => {
 
-        const cartItems = document.getElementById("cart-items");
+        const subtotal =
+            item.price * item.quantity;
 
-        const cartCount = document.getElementById("cart-count");
+        total += subtotal;
+        quantityTotal += item.quantity;
 
-        const cartTotal = document.getElementById("cart-total");
+        html += `
 
+            <div class="cart-item">
 
-        if (cart.length === 0) {
+                <div>
 
-            cartItems.innerHTML =
-                "<p>Tu carrito está vacío.</p>";
+                    <h4>${item.name}</h4>
 
-            cartCount.innerText = "0";
+                    <p>
+                        Bs ${item.price}
+                        × ${item.quantity}
+                    </p>
 
-            cartTotal.innerText = "0";
-
-            return;
-
-        }
-
-
-        let html = "";
-
-        let total = 0;
-
-        let quantityTotal = 0;
-
-
-        cart.forEach((item, index) => {
-
-            const subtotal =
-                item.price * item.quantity;
-
-            total += subtotal;
-
-            quantityTotal += item.quantity;
-
-
-            html += `
-
-                <div class="cart-item">
-
-                    <div>
-
-                        <h4>
-                            ${item.name}
-                        </h4>
-
-                        <p>
-                            Bs ${item.price}
-                            × ${item.quantity}
-                        </p>
-
-                        <strong>
-                            Bs ${subtotal}
-                        </strong>
-
-                    </div>
-
-                    <button
-                        class="remove-item"
-                        onclick="removeFromCart(${index})">
-
-                        Eliminar
-
-                    </button>
+                    <strong>
+                        Bs ${subtotal}
+                    </strong>
 
                 </div>
 
-            `;
+                <button
+                    class="remove-item"
+                    onclick="removeFromCart(${index})">
 
-        });
+                    Eliminar
 
+                </button>
 
-        cartItems.innerHTML = html;
+            </div>
 
-        cartCount.innerText = quantityTotal;
+        `;
 
-        cartTotal.innerText = total;
+    });
+
+    cartItems.innerHTML = html;
+    cartCount.innerText = quantityTotal;
+    cartTotal.innerText = total;
+
+}
+
+function openCart() {
+
+    document
+        .getElementById("cart")
+        .classList.add("open");
+
+}
+
+function closeCart() {
+
+    document
+        .getElementById("cart")
+        .classList.remove("open");
+
+}
+
+/* COMPRA INDIVIDUAL POR WHATSAPP CON IMAGEN */
+
+function buyWhatsApp(codigo, name, price, imagen) {
+
+    const message =
+        `Hola, Elda Style 👋\n\n` +
+        `Estoy interesado/a en esta prenda:\n\n` +
+        `🆔 Código: ${codigo}\n` +
+        `🛍️ Producto: ${name}\n` +
+        `💰 Precio: Bs ${price}\n\n` +
+        `🖼️ Imagen del producto:\n${imagen}\n\n` +
+        `¿Está disponible?`;
+
+    const url =
+        `https://wa.me/${WHATSAPP_NUMBER}?text=` +
+        encodeURIComponent(message);
+
+    window.open(url, "_blank");
+
+}
+
+/* PEDIDO DEL CARRITO */
+
+function checkoutWhatsApp() {
+
+    if (cart.length === 0) {
+
+        alert("Tu carrito está vacío.");
+        return;
 
     }
 
+    let message =
+        "Hola, Elda Style 👋\n\n" +
+        "Quiero realizar el siguiente pedido:\n\n";
 
-    /*
-    ==========================================
-    ABRIR / CERRAR CARRITO
-    ==========================================
-    */
+    let total = 0;
 
-    function openCart() {
+    cart.forEach(item => {
 
-        document
-            .getElementById("cart")
-            .classList.add("open");
+        const subtotal =
+            item.price * item.quantity;
 
-    }
-
-
-    function closeCart() {
-
-        document
-            .getElementById("cart")
-            .classList.remove("open");
-
-    }
-
-
-    /*
-    ==========================================
-    COMPRAR PRODUCTO INDIVIDUAL
-    ==========================================
-    */
-
-    function buyWhatsApp(name, price) {
-
-        const message =
-            `Hola, Elda Style 👋%0A%0A` +
-            `Estoy interesado/a en este producto:%0A` +
-            `🛍️ ${name}%0A` +
-            `💰 Precio: Bs ${price}%0A%0A` +
-            `¿Está disponible?`;
-
-        const url =
-            `https://wa.me/${WHATSAPP_NUMBER}?text=${message}`;
-
-        window.open(url, "_blank");
-
-    }
-
-
-    /*
-    ==========================================
-    PEDIDO DEL CARRITO
-    ==========================================
-    */
-
-    function checkoutWhatsApp() {
-
-        if (cart.length === 0) {
-
-            alert("Tu carrito está vacío.");
-
-            return;
-
-        }
-
-
-        let message =
-            "Hola, Elda Style 👋\n\n" +
-            "Quiero realizar el siguiente pedido:\n\n";
-
-
-        let total = 0;
-
-
-        cart.forEach(item => {
-
-            const subtotal =
-                item.price * item.quantity;
-
-            total += subtotal;
-
-
-            message +=
-                `🛍️ ${item.name}\n` +
-                `Cantidad: ${item.quantity}\n` +
-                `Precio: Bs ${subtotal}\n\n`;
-
-        });
-
+        total += subtotal;
 
         message +=
-            `💰 TOTAL: Bs ${total}\n\n` +
-            "¿Me pueden confirmar disponibilidad y forma de entrega?";
+            `🛍️ ${item.name}\n` +
+            `Cantidad: ${item.quantity}\n` +
+            `Precio: Bs ${subtotal}\n\n`;
 
+    });
 
-        const url =
-            `https://wa.me/${WHATSAPP_NUMBER}?text=` +
-            encodeURIComponent(message);
+    message +=
+        `💰 TOTAL: Bs ${total}\n\n` +
+        "¿Me pueden confirmar disponibilidad y forma de entrega?";
 
+    const url =
+        `https://wa.me/${WHATSAPP_NUMBER}?text=` +
+        encodeURIComponent(message);
 
-        window.open(url, "_blank");
+    window.open(url, "_blank");
 
-    }
+}
 
+/* FILTRO DE CATEGORÍAS */
 
-    /*
-    ==========================================
-    FILTRO DE CATEGORÍAS
-    ==========================================
-    */
+function filterProducts(category, button) {
 
-    function filterProducts(category, button) {
+    const products =
+        document.querySelectorAll(".product");
 
-        const products =
-            document.querySelectorAll(".product");
+    const buttons =
+        document.querySelectorAll(".category-btn");
 
+    buttons.forEach(btn => {
+        btn.classList.remove("active");
+    });
 
-        const buttons =
-            document.querySelectorAll(".category-btn");
+    button.classList.add("active");
 
+    products.forEach(product => {
 
-        buttons.forEach(btn => {
+        if (
+            category === "todos" ||
+            product.dataset.category === category
+        ) {
+            product.style.display = "";
+        } else {
+            product.style.display = "none";
+        }
 
-            btn.classList.remove("active");
+    });
 
-        });
+}
 
+/* BUSCADOR */
 
-        button.classList.add("active");
+function searchProducts() {
 
+    const search =
+        document
+            .getElementById("search")
+            .value
+            .toLowerCase();
 
-        products.forEach(product => {
+    const products =
+        document.querySelectorAll(".product");
 
-            if (
-                category === "todos" ||
-                product.dataset.category === category
-            ) {
+    products.forEach(product => {
 
-                product.style.display = "";
+        const name =
+            product.dataset.name.toLowerCase();
 
-            } else {
+        const description =
+            product.innerText.toLowerCase();
 
-                product.style.display = "none";
+        if (
+            name.includes(search) ||
+            description.includes(search)
+        ) {
+            product.style.display = "";
+        } else {
+            product.style.display = "none";
+        }
 
-            }
+    });
 
-        });
+}
 
-    }
+/* INICIALIZAR */
 
-
-    /*
-    ==========================================
-    BUSCADOR
-    ==========================================
-    */
-
-    function searchProducts() {
-
-        const search =
-            document
-                .getElementById("search")
-                .value
-                .toLowerCase();
-
-
-        const products =
-            document.querySelectorAll(".product");
-
-
-        products.forEach(product => {
-
-            const name =
-                product.dataset.name.toLowerCase();
-
-
-            const description =
-                product.innerText.toLowerCase();
-
-
-            if (
-                name.includes(search) ||
-                description.includes(search)
-            ) {
-
-                product.style.display = "";
-
-            } else {
-
-                product.style.display = "none";
-
-            }
-
-        });
-
-    }
-
-
-    /*
-    ==========================================
-    INICIALIZAR
-    ==========================================
-    */
-
-    updateCart();
+updateCart();
 
 </script>
 
