@@ -5,13 +5,13 @@
 
 <meta charset="UTF-8">
 
-<meta name="viewport"
-      content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Elda Style | Tienda Online</title>
 
 <meta name="description"
-      content="Elda Style - Ropa y productos seleccionados. Compra fácilmente por WhatsApp.">
+content="Elda Style - Ropa y productos seleccionados. Compra fácilmente por WhatsApp.">
+
 
 <style>
 
@@ -43,15 +43,18 @@ body {
 header {
     background: #111;
     color: white;
+
     position: sticky;
     top: 0;
     z-index: 1000;
+
     box-shadow: 0 3px 15px rgba(0,0,0,.15);
 }
 
 .header-container {
     max-width: 1200px;
     margin: auto;
+
     padding: 18px 20px;
 
     display: flex;
@@ -89,10 +92,15 @@ nav a:hover {
 .cart-button {
     background: white;
     color: #111;
+
     border: none;
+
     padding: 10px 15px;
+
     border-radius: 20px;
+
     cursor: pointer;
+
     font-weight: bold;
 }
 
@@ -140,12 +148,14 @@ nav a:hover {
 
 .hero-button {
     display: inline-block;
+
     padding: 14px 28px;
 
     background: white;
     color: #111;
 
     text-decoration: none;
+
     border-radius: 30px;
 
     font-weight: bold;
@@ -158,17 +168,21 @@ nav a:hover {
 
 .container {
     max-width: 1200px;
+
     margin: auto;
+
     padding: 50px 20px;
 }
 
 .section-title {
     text-align: center;
+
     margin-bottom: 30px;
 }
 
 .section-title h2 {
     font-size: 32px;
+
     margin-bottom: 10px;
 }
 
@@ -183,6 +197,7 @@ nav a:hover {
 
 .search-box {
     max-width: 600px;
+
     margin: 0 auto 25px;
 }
 
@@ -192,6 +207,7 @@ nav a:hover {
     padding: 15px 20px;
 
     border: 1px solid #ddd;
+
     border-radius: 30px;
 
     font-size: 16px;
@@ -210,7 +226,9 @@ nav a:hover {
 
 .categories {
     display: flex;
+
     justify-content: center;
+
     flex-wrap: wrap;
 
     gap: 10px;
@@ -235,6 +253,7 @@ nav a:hover {
 .category-btn.active,
 .category-btn:hover {
     background: #111;
+
     color: white;
 }
 
@@ -271,6 +290,7 @@ nav a:hover {
 
 .product-image {
     width: 100%;
+
     height: 300px;
 
     object-fit: cover;
@@ -286,6 +306,7 @@ nav a:hover {
 
 .product-image:hover {
     opacity: .88;
+
     transform: scale(1.02);
 }
 
@@ -360,11 +381,13 @@ nav a:hover {
 
 .add-cart {
     background: #111;
+
     color: white;
 }
 
 .whatsapp-button {
     background: #25D366;
+
     color: white;
 }
 
@@ -390,6 +413,7 @@ nav a:hover {
     z-index: 5000;
 
     align-items: center;
+
     justify-content: center;
 
     flex-direction: column;
@@ -403,6 +427,7 @@ nav a:hover {
 
 .gallery-modal img {
     max-width: 85%;
+
     max-height: 75vh;
 
     object-fit: contain;
@@ -417,6 +442,7 @@ nav a:hover {
     position: absolute;
 
     top: 15px;
+
     right: 25px;
 
     background: none;
@@ -492,6 +518,7 @@ nav a:hover {
 
 .gallery-thumbnails img {
     width: 65px;
+
     height: 65px;
 
     object-fit: cover;
@@ -704,9 +731,11 @@ nav a:hover {
     position: fixed;
 
     right: 25px;
+
     bottom: 25px;
 
     width: 60px;
+
     height: 60px;
 
     border-radius: 50%;
@@ -791,6 +820,7 @@ footer p {
 
     .gallery-modal img {
         max-width: 90%;
+
         max-height: 65vh;
     }
 
@@ -840,6 +870,7 @@ footer p {
 
     .gallery-close {
         right: 15px;
+
         top: 5px;
     }
 
@@ -974,42 +1005,32 @@ onkeyup="searchProducts()">
 
 <div class="categories">
 
-
 <button
 class="category-btn active"
 onclick="filterProducts('todos', this)">
-
 Todos
-
 </button>
 
 
 <button
 class="category-btn"
 onclick="filterProducts('ropa', this)">
-
 Ropa
-
 </button>
 
 
 <button
 class="category-btn"
 onclick="filterProducts('calzado', this)">
-
 Calzado
-
 </button>
 
 
 <button
 class="category-btn"
 onclick="filterProducts('accesorios', this)">
-
 Accesorios
-
 </button>
-
 
 </div>
 
@@ -1019,7 +1040,6 @@ Accesorios
 <div
 class="products"
 id="product-list">
-
 </div>
 
 
@@ -1036,7 +1056,6 @@ id="nosotros">
 
 <div class="container">
 
-
 <div class="section-title">
 
 <h2>
@@ -1049,22 +1068,16 @@ Sobre Elda Style
 <div class="about-content">
 
 <p>
-
 En Elda Style buscamos ofrecer prendas modernas,
 atractivas y accesibles para que encuentres
 aquello que combina con tu estilo.
-
 </p>
-
 
 <br>
 
-
 <p>
-
 Hacé clic sobre cualquier fotografía para observar
 el producto desde diferentes ángulos.
-
 </p>
 
 </div>
@@ -1081,7 +1094,6 @@ el producto desde diferentes ángulos.
 <section
 class="container contact"
 id="contacto">
-
 
 <div class="section-title">
 
@@ -1105,7 +1117,6 @@ class="contact-whatsapp">
 
 </a>
 
-
 </section>
 
 
@@ -1116,7 +1127,6 @@ class="contact-whatsapp">
 <div
 class="cart"
 id="cart">
-
 
 <div class="cart-header">
 
@@ -1149,7 +1159,6 @@ Tu carrito está vacío.
 
 <div class="cart-footer">
 
-
 <div class="total">
 
 <span>
@@ -1170,7 +1179,6 @@ onclick="checkoutWhatsApp()">
 💬 Realizar pedido por WhatsApp
 
 </button>
-
 
 </div>
 
@@ -1222,14 +1230,12 @@ onclick="nextImage()">
 <div
 class="gallery-counter"
 id="galleryCounter">
-
 </div>
 
 
 <div
 class="gallery-thumbnails"
 id="galleryThumbnails">
-
 </div>
 
 
@@ -1237,7 +1243,7 @@ id="galleryThumbnails">
 
 
 <!-- =====================================================
-     WHATSAPP FLOTANTE
+     WHATSAPP
 ===================================================== -->
 
 <a
@@ -1287,414 +1293,283 @@ const GITHUB_IMAGE_BASE =
 
 const products = [
 
-/* =========================
-   ROPA
-========================= */
-
-{
-    codigo: "T34",
-    nombre: "Prenda T34",
-    categoria: "ropa",
-
-    imagenes: [
-        "imagenes/T34/T34-1.jpeg",
-        "imagenes/T34/T34-2.jpeg"
-    ]
-},
-
-
-{
-    codigo: "T33",
-    nombre: "Prenda T33",
-    categoria: "ropa",
-
-    imagenes: [
-        "imagenes/T33/T33-1.jpeg",
-        "imagenes/T33/T33-2.jpeg"
-    ]
-},
-
-
-{
-    codigo: "T32",
-    nombre: "Prenda T32",
-    categoria: "ropa",
-
-    imagenes: [
-        "imagenes/T32/T32-1.jpeg",
-        "imagenes/T32/T32-2.jpeg"
-    ]
-},
-
-
-{
-    codigo: "T31",
-    nombre: "Prenda T31",
-    categoria: "ropa",
-
-    imagenes: [
-        "imagenes/T31/T31-1.jpeg"
-    ]
-},
-
-
-/* T19 ELIMINADO */
-
-
-{
-    codigo: "T28",
-    nombre: "Prenda T28",
-    categoria: "ropa",
-
-    imagenes: [
-        "imagenes/T28/T28-1.jpeg"
-    ]
-},
-
-
-/* T29 ELIMINADO */
-
-
-{
-    codigo: "T27",
-    nombre: "Prenda T27",
-    categoria: "ropa",
-
-    imagenes: [
-        "imagenes/T27/T27-1.jpeg"
-    ]
-},
-
-
-{
-    codigo: "T25",
-    nombre: "Prenda T25",
-    categoria: "ropa",
-
-    imagenes: [
-        "imagenes/T25/T25-1.jpeg"
-    ]
-},
-
-
-{
-    codigo: "T24",
-    nombre: "Prenda T24",
-    categoria: "ropa",
-
-    imagenes: [
-        "imagenes/T24/T24-1.jpeg"
-    ]
-},
-
-
-{
-    codigo: "T23",
-    nombre: "Prenda T23",
-    categoria: "ropa",
-
-    imagenes: [
-        "imagenes/T23/T23-1.jpeg"
-    ]
-},
-
-
-{
-    codigo: "T22",
-    nombre: "Prenda T22",
-    categoria: "ropa",
-
-    imagenes: [
-        "imagenes/T22/T22-1.jpeg"
-    ]
-},
-
-
-{
-    codigo: "T21",
-    nombre: "Prenda T21",
-    categoria: "ropa",
-
-    imagenes: [
-        "imagenes/T21/T21-1.jpeg"
-    ]
-},
-
-
-{
-    codigo: "T20",
-    nombre: "Prenda T20",
-    categoria: "ropa",
-
-    imagenes: [
-        "imagenes/T20/T20-1.jpeg"
-    ]
-},
-
-
-{
-    codigo: "T4",
-    nombre: "Prenda T4",
-    categoria: "ropa",
-
-    imagenes: [
-        "imagenes/T4/T4-1.jpeg"
-    ]
-},
-
-
-{
-    codigo: "T16",
-    nombre: "Prenda T16",
-    categoria: "ropa",
-
-    imagenes: [
-        "imagenes/T16/T16-1.jpeg",
-        "imagenes/T16/T16-2.jpeg"
-    ]
-},
-
-
-{
-    codigo: "T17",
-    nombre: "Prenda T17",
-    categoria: "ropa",
-
-    imagenes: [
-        "imagenes/T17/T17-1.jpeg"
-    ]
-},
-
-
-{
-    codigo: "T15",
-    nombre: "Prenda T15",
-    categoria: "ropa",
-
-    imagenes: [
-        "imagenes/T15/T15-1.jpeg"
-    ]
-},
-
-
-{
-    codigo: "T14",
-    nombre: "Prenda T14",
-    categoria: "ropa",
-
-    imagenes: [
-        "imagenes/T14/T14-1.jpeg"
-    ]
-},
-
-
-{
-    codigo: "T13",
-    nombre: "Prenda T13",
-    categoria: "ropa",
-
-    imagenes: [
-        "imagenes/T13/T13-1.jpeg"
-    ]
-},
-
-
-{
-    codigo: "T12",
-    nombre: "Prenda T12",
-    categoria: "ropa",
-
-    imagenes: [
-        "imagenes/T12/T12-1.jpeg",
-        "imagenes/T12/T12-2.jpeg"
-    ]
-},
-
-
-{
-    codigo: "T11",
-    nombre: "Prenda T11",
-    categoria: "ropa",
-
-    imagenes: [
-        "imagenes/T11/T11-1.jpeg"
-    ]
-},
-
-
-{
-    codigo: "T10",
-    nombre: "Prenda T10",
-    categoria: "ropa",
-
-    imagenes: [
-        "imagenes/T10/T10-1.jpeg"
-    ]
-},
-
-
-{
-    codigo: "T9",
-    nombre: "Prenda T9",
-    categoria: "ropa",
-
-    imagenes: [
-        "imagenes/T9/T9-1.jpeg"
-    ]
-},
-
-
-{
-    codigo: "T8",
-    nombre: "Prenda T8",
-    categoria: "ropa",
-
-    imagenes: [
-        "imagenes/T8/T8-1.jpeg"
-    ]
-},
-
-
-{
-    codigo: "T7",
-    nombre: "Prenda T7",
-    categoria: "ropa",
-
-    imagenes: [
-        "imagenes/T7/T7-1.jpeg"
-    ]
-},
-
-
-{
-    codigo: "T6",
-    nombre: "Prenda T6",
-    categoria: "ropa",
-
-    imagenes: [
-        "imagenes/T6/T6-1.jpeg"
-    ]
-},
-
-
-{
-    codigo: "T5",
-    nombre: "Prenda T5",
-    categoria: "ropa",
-
-    imagenes: [
-        "imagenes/T5/T5-1.jpeg"
-    ]
-},
-
-
-{
-    codigo: "T3",
-    nombre: "Prenda T3",
-    categoria: "ropa",
-
-    imagenes: [
-        "imagenes/T3/T3-1.jpeg"
-    ]
-},
-
-
-{
-    codigo: "T1",
-    nombre: "Prenda T1",
-    categoria: "ropa",
-
-    imagenes: [
-        "imagenes/T1/T1-1.jpeg"
-    ]
-},
-
-
-{
-    codigo: "T35",
-    nombre: "Prenda T35",
-    categoria: "ropa",
-
-    imagenes: [
-        "imagenes/T35/T35-1.jpeg"
-    ]
-},
-
-
-/* T36 ELIMINADO */
-
-
-/* =====================================================
-   M5 + M6 JUNTOS
-===================================================== */
-
-{
-    codigo: "M5-M6",
-    nombre: "Manga larga M5 / M6",
-    categoria: "ropa",
-
-    imagenes: [
-       "imagenes/M5-M6/M5-M6-1.jpeg"
-    ]
-},
-
-
-{
-    codigo: "M1",
-    nombre: "Prenda M1",
-    categoria: "ropa",
-
-    imagenes: [
-        "imagenes/M1/M1-1.jpeg"
-    ]
-},
-
-
-{
-    codigo: "M3",
-    nombre: "Prenda M3",
-    categoria: "ropa",
-
-    imagenes: [
-        "imagenes/M3/M3-1.jpeg"
-    ]
-},
-
-
-{
-    codigo: "M2",
-    nombre: "Prenda M2",
-    categoria: "ropa",
-
-    imagenes: [
-        "imagenes/M2/M2-1.jpeg"
-    ]
-},
-
-
-{
-    codigo: "M4",
-    nombre: "Prenda M4",
-    categoria: "ropa",
-
-    imagenes: [
-        "imagenes/M4/M4-1.jpeg"
-    ]
-}
+    {
+        codigo: "T34",
+        nombre: "Prenda T34",
+        categoria: "ropa",
+        imagenes: [
+            "imagenes/T34/T34-1.jpeg",
+            "imagenes/T34/T34-2.jpeg"
+        ]
+    },
+
+    {
+        codigo: "T33",
+        nombre: "Prenda T33",
+        categoria: "ropa",
+        imagenes: [
+            "imagenes/T33/T33-1.jpeg",
+            "imagenes/T33/T33-2.jpeg"
+        ]
+    },
+
+    {
+        codigo: "T32",
+        nombre: "Prenda T32",
+        categoria: "ropa",
+        imagenes: [
+            "imagenes/T32/T32-1.jpeg",
+            "imagenes/T32/T32-2.jpeg"
+        ]
+    },
+
+    {
+        codigo: "T31",
+        nombre: "Prenda T31",
+        categoria: "ropa",
+        imagenes: [
+            "imagenes/T31/T31-1.jpeg"
+        ]
+    },
+
+    {
+        codigo: "T28",
+        nombre: "Prenda T28",
+        categoria: "ropa",
+        imagenes: [
+            "imagenes/T28/T28-1.jpeg"
+        ]
+    },
+
+    {
+        codigo: "T27",
+        nombre: "Prenda T27",
+        categoria: "ropa",
+        imagenes: [
+            "imagenes/T27/T27-1.jpeg"
+        ]
+    },
+
+    {
+        codigo: "T25",
+        nombre: "Prenda T25",
+        categoria: "ropa",
+        imagenes: [
+            "imagenes/T25/T25-1.jpeg"
+        ]
+    },
+
+    {
+        codigo: "T24",
+        nombre: "Prenda T24",
+        categoria: "ropa",
+        imagenes: [
+            "imagenes/T24/T24-1.jpeg"
+        ]
+    },
+
+    {
+        codigo: "T23",
+        nombre: "Prenda T23",
+        categoria: "ropa",
+        imagenes: [
+            "imagenes/T23/T23-1.jpeg"
+        ]
+    },
+
+    {
+        codigo: "T22",
+        nombre: "Prenda T22",
+        categoria: "ropa",
+        imagenes: [
+            "imagenes/T22/T22-1.jpeg"
+        ]
+    },
+
+    {
+        codigo: "T21",
+        nombre: "Prenda T21",
+        categoria: "ropa",
+        imagenes: [
+            "imagenes/T21/T21-1.jpeg"
+        ]
+    },
+
+    {
+        codigo: "T20",
+        nombre: "Prenda T20",
+        categoria: "ropa",
+        imagenes: [
+            "imagenes/T20/T20-1.jpeg"
+        ]
+    },
+
+    {
+        codigo: "T4",
+        nombre: "Prenda T4",
+        categoria: "ropa",
+        imagenes: [
+            "imagenes/T4/T4-1.jpeg"
+        ]
+    },
+
+    {
+        codigo: "T16",
+        nombre: "Prenda T16",
+        categoria: "ropa",
+        imagenes: [
+            "imagenes/T16/T16-1.jpeg",
+            "imagenes/T16/T16-2.jpeg"
+        ]
+    },
+
+    {
+        codigo: "T17",
+        nombre: "Prenda T17",
+        categoria: "ropa",
+        imagenes: [
+            "imagenes/T17/T17-1.jpeg"
+        ]
+    },
+
+    {
+        codigo: "T15",
+        nombre: "Prenda T15",
+        categoria: "ropa",
+        imagenes: [
+            "imagenes/T15/T15-1.jpeg"
+        ]
+    },
+
+    {
+        codigo: "T14",
+        nombre: "Prenda T14",
+        categoria: "ropa",
+        imagenes: [
+            "imagenes/T14/T14-1.jpeg"
+        ]
+    },
+
+    {
+        codigo: "T13",
+        nombre: "Prenda T13",
+        categoria: "ropa",
+        imagenes: [
+            "imagenes/T13/T13-1.jpeg"
+        ]
+    },
+
+    {
+        codigo: "T12",
+        nombre: "Prenda T12",
+        categoria: "ropa",
+        imagenes: [
+            "imagenes/T12/T12-1.jpeg",
+            "imagenes/T12/T12-2.jpeg"
+        ]
+    },
+
+    {
+        codigo: "T11",
+        nombre: "Prenda T11",
+        categoria: "ropa",
+        imagenes: [
+            "imagenes/T11/T11-1.jpeg"
+        ]
+    },
+
+    {
+        codigo: "T10",
+        nombre: "Prenda T10",
+        categoria: "ropa",
+        imagenes: [
+            "imagenes/T10/T10-1.jpeg"
+        ]
+    },
+
+    {
+        codigo: "T9",
+        nombre: "Prenda T9",
+        categoria: "ropa",
+        imagenes: [
+            "imagenes/T9/T9-1.jpeg"
+        ]
+    },
+
+    {
+        codigo: "T8",
+        nombre: "Prenda T8",
+        categoria: "ropa",
+        imagenes: [
+            "imagenes/T8/T8-1.jpeg"
+        ]
+    },
+
+    {
+        codigo: "T7",
+        nombre: "Prenda T7",
+        categoria: "ropa",
+        imagenes: [
+            "imagenes/T7/T7-1.jpeg"
+        ]
+    },
+
+    {
+        codigo: "T6",
+        nombre: "Prenda T6",
+        categoria: "ropa",
+        imagenes: [
+            "imagenes/T6/T6-1.jpeg"
+        ]
+    },
+
+    {
+        codigo: "T5",
+        nombre: "Prenda T5",
+        categoria: "ropa",
+        imagenes: [
+            "imagenes/T5/T5-1.jpeg"
+        ]
+    },
+
+    {
+        codigo: "T3",
+        nombre: "Prenda T3",
+        categoria: "ropa",
+        imagenes: [
+            "imagenes/T3/T3-1.jpeg"
+        ]
+    },
+
+    {
+        codigo: "T1",
+        nombre: "Prenda T1",
+        categoria: "ropa",
+        imagenes: [
+            "imagenes/T1/T1-1.jpeg"
+        ]
+    },
+
+    {
+        codigo: "T35",
+        nombre: "Prenda T35",
+        categoria: "ropa",
+        imagenes: [
+            "imagenes/T35/T35-1.jpeg"
+        ]
+    }
 
 ];
 
 
 /* =====================================================
-   RENDERIZAR PRODUCTOS
+   MOSTRAR PRODUCTOS
 ===================================================== */
 
 function renderProducts() {
 
     const list =
-        document.getElementById(
-            "product-list"
-        );
+        document.getElementById("product-list");
 
     list.innerHTML = "";
 
@@ -1704,36 +1579,27 @@ function renderProducts() {
         const card =
             document.createElement("div");
 
-
-        card.className =
-            "product";
-
+        card.className = "product";
 
         card.dataset.category =
             product.categoria;
 
-
         card.dataset.name =
-            product.codigo +
-            " " +
+            product.codigo + " " +
             product.nombre;
 
 
         const image =
             document.createElement("img");
 
-
         image.className =
             "product-image";
-
 
         image.src =
             product.imagenes[0];
 
-
         image.alt =
             product.nombre;
-
 
         image.loading =
             "lazy";
@@ -1749,9 +1615,17 @@ function renderProducts() {
             };
 
 
+        image.onerror =
+            function() {
+
+                this.style.display =
+                    "none";
+
+            };
+
+
         const info =
             document.createElement("div");
-
 
         info.className =
             "product-info";
@@ -1772,11 +1646,9 @@ function renderProducts() {
             </h3>
 
             <p class="product-description">
-
                 Prenda disponible.
                 Consultá disponibilidad,
                 tallas y colores por WhatsApp.
-
             </p>
 
             <div class="product-price">
@@ -1813,19 +1685,11 @@ function renderProducts() {
         `;
 
 
-        card.appendChild(
-            image
-        );
+        card.appendChild(image);
 
+        card.appendChild(info);
 
-        card.appendChild(
-            info
-        );
-
-
-        list.appendChild(
-            card
-        );
+        list.appendChild(card);
 
     });
 
@@ -1855,11 +1719,8 @@ function addToCart(name) {
     } else {
 
         cart.push({
-
             name: name,
-
             quantity: 1
-
         });
 
     }
@@ -1874,10 +1735,7 @@ function addToCart(name) {
 
 function removeFromCart(index) {
 
-    cart.splice(
-        index,
-        1
-    );
+    cart.splice(index, 1);
 
     updateCart();
 
@@ -1890,7 +1748,6 @@ function updateCart() {
         document.getElementById(
             "cart-items"
         );
-
 
     const cartCount =
         document.getElementById(
@@ -1940,7 +1797,6 @@ function updateCart() {
 
                     </div>
 
-
                     <button
                         class="remove-item"
                         onclick="removeFromCart(${index})">
@@ -1959,7 +1815,6 @@ function updateCart() {
 
     cartItems.innerHTML =
         html;
-
 
     cartCount.innerText =
         quantityTotal;
@@ -1986,7 +1841,7 @@ function closeCart() {
 
 
 /* =====================================================
-   WHATSAPP CON IMAGEN
+   WHATSAPP
 ===================================================== */
 
 function buyWhatsApp(
@@ -2018,12 +1873,8 @@ function buyWhatsApp(
 
 
     const url =
-
         `https://wa.me/${WHATSAPP_NUMBER}?text=` +
-
-        encodeURIComponent(
-            message
-        );
+        encodeURIComponent(message);
 
 
     window.open(
@@ -2033,10 +1884,6 @@ function buyWhatsApp(
 
 }
 
-
-/* =====================================================
-   WHATSAPP DEL CARRITO
-===================================================== */
 
 function checkoutWhatsApp() {
 
@@ -2058,31 +1905,22 @@ function checkoutWhatsApp() {
         "Quiero consultar por estas prendas:\n\n";
 
 
-    cart.forEach(
-        item => {
+    cart.forEach(item => {
 
-            message +=
+        message +=
+            `🛍️ ${item.name}\n` +
+            `Cantidad: ${item.quantity}\n\n`;
 
-                `🛍️ ${item.name}\n` +
-
-                `Cantidad: ${item.quantity}\n\n`;
-
-        }
-    );
+    });
 
 
     message +=
-
         "¿Me pueden confirmar disponibilidad, precio, tallas y forma de entrega?";
 
 
     const url =
-
         `https://wa.me/${WHATSAPP_NUMBER}?text=` +
-
-        encodeURIComponent(
-            message
-        );
+        encodeURIComponent(message);
 
 
     window.open(
@@ -2103,18 +1941,14 @@ function filterProducts(
 ) {
 
     document
-        .querySelectorAll(
-            ".category-btn"
-        )
-        .forEach(
-            btn => {
+        .querySelectorAll(".category-btn")
+        .forEach(btn => {
 
-                btn.classList.remove(
-                    "active"
-                );
+            btn.classList.remove(
+                "active"
+            );
 
-            }
-        );
+        });
 
 
     button.classList.add(
@@ -2123,29 +1957,25 @@ function filterProducts(
 
 
     document
-        .querySelectorAll(
-            ".product"
-        )
-        .forEach(
-            product => {
+        .querySelectorAll(".product")
+        .forEach(product => {
 
-                if (
-                    category === "todos" ||
-                    product.dataset.category === category
-                ) {
+            if (
+                category === "todos" ||
+                product.dataset.category === category
+            ) {
 
-                    product.style.display =
-                        "";
+                product.style.display =
+                    "";
 
-                } else {
+            } else {
 
-                    product.style.display =
-                        "none";
-
-                }
+                product.style.display =
+                    "none";
 
             }
-        );
+
+        });
 
 }
 
@@ -2157,45 +1987,36 @@ function filterProducts(
 function searchProducts() {
 
     const search =
-
         document
-            .getElementById(
-                "search"
-            )
+            .getElementById("search")
             .value
             .toLowerCase();
 
 
     document
-        .querySelectorAll(
-            ".product"
-        )
-        .forEach(
-            product => {
+        .querySelectorAll(".product")
+        .forEach(product => {
 
-                const text =
-                    product.innerText
-                        .toLowerCase();
+            const text =
+                product.innerText
+                    .toLowerCase();
 
 
-                if (
-                    text.includes(
-                        search
-                    )
-                ) {
+            if (
+                text.includes(search)
+            ) {
 
-                    product.style.display =
-                        "";
+                product.style.display =
+                    "";
 
-                } else {
+            } else {
 
-                    product.style.display =
-                        "none";
-
-                }
+                product.style.display =
+                    "none";
 
             }
-        );
+
+        });
 
 }
 
@@ -2217,58 +2038,55 @@ function openGallery(images) {
         images.length;
 
 
-    images.forEach(
-        src => {
+    images.forEach(src => {
 
-            const test =
-                new Image();
-
-
-            test.onload =
-                function() {
-
-                    galleryImages.push(
-                        src
-                    );
+        const test =
+            new Image();
 
 
-                    remaining--;
+        test.onload =
+            function() {
+
+                galleryImages.push(
+                    src
+                );
+
+                remaining--;
 
 
-                    if (
-                        remaining === 0
-                    ) {
+                if (
+                    remaining === 0
+                ) {
 
-                        showGallery();
+                    showGallery();
 
-                    }
+                }
 
-                };
-
-
-            test.onerror =
-                function() {
-
-                    remaining--;
+            };
 
 
-                    if (
-                        remaining === 0 &&
-                        galleryImages.length > 0
-                    ) {
+        test.onerror =
+            function() {
 
-                        showGallery();
-
-                    }
-
-                };
+                remaining--;
 
 
-            test.src =
-                src;
+                if (
+                    remaining === 0 &&
+                    galleryImages.length > 0
+                ) {
 
-        }
-    );
+                    showGallery();
+
+                }
+
+            };
+
+
+        test.src =
+            src;
+
+    });
 
 }
 
@@ -2292,12 +2110,8 @@ function showGallery() {
 
 
     document
-        .getElementById(
-            "galleryModal"
-        )
-        .classList.add(
-            "open"
-        );
+        .getElementById("galleryModal")
+        .classList.add("open");
 
 
     createThumbnails();
@@ -2310,12 +2124,8 @@ function showGallery() {
 function closeGallery() {
 
     document
-        .getElementById(
-            "galleryModal"
-        )
-        .classList.remove(
-            "open"
-        );
+        .getElementById("galleryModal")
+        .classList.remove("open");
 
 }
 
@@ -2323,9 +2133,7 @@ function closeGallery() {
 function showGalleryImage() {
 
     document
-        .getElementById(
-            "galleryImage"
-        )
+        .getElementById("galleryImage")
         .src =
         galleryImages[
             currentImage
@@ -2333,11 +2141,8 @@ function showGalleryImage() {
 
 
     document
-        .getElementById(
-            "galleryCounter"
-        )
+        .getElementById("galleryCounter")
         .innerText =
-
         `${currentImage + 1} / ${galleryImages.length}`;
 
 
@@ -2367,8 +2172,7 @@ function createThumbnails() {
         );
 
 
-    container.innerHTML =
-        "";
+    container.innerHTML = "";
 
 
     galleryImages.forEach(
