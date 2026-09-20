@@ -11,7 +11,7 @@
 <title>Elda Style | Tienda Online</title>
 
 <meta name="description"
-      content="Elda Style - Moda, ropa y productos seleccionados. Compra fácilmente por WhatsApp.">
+      content="Elda Style - Ropa y productos seleccionados. Compra fácilmente por WhatsApp.">
 
 
 <style>
@@ -122,12 +122,10 @@ nav a:hover {
     text-align: center;
 
     background:
-
         linear-gradient(
             rgba(0,0,0,.48),
             rgba(0,0,0,.48)
         ),
-
         url("https://images.unsplash.com/photo-1445205170230-053b83016050?auto=format&fit=crop&w=1600&q=80");
 
     background-size: cover;
@@ -1069,8 +1067,6 @@ Hacé clic en la foto para ver las diferentes imágenes de cada producto.
 </div>
 
 
-<!-- BUSCADOR -->
-
 <div class="search-box">
 
 <input
@@ -1125,8 +1121,6 @@ Accesorios
 
 </div>
 
-
-<!-- LISTA -->
 
 <div
 class="products"
@@ -1382,30 +1376,32 @@ Elda Style
 <script>
 
 /* =====================================================
-   WHATSAPP
+   CONFIGURACIÓN
 ===================================================== */
 
 const WHATSAPP_NUMBER =
 "59162131042";
 
 
+/*
+   URL BASE DE LAS IMÁGENES EN GITHUB
+
+   Repositorio:
+   juancar533/elda-style
+
+   Rama:
+   main
+*/
+
+const GITHUB_IMAGE_BASE =
+"https://raw.githubusercontent.com/juancar533/elda-style/main/";
+
+
 /* =====================================================
    PRODUCTOS
-=====================================================
-
-   IMPORTANTE:
-
-   La carpeta correcta es:
-
-   imagenes/
-
-   SIN tilde.
-
 ===================================================== */
 
 const products = [
-
-/* T34 */
 
 {
     codigo: "T34",
@@ -1417,8 +1413,6 @@ const products = [
     ]
 },
 
-/* T33 */
-
 {
     codigo: "T33",
     nombre: "Prenda T33",
@@ -1428,8 +1422,6 @@ const products = [
         "imagenes/T33/T33-2.jpeg"
     ]
 },
-
-/* T32 */
 
 {
     codigo: "T32",
@@ -1441,8 +1433,6 @@ const products = [
     ]
 },
 
-/* T31 */
-
 {
     codigo: "T31",
     nombre: "Prenda T31",
@@ -1451,8 +1441,6 @@ const products = [
         "imagenes/T31/T31-1.jpeg"
     ]
 },
-
-/* T19 */
 
 {
     codigo: "T19",
@@ -1463,8 +1451,6 @@ const products = [
     ]
 },
 
-/* T29 */
-
 {
     codigo: "T29",
     nombre: "Prenda T29",
@@ -1473,8 +1459,6 @@ const products = [
         "imagenes/T29/T29-1.jpeg"
     ]
 },
-
-/* T28 */
 
 {
     codigo: "T28",
@@ -1485,8 +1469,6 @@ const products = [
     ]
 },
 
-/* T27 */
-
 {
     codigo: "T27",
     nombre: "Prenda T27",
@@ -1495,8 +1477,6 @@ const products = [
         "imagenes/T27/T27-1.jpeg"
     ]
 },
-
-/* T25 */
 
 {
     codigo: "T25",
@@ -1507,8 +1487,6 @@ const products = [
     ]
 },
 
-/* T24 */
-
 {
     codigo: "T24",
     nombre: "Prenda T24",
@@ -1517,8 +1495,6 @@ const products = [
         "imagenes/T24/T24-1.jpeg"
     ]
 },
-
-/* T23 */
 
 {
     codigo: "T23",
@@ -1529,8 +1505,6 @@ const products = [
     ]
 },
 
-/* T22 */
-
 {
     codigo: "T22",
     nombre: "Prenda T22",
@@ -1539,8 +1513,6 @@ const products = [
         "imagenes/T22/T22-1.jpeg"
     ]
 },
-
-/* T21 */
 
 {
     codigo: "T21",
@@ -1551,8 +1523,6 @@ const products = [
     ]
 },
 
-/* T20 */
-
 {
     codigo: "T20",
     nombre: "Prenda T20",
@@ -1562,8 +1532,6 @@ const products = [
     ]
 },
 
-/* T4 */
-
 {
     codigo: "T4",
     nombre: "Prenda T4",
@@ -1572,8 +1540,6 @@ const products = [
         "imagenes/T4/T4-1.jpeg"
     ]
 },
-
-/* T16 */
 
 {
     codigo: "T16",
@@ -1585,8 +1551,6 @@ const products = [
     ]
 },
 
-/* T17 */
-
 {
     codigo: "T17",
     nombre: "Prenda T17",
@@ -1595,8 +1559,6 @@ const products = [
         "imagenes/T17/T17-1.jpeg"
     ]
 },
-
-/* T15 */
 
 {
     codigo: "T15",
@@ -1607,8 +1569,6 @@ const products = [
     ]
 },
 
-/* T14 */
-
 {
     codigo: "T14",
     nombre: "Prenda T14",
@@ -1618,8 +1578,6 @@ const products = [
     ]
 },
 
-/* T13 */
-
 {
     codigo: "T13",
     nombre: "Prenda T13",
@@ -1628,8 +1586,6 @@ const products = [
         "imagenes/T13/T13-1.jpeg"
     ]
 },
-
-/* T12 */
 
 {
     codigo: "T12",
@@ -1641,8 +1597,6 @@ const products = [
     ]
 },
 
-/* T11 */
-
 {
     codigo: "T11",
     nombre: "Prenda T11",
@@ -1651,8 +1605,6 @@ const products = [
         "imagenes/T11/T11-1.jpeg"
     ]
 },
-
-/* T10 */
 
 {
     codigo: "T10",
@@ -1663,8 +1615,6 @@ const products = [
     ]
 },
 
-/* T9 */
-
 {
     codigo: "T9",
     nombre: "Prenda T9",
@@ -1673,8 +1623,6 @@ const products = [
         "imagenes/T9/T9-1.jpeg"
     ]
 },
-
-/* T8 */
 
 {
     codigo: "T8",
@@ -1685,8 +1633,6 @@ const products = [
     ]
 },
 
-/* T7 */
-
 {
     codigo: "T7",
     nombre: "Prenda T7",
@@ -1695,8 +1641,6 @@ const products = [
         "imagenes/T7/T7-1.jpeg"
     ]
 },
-
-/* T6 */
 
 {
     codigo: "T6",
@@ -1707,8 +1651,6 @@ const products = [
     ]
 },
 
-/* T5 */
-
 {
     codigo: "T5",
     nombre: "Prenda T5",
@@ -1717,8 +1659,6 @@ const products = [
         "imagenes/T5/T5-1.jpeg"
     ]
 },
-
-/* T3 */
 
 {
     codigo: "T3",
@@ -1729,8 +1669,6 @@ const products = [
     ]
 },
 
-/* T1 */
-
 {
     codigo: "T1",
     nombre: "Prenda T1",
@@ -1739,8 +1677,6 @@ const products = [
         "imagenes/T1/T1-1.jpeg"
     ]
 },
-
-/* T35 */
 
 {
     codigo: "T35",
@@ -1751,8 +1687,6 @@ const products = [
     ]
 },
 
-/* T36 */
-
 {
     codigo: "T36",
     nombre: "Prenda T36",
@@ -1761,8 +1695,6 @@ const products = [
         "imagenes/T36/T36-1.jpeg"
     ]
 },
-
-/* M1 */
 
 {
     codigo: "M1",
@@ -1773,8 +1705,6 @@ const products = [
     ]
 },
 
-/* M3 */
-
 {
     codigo: "M3",
     nombre: "Prenda M3",
@@ -1783,8 +1713,6 @@ const products = [
         "imagenes/M3/M3-1.jpeg"
     ]
 },
-
-/* M5 */
 
 {
     codigo: "M5",
@@ -1795,8 +1723,6 @@ const products = [
     ]
 },
 
-/* M6 */
-
 {
     codigo: "M6",
     nombre: "Prenda M6",
@@ -1806,8 +1732,6 @@ const products = [
     ]
 },
 
-/* M2 */
-
 {
     codigo: "M2",
     nombre: "Prenda M2",
@@ -1816,8 +1740,6 @@ const products = [
         "imagenes/M2/M2-1.jpeg"
     ]
 },
-
-/* M4 */
 
 {
     codigo: "M4",
@@ -1850,11 +1772,14 @@ function renderProducts() {
         const card =
             document.createElement("div");
 
+
         card.className =
             "product";
 
+
         card.dataset.category =
             product.categoria;
+
 
         card.dataset.name =
             product.codigo +
@@ -1865,14 +1790,18 @@ function renderProducts() {
         const image =
             document.createElement("img");
 
+
         image.className =
             "product-image";
+
 
         image.src =
             product.imagenes[0];
 
+
         image.alt =
             product.nombre;
+
 
         image.loading =
             "lazy";
@@ -1888,8 +1817,18 @@ function renderProducts() {
             };
 
 
+        image.onerror =
+            function() {
+
+                this.style.display =
+                    "none";
+
+            };
+
+
         const info =
             document.createElement("div");
+
 
         info.className =
             "product-info";
@@ -1940,7 +1879,8 @@ function renderProducts() {
                     class="whatsapp-button"
                     onclick="buyWhatsApp(
                         '${product.codigo}',
-                        '${product.nombre}'
+                        '${product.nombre}',
+                        '${product.imagenes[0]}'
                     )">
 
                     WhatsApp
@@ -1952,11 +1892,19 @@ function renderProducts() {
         `;
 
 
-        card.appendChild(image);
+        card.appendChild(
+            image
+        );
 
-        card.appendChild(info);
 
-        list.appendChild(card);
+        card.appendChild(
+            info
+        );
+
+
+        list.appendChild(
+            card
+        );
 
     });
 
@@ -1983,7 +1931,9 @@ function addToCart(name) {
 
         existingProduct.quantity++;
 
-    } else {
+    }
+
+    else {
 
         cart.push({
 
@@ -2005,7 +1955,10 @@ function addToCart(name) {
 
 function removeFromCart(index) {
 
-    cart.splice(index, 1);
+    cart.splice(
+        index,
+        1
+    );
 
     updateCart();
 
@@ -2018,6 +1971,7 @@ function updateCart() {
         document.getElementById(
             "cart-items"
         );
+
 
     const cartCount =
         document.getElementById(
@@ -2113,13 +2067,32 @@ function closeCart() {
 
 
 /* =====================================================
-   WHATSAPP INDIVIDUAL
+   WHATSAPP INDIVIDUAL CON IMAGEN
 ===================================================== */
 
 function buyWhatsApp(
     codigo,
-    name
+    name,
+    imagen
 ) {
+
+
+    /*
+       Convertimos:
+
+       imagenes/T34/T34-1.jpeg
+
+       en:
+
+       https://raw.githubusercontent.com/
+       juancar533/elda-style/main/
+       imagenes/T34/T34-1.jpeg
+    */
+
+    const imageUrl =
+        GITHUB_IMAGE_BASE +
+        imagen;
+
 
     const message =
 
@@ -2130,6 +2103,10 @@ function buyWhatsApp(
         `🆔 Código: ${codigo}\n` +
 
         `🛍️ Producto: ${name}\n\n` +
+
+        `🖼️ Foto del producto:\n` +
+
+        `${imageUrl}\n\n` +
 
         `¿Está disponible?`;
 
@@ -2152,7 +2129,7 @@ function buyWhatsApp(
 
 
 /* =====================================================
-   WHATSAPP CARRITO
+   WHATSAPP DEL CARRITO
 ===================================================== */
 
 function checkoutWhatsApp() {
@@ -2172,7 +2149,7 @@ function checkoutWhatsApp() {
 
         "Hola, Elda Style 👋\n\n" +
 
-        "Quiero consultar por las siguientes prendas:\n\n";
+        "Quiero consultar por estas prendas:\n\n";
 
 
     cart.forEach(
@@ -2254,7 +2231,9 @@ function filterProducts(
                     product.style.display =
                         "";
 
-                } else {
+                }
+
+                else {
 
                     product.style.display =
                         "none";
@@ -2304,7 +2283,9 @@ function searchProducts() {
                     product.style.display =
                         "";
 
-                } else {
+                }
+
+                else {
 
                     product.style.display =
                         "none";
@@ -2347,6 +2328,7 @@ function openGallery(images) {
                     galleryImages.push(
                         src
                     );
+
 
                     remaining--;
 
@@ -2580,7 +2562,7 @@ function previousImage() {
 
 
 /* =====================================================
-   CERRAR GALERÍA
+   CERRAR GALERÍA AL HACER CLIC AFUERA
 ===================================================== */
 
 document
