@@ -1,19 +1,24 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
+
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
 
 <title>Elda Style | Tienda Online</title>
 
 <meta name="description"
-content="Elda Style - Ropa y prendas seleccionadas. Compra fácilmente por WhatsApp.">
+      content="Elda Style - Moda, ropa y productos seleccionados. Compra fácilmente por WhatsApp.">
+
 
 <style>
 
-/* =========================
-   CONFIGURACIÓN GENERAL
-========================= */
+/* =====================================================
+   GENERAL
+===================================================== */
 
 * {
     margin: 0;
@@ -32,22 +37,26 @@ body {
 }
 
 
-/* =========================
+/* =====================================================
    HEADER
-========================= */
+===================================================== */
 
 header {
     background: #111;
     color: white;
+
     position: sticky;
     top: 0;
+
     z-index: 1000;
+
     box-shadow: 0 3px 15px rgba(0,0,0,.15);
 }
 
 .header-container {
     max-width: 1200px;
     margin: auto;
+
     padding: 18px 20px;
 
     display: flex;
@@ -78,22 +87,32 @@ nav a {
     font-size: 15px;
 }
 
+nav a:hover {
+    opacity: .7;
+}
+
 .cart-button {
     background: white;
     color: #111;
+
     border: none;
+
     padding: 10px 15px;
+
     border-radius: 20px;
+
     cursor: pointer;
+
     font-weight: bold;
 }
 
 
-/* =========================
+/* =====================================================
    HERO
-========================= */
+===================================================== */
 
 .hero {
+
     min-height: 480px;
 
     display: flex;
@@ -103,10 +122,12 @@ nav a {
     text-align: center;
 
     background:
+
         linear-gradient(
             rgba(0,0,0,.48),
             rgba(0,0,0,.48)
         ),
+
         url("https://images.unsplash.com/photo-1445205170230-053b83016050?auto=format&fit=crop&w=1600&q=80");
 
     background-size: cover;
@@ -131,59 +152,74 @@ nav a {
 }
 
 .hero-button {
+
     display: inline-block;
+
     padding: 14px 28px;
 
     background: white;
     color: #111;
 
     text-decoration: none;
+
     border-radius: 30px;
 
     font-weight: bold;
 }
 
 
-/* =========================
+/* =====================================================
    CONTENEDOR
-========================= */
+===================================================== */
 
 .container {
+
     max-width: 1200px;
+
     margin: auto;
+
     padding: 50px 20px;
 }
 
 .section-title {
+
     text-align: center;
+
     margin-bottom: 30px;
 }
 
 .section-title h2 {
+
     font-size: 32px;
+
     margin-bottom: 10px;
 }
 
 .section-title p {
+
     color: #777;
 }
 
 
-/* =========================
+/* =====================================================
    BUSCADOR
-========================= */
+===================================================== */
 
 .search-box {
+
     max-width: 600px;
+
     margin: 0 auto 25px;
 }
 
 .search-box input {
+
     width: 100%;
 
     padding: 15px 20px;
 
     border: 1px solid #ddd;
+
     border-radius: 30px;
 
     font-size: 16px;
@@ -191,21 +227,31 @@ nav a {
     outline: none;
 }
 
+.search-box input:focus {
 
-/* =========================
+    border-color: #111;
+}
+
+
+/* =====================================================
    CATEGORÍAS
-========================= */
+===================================================== */
 
 .categories {
+
     display: flex;
+
     justify-content: center;
+
     flex-wrap: wrap;
 
     gap: 10px;
+
     margin-bottom: 35px;
 }
 
 .category-btn {
+
     border: 1px solid #ddd;
 
     background: white;
@@ -215,20 +261,25 @@ nav a {
     border-radius: 25px;
 
     cursor: pointer;
+
+    transition: .2s;
 }
 
 .category-btn.active,
 .category-btn:hover {
+
     background: #111;
+
     color: white;
 }
 
 
-/* =========================
+/* =====================================================
    PRODUCTOS
-========================= */
+===================================================== */
 
 .products {
+
     display: grid;
 
     grid-template-columns:
@@ -238,6 +289,7 @@ nav a {
 }
 
 .product {
+
     background: white;
 
     border-radius: 15px;
@@ -251,32 +303,41 @@ nav a {
 }
 
 .product:hover {
+
     transform: translateY(-5px);
 }
 
 .product-image {
+
     width: 100%;
-    height: 260px;
+
+    height: 300px;
 
     object-fit: cover;
 
+    display: block;
+
     cursor: pointer;
 
-    transition: .3s;
-
     background: #eee;
+
+    transition: .3s;
 }
 
 .product-image:hover {
-    opacity: .85;
+
+    opacity: .88;
+
     transform: scale(1.02);
 }
 
 .product-info {
+
     padding: 18px;
 }
 
 .product-category {
+
     color: #888;
 
     font-size: 12px;
@@ -287,6 +348,7 @@ nav a {
 }
 
 .product-code {
+
     font-size: 13px;
 
     color: #555;
@@ -297,11 +359,14 @@ nav a {
 }
 
 .product h3 {
+
     font-size: 18px;
+
     margin-bottom: 8px;
 }
 
 .product-description {
+
     color: #777;
 
     font-size: 14px;
@@ -312,7 +377,8 @@ nav a {
 }
 
 .product-price {
-    font-size: 19px;
+
+    font-size: 20px;
 
     font-weight: bold;
 
@@ -320,12 +386,15 @@ nav a {
 }
 
 .product-buttons {
+
     display: flex;
+
     gap: 8px;
 }
 
 .add-cart,
 .whatsapp-button {
+
     flex: 1;
 
     border: none;
@@ -340,21 +409,32 @@ nav a {
 }
 
 .add-cart {
+
     background: #111;
+
     color: white;
 }
 
 .whatsapp-button {
+
     background: #25D366;
+
     color: white;
 }
 
+.add-cart:hover,
+.whatsapp-button:hover {
 
-/* =========================
+    opacity: .85;
+}
+
+
+/* =====================================================
    GALERÍA
-========================= */
+===================================================== */
 
 .gallery-modal {
+
     display: none;
 
     position: fixed;
@@ -366,6 +446,7 @@ nav a {
     z-index: 5000;
 
     align-items: center;
+
     justify-content: center;
 
     flex-direction: column;
@@ -374,11 +455,14 @@ nav a {
 }
 
 .gallery-modal.open {
+
     display: flex;
 }
 
 .gallery-modal img {
+
     max-width: 85%;
+
     max-height: 75vh;
 
     object-fit: contain;
@@ -390,9 +474,11 @@ nav a {
 }
 
 .gallery-close {
+
     position: absolute;
 
     top: 15px;
+
     right: 25px;
 
     background: none;
@@ -410,6 +496,7 @@ nav a {
 
 .gallery-prev,
 .gallery-next {
+
     position: absolute;
 
     top: 50%;
@@ -433,14 +520,24 @@ nav a {
 }
 
 .gallery-prev {
+
     left: 25px;
 }
 
 .gallery-next {
+
     right: 25px;
 }
 
+.gallery-prev:hover,
+.gallery-next:hover {
+
+    background:
+        rgba(255,255,255,.4);
+}
+
 .gallery-counter {
+
     color: white;
 
     margin-top: 18px;
@@ -449,6 +546,7 @@ nav a {
 }
 
 .gallery-thumbnails {
+
     display: flex;
 
     gap: 10px;
@@ -461,7 +559,9 @@ nav a {
 }
 
 .gallery-thumbnails img {
+
     width: 65px;
+
     height: 65px;
 
     object-fit: cover;
@@ -476,20 +576,23 @@ nav a {
 }
 
 .gallery-thumbnails img.active {
+
     opacity: 1;
 
     border: 2px solid white;
 }
 
 
-/* =========================
+/* =====================================================
    CARRITO
-========================= */
+===================================================== */
 
 .cart {
+
     position: fixed;
 
     right: -420px;
+
     top: 0;
 
     width: 400px;
@@ -513,10 +616,12 @@ nav a {
 }
 
 .cart.open {
+
     right: 0;
 }
 
 .cart-header {
+
     padding: 20px;
 
     border-bottom: 1px solid #ddd;
@@ -529,6 +634,7 @@ nav a {
 }
 
 .close-cart {
+
     border: none;
 
     background: none;
@@ -539,6 +645,7 @@ nav a {
 }
 
 .cart-items {
+
     flex: 1;
 
     overflow-y: auto;
@@ -547,6 +654,7 @@ nav a {
 }
 
 .cart-item {
+
     display: flex;
 
     justify-content: space-between;
@@ -559,16 +667,19 @@ nav a {
 }
 
 .cart-item h4 {
+
     margin-bottom: 5px;
 }
 
 .cart-item p {
+
     color: #777;
 
     font-size: 14px;
 }
 
 .remove-item {
+
     border: none;
 
     background: none;
@@ -579,12 +690,14 @@ nav a {
 }
 
 .cart-footer {
+
     padding: 20px;
 
     border-top: 1px solid #ddd;
 }
 
 .total {
+
     display: flex;
 
     justify-content: space-between;
@@ -597,6 +710,7 @@ nav a {
 }
 
 .checkout {
+
     width: 100%;
 
     border: none;
@@ -617,15 +731,17 @@ nav a {
 }
 
 
-/* =========================
-   SOBRE NOSOTROS
-========================= */
+/* =====================================================
+   NOSOTROS
+===================================================== */
 
 .about {
+
     background: white;
 }
 
 .about-content {
+
     max-width: 850px;
 
     margin: auto;
@@ -638,15 +754,17 @@ nav a {
 }
 
 
-/* =========================
+/* =====================================================
    CONTACTO
-========================= */
+===================================================== */
 
 .contact {
+
     text-align: center;
 }
 
 .contact-whatsapp {
+
     display: inline-block;
 
     margin-top: 20px;
@@ -665,17 +783,20 @@ nav a {
 }
 
 
-/* =========================
+/* =====================================================
    WHATSAPP FLOTANTE
-========================= */
+===================================================== */
 
 .floating-whatsapp {
+
     position: fixed;
 
     right: 25px;
+
     bottom: 25px;
 
     width: 60px;
+
     height: 60px;
 
     border-radius: 50%;
@@ -701,11 +822,12 @@ nav a {
 }
 
 
-/* =========================
+/* =====================================================
    FOOTER
-========================= */
+===================================================== */
 
 footer {
+
     background: #111;
 
     color: white;
@@ -716,19 +838,21 @@ footer {
 }
 
 footer p {
+
     margin-top: 10px;
 
     color: #aaa;
 }
 
 
-/* =========================
+/* =====================================================
    RESPONSIVE
-========================= */
+===================================================== */
 
 @media (max-width: 1000px) {
 
     .products {
+
         grid-template-columns:
             repeat(3, 1fr);
     }
@@ -738,32 +862,40 @@ footer p {
 @media (max-width: 750px) {
 
     nav {
+
         display: none;
     }
 
     .hero h1 {
+
         font-size: 42px;
     }
 
     .hero p {
+
         font-size: 17px;
     }
 
     .products {
+
         grid-template-columns:
             repeat(2, 1fr);
     }
 
     .product-image {
-        height: 220px;
+
+        height: 260px;
     }
 
     .gallery-modal img {
+
         max-width: 90%;
+
         max-height: 65vh;
     }
 
     .gallery-prev {
+
         left: 8px;
 
         font-size: 25px;
@@ -772,6 +904,7 @@ footer p {
     }
 
     .gallery-next {
+
         right: 8px;
 
         font-size: 25px;
@@ -784,54 +917,66 @@ footer p {
 @media (max-width: 500px) {
 
     .header-container {
+
         padding: 15px;
     }
 
     .logo {
+
         font-size: 22px;
     }
 
     .hero {
+
         min-height: 420px;
     }
 
     .hero h1 {
+
         font-size: 36px;
     }
 
     .products {
+
         grid-template-columns: 1fr;
     }
 
     .product-image {
-        height: 300px;
+
+        height: 320px;
     }
 
     .gallery-close {
+
         right: 15px;
+
         top: 5px;
     }
 
 }
 
 </style>
+
 </head>
 
 
 <body>
 
 
-<!-- =========================
+<!-- =====================================================
      HEADER
-========================= -->
+===================================================== -->
 
 <header>
 
 <div class="header-container">
 
 <div class="logo">
+
 Elda <span>Style</span>
+
 </div>
+
 
 <nav>
 
@@ -853,6 +998,7 @@ Contacto
 
 </nav>
 
+
 <button
 class="cart-button"
 onclick="openCart()">
@@ -870,9 +1016,9 @@ onclick="openCart()">
 </header>
 
 
-<!-- =========================
+<!-- =====================================================
      HERO
-========================= -->
+===================================================== -->
 
 <section
 class="hero"
@@ -901,22 +1047,23 @@ Ver productos
 </section>
 
 
-<!-- =========================
+<!-- =====================================================
      PRODUCTOS
-========================= -->
+===================================================== -->
 
 <section
 class="container"
 id="productos">
 
+
 <div class="section-title">
 
 <h2>
-Nuestra ropa
+Nuestros productos
 </h2>
 
 <p>
-Hacé clic en la foto para ver las diferentes imágenes de cada prenda.
+Hacé clic en la foto para ver las diferentes imágenes de cada producto.
 </p>
 
 </div>
@@ -929,15 +1076,16 @@ Hacé clic en la foto para ver las diferentes imágenes de cada prenda.
 <input
 type="text"
 id="search"
-placeholder="🔎 Buscar por código..."
+placeholder="🔎 Buscar productos..."
 onkeyup="searchProducts()">
 
 </div>
 
 
-<!-- CATEGORÍA -->
+<!-- CATEGORÍAS -->
 
 <div class="categories">
+
 
 <button
 class="category-btn active"
@@ -947,6 +1095,7 @@ Todos
 
 </button>
 
+
 <button
 class="category-btn"
 onclick="filterProducts('ropa', this)">
@@ -955,10 +1104,29 @@ Ropa
 
 </button>
 
+
+<button
+class="category-btn"
+onclick="filterProducts('calzado', this)">
+
+Calzado
+
+</button>
+
+
+<button
+class="category-btn"
+onclick="filterProducts('accesorios', this)">
+
+Accesorios
+
+</button>
+
+
 </div>
 
 
-<!-- CATÁLOGO -->
+<!-- LISTA -->
 
 <div
 class="products"
@@ -966,18 +1134,20 @@ id="product-list">
 
 </div>
 
+
 </section>
 
 
-<!-- =========================
+<!-- =====================================================
      SOBRE NOSOTROS
-========================= -->
+===================================================== -->
 
 <section
 class="about"
 id="nosotros">
 
 <div class="container">
+
 
 <div class="section-title">
 
@@ -986,6 +1156,7 @@ Sobre Elda Style
 </h2>
 
 </div>
+
 
 <div class="about-content">
 
@@ -997,12 +1168,14 @@ aquello que combina con tu estilo.
 
 </p>
 
+
 <br>
+
 
 <p>
 
 Hacé clic sobre cualquier fotografía para observar
-la prenda desde diferentes ángulos.
+el producto desde diferentes ángulos.
 
 </p>
 
@@ -1013,13 +1186,14 @@ la prenda desde diferentes ángulos.
 </section>
 
 
-<!-- =========================
+<!-- =====================================================
      CONTACTO
-========================= -->
+===================================================== -->
 
 <section
 class="container contact"
 id="contacto">
+
 
 <div class="section-title">
 
@@ -1043,22 +1217,25 @@ class="contact-whatsapp">
 
 </a>
 
+
 </section>
 
 
-<!-- =========================
+<!-- =====================================================
      CARRITO
-========================= -->
+===================================================== -->
 
 <div
 class="cart"
 id="cart">
+
 
 <div class="cart-header">
 
 <h2>
 Mi carrito
 </h2>
+
 
 <button
 class="close-cart"
@@ -1084,6 +1261,7 @@ Tu carrito está vacío.
 
 <div class="cart-footer">
 
+
 <div class="total">
 
 <span>
@@ -1091,13 +1269,7 @@ Total:
 </span>
 
 <span>
-
-Bs
-
-<span id="cart-total">
-0
-</span>
-
+A consultar
 </span>
 
 </div>
@@ -1111,14 +1283,15 @@ onclick="checkoutWhatsApp()">
 
 </button>
 
-</div>
 
 </div>
 
+</div>
 
-<!-- =========================
+
+<!-- =====================================================
      GALERÍA
-========================= -->
+===================================================== -->
 
 <div
 class="gallery-modal"
@@ -1171,12 +1344,13 @@ id="galleryThumbnails">
 
 </div>
 
+
 </div>
 
 
-<!-- =========================
+<!-- =====================================================
      WHATSAPP FLOTANTE
-========================= -->
+===================================================== -->
 
 <a
 href="https://wa.me/59162131042"
@@ -1188,9 +1362,9 @@ class="floating-whatsapp">
 </a>
 
 
-<!-- =========================
+<!-- =====================================================
      FOOTER
-========================= -->
+===================================================== -->
 
 <footer>
 
@@ -1205,342 +1379,461 @@ Elda Style
 </footer>
 
 
-<!-- =========================
-     JAVASCRIPT
-========================= -->
-
 <script>
 
-
-/* =========================
+/* =====================================================
    WHATSAPP
-========================= */
+===================================================== */
 
 const WHATSAPP_NUMBER =
 "59162131042";
 
 
-/* =========================
-   CATÁLOGO REAL
-========================= */
+/* =====================================================
+   PRODUCTOS
+=====================================================
+
+   IMPORTANTE:
+
+   La carpeta correcta es:
+
+   imagenes/
+
+   SIN tilde.
+
+===================================================== */
 
 const products = [
+
+/* T34 */
 
 {
     codigo: "T34",
     nombre: "Prenda T34",
+    categoria: "ropa",
     imagenes: [
-        "imágenes/T34/T34-1.jpeg",
-        "imágenes/T34/T34-2.jpeg"
+        "imagenes/T34/T34-1.jpeg",
+        "imagenes/T34/T34-2.jpeg"
     ]
 },
+
+/* T33 */
 
 {
     codigo: "T33",
     nombre: "Prenda T33",
+    categoria: "ropa",
     imagenes: [
-        "imágenes/T33/T33-1.jpeg",
-        "imágenes/T33/T33-2.jpeg"
+        "imagenes/T33/T33-1.jpeg",
+        "imagenes/T33/T33-2.jpeg"
     ]
 },
+
+/* T32 */
 
 {
     codigo: "T32",
     nombre: "Prenda T32",
+    categoria: "ropa",
     imagenes: [
-        "imágenes/T32/T32-1.jpeg",
-        "imágenes/T32/T32-2.jpeg"
+        "imagenes/T32/T32-1.jpeg",
+        "imagenes/T32/T32-2.jpeg"
     ]
 },
+
+/* T31 */
 
 {
     codigo: "T31",
     nombre: "Prenda T31",
+    categoria: "ropa",
     imagenes: [
-        "imágenes/T31/T31-1.jpeg"
+        "imagenes/T31/T31-1.jpeg"
     ]
 },
+
+/* T19 */
 
 {
     codigo: "T19",
     nombre: "Prenda T19",
+    categoria: "ropa",
     imagenes: [
-        "imágenes/T19/T19-1.jpeg"
+        "imagenes/T19/T19-1.jpeg"
     ]
 },
+
+/* T29 */
 
 {
     codigo: "T29",
     nombre: "Prenda T29",
+    categoria: "ropa",
     imagenes: [
-        "imágenes/T29/T29-1.jpeg"
+        "imagenes/T29/T29-1.jpeg"
     ]
 },
+
+/* T28 */
 
 {
     codigo: "T28",
     nombre: "Prenda T28",
+    categoria: "ropa",
     imagenes: [
-        "imágenes/T28/T28-1.jpeg"
+        "imagenes/T28/T28-1.jpeg"
     ]
 },
+
+/* T27 */
 
 {
     codigo: "T27",
     nombre: "Prenda T27",
+    categoria: "ropa",
     imagenes: [
-        "imágenes/T27/T27-1.jpeg"
+        "imagenes/T27/T27-1.jpeg"
     ]
 },
+
+/* T25 */
 
 {
     codigo: "T25",
     nombre: "Prenda T25",
+    categoria: "ropa",
     imagenes: [
-        "imágenes/T25/T25-1.jpeg"
+        "imagenes/T25/T25-1.jpeg"
     ]
 },
+
+/* T24 */
 
 {
     codigo: "T24",
     nombre: "Prenda T24",
+    categoria: "ropa",
     imagenes: [
-        "imágenes/T24/T24-1.jpeg"
+        "imagenes/T24/T24-1.jpeg"
     ]
 },
+
+/* T23 */
 
 {
     codigo: "T23",
     nombre: "Prenda T23",
+    categoria: "ropa",
     imagenes: [
-        "imágenes/T23/T23-1.jpeg"
+        "imagenes/T23/T23-1.jpeg"
     ]
 },
+
+/* T22 */
 
 {
     codigo: "T22",
     nombre: "Prenda T22",
+    categoria: "ropa",
     imagenes: [
-        "imágenes/T22/T22-1.jpeg"
+        "imagenes/T22/T22-1.jpeg"
     ]
 },
+
+/* T21 */
 
 {
     codigo: "T21",
     nombre: "Prenda T21",
+    categoria: "ropa",
     imagenes: [
-        "imágenes/T21/T21-1.jpeg"
+        "imagenes/T21/T21-1.jpeg"
     ]
 },
+
+/* T20 */
 
 {
     codigo: "T20",
     nombre: "Prenda T20",
+    categoria: "ropa",
     imagenes: [
-        "imágenes/T20/T20-1.jpeg"
+        "imagenes/T20/T20-1.jpeg"
     ]
 },
+
+/* T4 */
 
 {
     codigo: "T4",
     nombre: "Prenda T4",
+    categoria: "ropa",
     imagenes: [
-        "imágenes/T4/T4-1.jpeg"
+        "imagenes/T4/T4-1.jpeg"
     ]
 },
+
+/* T16 */
 
 {
     codigo: "T16",
     nombre: "Prenda T16",
+    categoria: "ropa",
     imagenes: [
-        "imágenes/T16/T16-1.jpeg",
-        "imágenes/T16/T16-2.jpeg"
+        "imagenes/T16/T16-1.jpeg",
+        "imagenes/T16/T16-2.jpeg"
     ]
 },
+
+/* T17 */
 
 {
     codigo: "T17",
     nombre: "Prenda T17",
+    categoria: "ropa",
     imagenes: [
-        "imágenes/T17/T17-1.jpeg"
+        "imagenes/T17/T17-1.jpeg"
     ]
 },
+
+/* T15 */
 
 {
     codigo: "T15",
     nombre: "Prenda T15",
+    categoria: "ropa",
     imagenes: [
-        "imágenes/T15/T15-1.jpeg"
+        "imagenes/T15/T15-1.jpeg"
     ]
 },
+
+/* T14 */
 
 {
     codigo: "T14",
     nombre: "Prenda T14",
+    categoria: "ropa",
     imagenes: [
-        "imágenes/T14/T14-1.jpeg"
+        "imagenes/T14/T14-1.jpeg"
     ]
 },
+
+/* T13 */
 
 {
     codigo: "T13",
     nombre: "Prenda T13",
+    categoria: "ropa",
     imagenes: [
-        "imágenes/T13/T13-1.jpeg"
+        "imagenes/T13/T13-1.jpeg"
     ]
 },
+
+/* T12 */
 
 {
     codigo: "T12",
     nombre: "Prenda T12",
+    categoria: "ropa",
     imagenes: [
-        "imágenes/T12/T12-1.jpeg",
-        "imágenes/T12/T12-2.jpeg"
+        "imagenes/T12/T12-1.jpeg",
+        "imagenes/T12/T12-2.jpeg"
     ]
 },
+
+/* T11 */
 
 {
     codigo: "T11",
     nombre: "Prenda T11",
+    categoria: "ropa",
     imagenes: [
-        "imágenes/T11/T11-1.jpeg"
+        "imagenes/T11/T11-1.jpeg"
     ]
 },
+
+/* T10 */
 
 {
     codigo: "T10",
     nombre: "Prenda T10",
+    categoria: "ropa",
     imagenes: [
-        "imágenes/T10/T10-1.jpeg"
+        "imagenes/T10/T10-1.jpeg"
     ]
 },
+
+/* T9 */
 
 {
     codigo: "T9",
     nombre: "Prenda T9",
+    categoria: "ropa",
     imagenes: [
-        "imágenes/T9/T9-1.jpeg"
+        "imagenes/T9/T9-1.jpeg"
     ]
 },
+
+/* T8 */
 
 {
     codigo: "T8",
     nombre: "Prenda T8",
+    categoria: "ropa",
     imagenes: [
-        "imágenes/T8/T8-1.jpeg"
+        "imagenes/T8/T8-1.jpeg"
     ]
 },
+
+/* T7 */
 
 {
     codigo: "T7",
     nombre: "Prenda T7",
+    categoria: "ropa",
     imagenes: [
-        "imágenes/T7/T7-1.jpeg"
+        "imagenes/T7/T7-1.jpeg"
     ]
 },
+
+/* T6 */
 
 {
     codigo: "T6",
     nombre: "Prenda T6",
+    categoria: "ropa",
     imagenes: [
-        "imágenes/T6/T6-1.jpeg"
+        "imagenes/T6/T6-1.jpeg"
     ]
 },
+
+/* T5 */
 
 {
     codigo: "T5",
     nombre: "Prenda T5",
+    categoria: "ropa",
     imagenes: [
-        "imágenes/T5/T5-1.jpeg"
+        "imagenes/T5/T5-1.jpeg"
     ]
 },
+
+/* T3 */
 
 {
     codigo: "T3",
     nombre: "Prenda T3",
+    categoria: "ropa",
     imagenes: [
-        "imágenes/T3/T3-1.jpeg"
+        "imagenes/T3/T3-1.jpeg"
     ]
 },
+
+/* T1 */
 
 {
     codigo: "T1",
     nombre: "Prenda T1",
+    categoria: "ropa",
     imagenes: [
-        "imágenes/T1/T1-1.jpeg"
+        "imagenes/T1/T1-1.jpeg"
     ]
 },
+
+/* T35 */
 
 {
     codigo: "T35",
     nombre: "Prenda T35",
+    categoria: "ropa",
     imagenes: [
-        "imágenes/T35/T35-1.jpeg"
+        "imagenes/T35/T35-1.jpeg"
     ]
 },
+
+/* T36 */
 
 {
     codigo: "T36",
     nombre: "Prenda T36",
+    categoria: "ropa",
     imagenes: [
-        "imágenes/T36/T36-1.jpeg"
+        "imagenes/T36/T36-1.jpeg"
     ]
 },
+
+/* M1 */
 
 {
     codigo: "M1",
     nombre: "Prenda M1",
+    categoria: "ropa",
     imagenes: [
-        "imágenes/M1/M1-1.jpeg"
+        "imagenes/M1/M1-1.jpeg"
     ]
 },
+
+/* M3 */
 
 {
     codigo: "M3",
     nombre: "Prenda M3",
+    categoria: "ropa",
     imagenes: [
-        "imágenes/M3/M3-1.jpeg"
+        "imagenes/M3/M3-1.jpeg"
     ]
 },
+
+/* M5 */
 
 {
     codigo: "M5",
     nombre: "Prenda M5",
+    categoria: "ropa",
     imagenes: [
-        "imágenes/M5/M5-1.jpeg"
+        "imagenes/M5/M5-1.jpeg"
     ]
 },
+
+/* M6 */
 
 {
     codigo: "M6",
     nombre: "Prenda M6",
+    categoria: "ropa",
     imagenes: [
-        "imágenes/M6/M6-1.jpeg"
+        "imagenes/M6/M6-1.jpeg"
     ]
 },
+
+/* M2 */
 
 {
     codigo: "M2",
     nombre: "Prenda M2",
+    categoria: "ropa",
     imagenes: [
-        "imágenes/M2/M2-1.jpeg"
+        "imagenes/M2/M2-1.jpeg"
     ]
 },
+
+/* M4 */
 
 {
     codigo: "M4",
     nombre: "Prenda M4",
+    categoria: "ropa",
     imagenes: [
-        "imágenes/M4/M4-1.jpeg"
+        "imagenes/M4/M4-1.jpeg"
     ]
 }
 
 ];
 
 
-/* =========================
+/* =====================================================
    RENDERIZAR PRODUCTOS
-========================= */
+===================================================== */
 
 function renderProducts() {
 
@@ -1557,10 +1850,11 @@ function renderProducts() {
         const card =
             document.createElement("div");
 
-        card.className = "product";
+        card.className =
+            "product";
 
         card.dataset.category =
-            "ropa";
+            product.categoria;
 
         card.dataset.name =
             product.codigo +
@@ -1616,13 +1910,17 @@ function renderProducts() {
             </h3>
 
             <p class="product-description">
+
                 Prenda disponible.
                 Consultá disponibilidad,
                 tallas y colores por WhatsApp.
+
             </p>
 
             <div class="product-price">
+
                 Consultar precio
+
             </div>
 
             <div class="product-buttons">
@@ -1630,8 +1928,7 @@ function renderProducts() {
                 <button
                     class="add-cart"
                     onclick="addToCart(
-                        '${product.codigo} - ${product.nombre}',
-                        0
+                        '${product.codigo} - ${product.nombre}'
                     )">
 
                     🛒 Agregar
@@ -1643,9 +1940,7 @@ function renderProducts() {
                     class="whatsapp-button"
                     onclick="buyWhatsApp(
                         '${product.codigo}',
-                        '${product.nombre}',
-                        'Consultar',
-                        '${product.imagenes[0]}'
+                        '${product.nombre}'
                     )">
 
                     WhatsApp
@@ -1668,17 +1963,14 @@ function renderProducts() {
 }
 
 
-/* =========================
+/* =====================================================
    CARRITO
-========================= */
+===================================================== */
 
 let cart = [];
 
 
-function addToCart(
-    name,
-    price
-) {
+function addToCart(name) {
 
     const existingProduct =
         cart.find(
@@ -1696,8 +1988,6 @@ function addToCart(
         cart.push({
 
             name: name,
-
-            price: price,
 
             quantity: 1
 
@@ -1734,11 +2024,6 @@ function updateCart() {
             "cart-count"
         );
 
-    const cartTotal =
-        document.getElementById(
-            "cart-total"
-        );
-
 
     if (cart.length === 0) {
 
@@ -1748,9 +2033,6 @@ function updateCart() {
         cartCount.innerText =
             "0";
 
-        cartTotal.innerText =
-            "0";
-
         return;
 
     }
@@ -1758,22 +2040,11 @@ function updateCart() {
 
     let html = "";
 
-    let total = 0;
-
     let quantityTotal = 0;
 
 
     cart.forEach(
         (item, index) => {
-
-            const subtotal =
-                item.price *
-                item.quantity;
-
-
-            total +=
-                subtotal;
-
 
             quantityTotal +=
                 item.quantity;
@@ -1790,24 +2061,9 @@ function updateCart() {
                         </h4>
 
                         <p>
-
-                            ${
-                                item.price === 0
-                                ? "Precio a consultar"
-                                : "Bs " + item.price
-                            }
-
+                            Precio a consultar
                             × ${item.quantity}
-
                         </p>
-
-                        ${
-                            item.price > 0
-                            ? `<strong>
-                                Bs ${subtotal}
-                               </strong>`
-                            : ""
-                        }
 
                     </div>
 
@@ -1835,10 +2091,6 @@ function updateCart() {
     cartCount.innerText =
         quantityTotal;
 
-
-    cartTotal.innerText =
-        total;
-
 }
 
 
@@ -1860,15 +2112,13 @@ function closeCart() {
 }
 
 
-/* =========================
+/* =====================================================
    WHATSAPP INDIVIDUAL
-========================= */
+===================================================== */
 
 function buyWhatsApp(
     codigo,
-    name,
-    price,
-    imagen
+    name
 ) {
 
     const message =
@@ -1879,13 +2129,7 @@ function buyWhatsApp(
 
         `🆔 Código: ${codigo}\n` +
 
-        `🛍️ Producto: ${name}\n` +
-
-        `💰 Precio: ${price}\n\n` +
-
-        `🖼️ Imagen del producto:\n` +
-
-        `${imagen}\n\n` +
+        `🛍️ Producto: ${name}\n\n` +
 
         `¿Está disponible?`;
 
@@ -1907,9 +2151,9 @@ function buyWhatsApp(
 }
 
 
-/* =========================
-   WHATSAPP DEL CARRITO
-========================= */
+/* =====================================================
+   WHATSAPP CARRITO
+===================================================== */
 
 function checkoutWhatsApp() {
 
@@ -1928,7 +2172,7 @@ function checkoutWhatsApp() {
 
         "Hola, Elda Style 👋\n\n" +
 
-        "Quiero realizar el siguiente pedido:\n\n";
+        "Quiero consultar por las siguientes prendas:\n\n";
 
 
     cart.forEach(
@@ -1938,19 +2182,7 @@ function checkoutWhatsApp() {
 
                 `🛍️ ${item.name}\n` +
 
-                `Cantidad: ${item.quantity}\n` +
-
-                `Precio: ` +
-
-                `${
-                    item.price === 0
-                    ? "A consultar"
-                    : "Bs " +
-                      (
-                        item.price *
-                        item.quantity
-                      )
-                }\n\n`;
+                `Cantidad: ${item.quantity}\n\n`;
 
         }
     );
@@ -1958,7 +2190,7 @@ function checkoutWhatsApp() {
 
     message +=
 
-        "¿Me pueden confirmar disponibilidad, precio y forma de entrega?";
+        "¿Me pueden confirmar disponibilidad, precio, tallas y forma de entrega?";
 
 
     const url =
@@ -1978,9 +2210,9 @@ function checkoutWhatsApp() {
 }
 
 
-/* =========================
-   FILTRO
-========================= */
+/* =====================================================
+   FILTRO DE CATEGORÍAS
+===================================================== */
 
 function filterProducts(
     category,
@@ -1992,10 +2224,13 @@ function filterProducts(
             ".category-btn"
         )
         .forEach(
-            btn =>
+            btn => {
+
                 btn.classList.remove(
                     "active"
-                )
+                );
+
+            }
         );
 
 
@@ -2032,9 +2267,9 @@ function filterProducts(
 }
 
 
-/* =========================
+/* =====================================================
    BUSCADOR
-========================= */
+===================================================== */
 
 function searchProducts() {
 
@@ -2082,9 +2317,9 @@ function searchProducts() {
 }
 
 
-/* =========================
+/* =====================================================
    GALERÍA
-========================= */
+===================================================== */
 
 let galleryImages = [];
 
@@ -2095,7 +2330,7 @@ function openGallery(images) {
 
     galleryImages = [];
 
-    let pending =
+    let remaining =
         images.length;
 
 
@@ -2113,10 +2348,11 @@ function openGallery(images) {
                         src
                     );
 
-                    pending--;
+                    remaining--;
+
 
                     if (
-                        pending === 0
+                        remaining === 0
                     ) {
 
                         showGallery();
@@ -2129,10 +2365,11 @@ function openGallery(images) {
             test.onerror =
                 function() {
 
-                    pending--;
+                    remaining--;
+
 
                     if (
-                        pending === 0 &&
+                        remaining === 0 &&
                         galleryImages.length > 0
                     ) {
 
@@ -2157,6 +2394,10 @@ function showGallery() {
     if (
         galleryImages.length === 0
     ) {
+
+        alert(
+            "No se encontraron las imágenes de este producto."
+        );
 
         return;
 
@@ -2282,7 +2523,17 @@ function createThumbnails() {
 
 function nextImage() {
 
+    if (
+        galleryImages.length <= 1
+    ) {
+
+        return;
+
+    }
+
+
     currentImage++;
+
 
     if (
         currentImage >=
@@ -2293,6 +2544,7 @@ function nextImage() {
 
     }
 
+
     showGalleryImage();
 
 }
@@ -2300,7 +2552,17 @@ function nextImage() {
 
 function previousImage() {
 
+    if (
+        galleryImages.length <= 1
+    ) {
+
+        return;
+
+    }
+
+
     currentImage--;
+
 
     if (
         currentImage < 0
@@ -2311,14 +2573,15 @@ function previousImage() {
 
     }
 
+
     showGalleryImage();
 
 }
 
 
-/* =========================
+/* =====================================================
    CERRAR GALERÍA
-========================= */
+===================================================== */
 
 document
     .getElementById(
@@ -2340,9 +2603,9 @@ document
     );
 
 
-/* =========================
+/* =====================================================
    TECLADO
-========================= */
+===================================================== */
 
 document.addEventListener(
     "keydown",
@@ -2395,9 +2658,9 @@ document.addEventListener(
 );
 
 
-/* =========================
-   INICIALIZAR
-========================= */
+/* =====================================================
+   INICIAR
+===================================================== */
 
 renderProducts();
 
@@ -2405,5 +2668,7 @@ updateCart();
 
 </script>
 
+
 </body>
+
 </html>
