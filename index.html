@@ -1,2190 +1,3317 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#111111">
 
-<title>Elda Style | Moda que te inspira</title>
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Elda Style | Moda y Estilo</title>
+
+<meta
+    name="description"
+    content="Elda Style - Moda, estilo y elegancia para ti."
+>
+
 
 <style>
 
-:root{
-  --black:#111111;
-  --dark:#1b1b1b;
-  --pink:#e85d7a;
-  --cream:#faf7f4;
-  --line:#e9e3df;
-  --muted:#777;
-  --white:#fff;
-  --shadow:0 12px 35px rgba(0,0,0,.08);
-}
+/* =====================================================
+   CONFIGURACIÓN GENERAL
+===================================================== */
 
 *{
-  box-sizing:border-box;
-  margin:0;
-  padding:0;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
 html{
-  scroll-behavior:smooth;
+    scroll-behavior:smooth;
 }
 
 body{
-  font-family:Arial,Helvetica,sans-serif;
-  background:#fff;
-  color:var(--black);
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f8f8f8;
+    color:#222;
 }
 
-a{
-  text-decoration:none;
-  color:inherit;
-}
 
-button,input{
-  font:inherit;
-}
-
-/* =========================
+/* =====================================================
    HEADER
-========================= */
+===================================================== */
 
-.header{
-  position:sticky;
-  top:0;
-  z-index:1000;
-  background:rgba(17,17,17,.97);
-  color:#fff;
-  border-bottom:1px solid rgba(255,255,255,.08);
+header{
+    position:sticky;
+    top:0;
+    z-index:1000;
+
+    background:#111;
+    color:white;
+
+    box-shadow:0 3px 15px rgba(0,0,0,.25);
 }
 
-.header-inner{
-  max-width:1400px;
-  margin:auto;
-  padding:15px 28px;
-  display:flex;
-  align-items:center;
-  gap:30px;
+.navbar{
+    max-width:1200px;
+    min-height:70px;
+
+    margin:auto;
+    padding:12px 20px;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    gap:20px;
 }
 
-.brand{
-  display:flex;
-  align-items:center;
-  gap:10px;
-  min-width:220px;
+.logo{
+    color:#ff4f91;
+
+    text-decoration:none;
+
+    font-size:27px;
+    font-weight:bold;
+
+    letter-spacing:1px;
 }
 
-.brand-name{
-  font-family:Georgia,serif;
-  font-size:30px;
-  font-weight:700;
+.logo span{
+    color:white;
 }
 
-.brand-name span{
-  color:var(--pink);
+nav{
+    display:flex;
+    align-items:center;
+
+    gap:20px;
 }
 
-.brand-heart{
-  font-size:26px;
+nav a{
+    color:white;
+
+    text-decoration:none;
+
+    font-size:14px;
+    font-weight:bold;
+
+    transition:.2s;
 }
 
-.nav{
-  display:flex;
-  gap:30px;
-  align-items:center;
-  flex:1;
-  justify-content:center;
+nav a:hover{
+    color:#ff4f91;
 }
 
-.nav a{
-  font-size:14px;
-  color:#eee;
-  padding:10px 0;
-  border-bottom:2px solid transparent;
+.header-right{
+    display:flex;
+    align-items:center;
+
+    gap:10px;
 }
 
-.nav a:hover,
-.nav a.active{
-  color:#fff;
-  border-bottom-color:var(--pink);
+.search-box{
+    width:190px;
+    height:40px;
+
+    display:flex;
+    align-items:center;
+
+    background:white;
+
+    border-radius:25px;
+
+    overflow:hidden;
 }
 
-.header-search{
-  width:270px;
-  background:#2d2d2d;
-  border-radius:30px;
-  padding:11px 16px;
-  display:flex;
-  align-items:center;
-  gap:8px;
+.search-box input{
+    width:100%;
+    height:100%;
+
+    padding:0 13px;
+
+    border:0;
+    outline:none;
+
+    font-size:13px;
 }
 
-.header-search input{
-  width:100%;
-  border:0;
-  outline:0;
-  background:transparent;
-  color:#fff;
+.search-box button{
+    padding:10px 12px;
+
+    border:0;
+
+    background:white;
+
+    cursor:pointer;
 }
 
-.header-search input::placeholder{
-  color:#aaa;
-}
+.cart-button{
+    position:relative;
 
-.cart-btn{
-  border:0;
-  background:#fff;
-  color:#111;
-  border-radius:25px;
-  padding:10px 16px;
-  cursor:pointer;
-  font-weight:700;
-  position:relative;
+    width:43px;
+    height:43px;
+
+    border:0;
+
+    border-radius:50%;
+
+    background:#ff4f91;
+
+    color:white;
+
+    cursor:pointer;
+
+    font-size:18px;
 }
 
 .cart-count{
-  position:absolute;
-  right:-7px;
-  top:-7px;
-  width:22px;
-  height:22px;
-  border-radius:50%;
-  background:var(--pink);
-  color:#fff;
-  font-size:12px;
-  display:grid;
-  place-items:center;
+    position:absolute;
+
+    top:-5px;
+    right:-4px;
+
+    min-width:19px;
+    height:19px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border-radius:50%;
+
+    background:white;
+    color:#ff4f91;
+
+    font-size:11px;
+    font-weight:bold;
 }
 
-/* =========================
-   HERO
-========================= */
 
-.hero-wrap{
-  background:#111;
-}
+/* =====================================================
+   HERO / BANNER
+===================================================== */
 
 .hero{
-  width:100%;
-  max-width:1800px;
-  margin:auto;
-  min-height:510px;
 
-  background:
-    #242424
-    url("imagenes/fondo.png")
-    center/cover
-    no-repeat;
+    min-height:620px;
 
-  position:relative;
+    position:relative;
 
-  display:flex;
-  align-items:flex-end;
-  justify-content:center;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    text-align:center;
+
+    overflow:hidden;
+
+    background-color:#242424;
+
+    background-image:url(
+        "https://raw.githubusercontent.com/juancar533/elda-style/main/imagenes/fondo.png"
+    );
+
+    background-size:cover;
+
+    background-position:center;
+
+    background-repeat:no-repeat;
 }
 
-.hero-overlay{
-  position:absolute;
-  inset:0;
+.hero::before{
+    content:"";
 
-  background:
-    linear-gradient(
-      90deg,
-      rgba(0,0,0,.06),
-      rgba(255,255,255,0) 48%,
-      rgba(0,0,0,.05)
-    );
+    position:absolute;
+
+    inset:0;
+
+    background:rgba(0,0,0,.10);
+}
+
+.hero-content{
+    position:relative;
+
+    z-index:2;
+
+    max-width:750px;
+
+    padding:40px 20px;
+
+    color:white;
+}
+
+.hero-content h1{
+    margin-bottom:15px;
+
+    font-size:68px;
+
+    letter-spacing:2px;
+
+    text-shadow:
+        0 4px 15px rgba(0,0,0,.45);
+}
+
+.hero-content p{
+    margin-bottom:30px;
+
+    font-size:22px;
+
+    font-weight:bold;
+
+    text-shadow:
+        0 2px 7px rgba(0,0,0,.5);
 }
 
 .hero-button{
-  position:relative;
-  margin-bottom:38px;
+    display:inline-block;
 
-  background:var(--pink);
-  color:#fff;
+    padding:15px 32px;
 
-  border:0;
-  border-radius:30px;
+    border-radius:30px;
 
-  padding:15px 34px;
+    background:#ff4f91;
+    color:white;
 
-  font-weight:800;
+    text-decoration:none;
 
-  cursor:pointer;
+    font-weight:bold;
 
-  box-shadow:
-    0 8px 22px rgba(232,93,122,.35);
+    box-shadow:
+        0 7px 20px rgba(0,0,0,.25);
+
+    transition:.25s;
 }
 
-/* =========================
+.hero-button:hover{
+    background:#ff337f;
+
+    transform:translateY(-3px);
+}
+
+
+/* =====================================================
    BENEFICIOS
-========================= */
+===================================================== */
 
 .benefits{
-  background:var(--cream);
-  border-bottom:1px solid var(--line);
-}
+    max-width:1200px;
 
-.benefits-inner{
-  max-width:1400px;
-  margin:auto;
-  padding:22px 28px;
+    margin:auto;
 
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
+    display:grid;
+
+    grid-template-columns:
+        repeat(4,1fr);
+
+    background:#111;
+
+    color:white;
 }
 
 .benefit{
-  display:flex;
-  align-items:center;
-  gap:14px;
-  justify-content:center;
+    padding:18px 12px;
 
-  border-right:1px solid #ddd;
+    text-align:center;
+
+    border-right:1px solid #333;
 }
 
 .benefit:last-child{
-  border-right:0;
+    border-right:0;
 }
 
 .benefit-icon{
-  font-size:30px;
-  color:var(--pink);
+    margin-bottom:6px;
+
+    font-size:24px;
 }
 
 .benefit strong{
-  display:block;
-  font-size:15px;
+    display:block;
+
+    margin-bottom:4px;
+
+    color:#ff4f91;
 }
 
-.benefit small{
-  color:var(--muted);
-  font-size:12px;
+.benefit span{
+    color:#ddd;
+
+    font-size:12px;
 }
 
-/* =========================
+
+/* =====================================================
    SECCIONES
-========================= */
+===================================================== */
 
-.section{
-  max-width:1400px;
-  margin:auto;
-  padding:72px 28px;
+section{
+    padding:70px 20px;
 }
 
-.section-head{
-  text-align:center;
-  margin-bottom:32px;
+.section-container{
+    max-width:1200px;
+
+    margin:auto;
 }
 
-.eyebrow{
-  color:var(--pink);
-  font-size:12px;
-  font-weight:800;
-  letter-spacing:3px;
-  text-transform:uppercase;
+.section-title{
+    margin-bottom:35px;
+
+    text-align:center;
 }
 
-.section-head h2{
-  font-family:Georgia,serif;
-  font-size:40px;
-  margin:9px 0;
+.section-title h2{
+    margin-bottom:10px;
+
+    font-size:36px;
 }
 
-.section-head p{
-  color:var(--muted);
+.section-title p{
+    color:#777;
 }
 
-/* =========================
-   BUSCADOR Y CATEGORIAS
-========================= */
 
-.controls{
-  display:flex;
-  gap:12px;
-  justify-content:space-between;
-  align-items:center;
-  flex-wrap:wrap;
-  margin-bottom:28px;
-}
-
-.search-main{
-  flex:1;
-  min-width:240px;
-
-  border:1px solid var(--line);
-  border-radius:30px;
-
-  padding:14px 18px;
-
-  outline:0;
-}
+/* =====================================================
+   FILTROS
+===================================================== */
 
 .filters{
-  display:flex;
-  gap:8px;
-  flex-wrap:wrap;
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:10px;
+
+    margin-bottom:35px;
 }
 
-.filter{
-  border:1px solid #ddd;
-  background:#fff;
+.filter-btn{
+    padding:10px 20px;
 
-  border-radius:25px;
+    border:1px solid #ddd;
 
-  padding:10px 17px;
+    border-radius:25px;
 
-  cursor:pointer;
+    background:white;
+
+    color:#333;
+
+    cursor:pointer;
+
+    font-weight:bold;
+
+    transition:.2s;
 }
 
-.filter.active,
-.filter:hover{
-  background:#111;
-  color:#fff;
-  border-color:#111;
+.filter-btn:hover,
+.filter-btn.active{
+    border-color:#ff4f91;
+
+    background:#ff4f91;
+
+    color:white;
 }
 
-/* =========================
+
+/* =====================================================
    PRODUCTOS
-========================= */
+===================================================== */
 
-.products{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:24px;
+.products-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(4,1fr);
+
+    gap:22px;
 }
 
-.card{
-  background:#fff;
+.product-card{
 
-  border:1px solid #eee;
+    position:relative;
 
-  border-radius:18px;
+    overflow:hidden;
 
-  overflow:hidden;
+    background:white;
 
-  box-shadow:var(--shadow);
+    border-radius:15px;
 
-  transition:.25s;
+    box-shadow:
+        0 5px 20px rgba(0,0,0,.08);
+
+    transition:.25s;
 }
 
-.card:hover{
-  transform:translateY(-5px);
+.product-card:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:
+        0 12px 30px rgba(0,0,0,.14);
 }
 
-.photo{
-  height:350px;
-  background:#f0eeee;
+.product-image{
 
-  position:relative;
+    position:relative;
 
-  overflow:hidden;
+    height:310px;
+
+    overflow:hidden;
+
+    background:#f1f1f1;
 }
 
-.photo img{
-  width:100%;
-  height:100%;
+.product-image img{
 
-  object-fit:cover;
+    width:100%;
+    height:100%;
 
-  display:block;
+    display:block;
+
+    object-fit:cover;
+
+    cursor:zoom-in;
+
+    transition:.3s;
 }
 
-.photo .badge{
-  position:absolute;
+.product-image img:hover{
 
-  left:12px;
-  top:12px;
-
-  background:#fff;
-
-  border-radius:20px;
-
-  padding:7px 11px;
-
-  font-size:11px;
-
-  font-weight:800;
+    transform:scale(1.04);
 }
 
-.gallery{
-  position:absolute;
+.product-code{
 
-  inset:auto 10px 10px 10px;
+    position:absolute;
 
-  display:flex;
-  justify-content:space-between;
+    top:12px;
+    left:12px;
 
-  pointer-events:none;
+    z-index:5;
+
+    padding:6px 10px;
+
+    border-radius:15px;
+
+    background:#111;
+
+    color:white;
+
+    font-size:12px;
+
+    font-weight:bold;
 }
 
-.gallery button{
-  pointer-events:auto;
+.product-info{
 
-  width:34px;
-  height:34px;
-
-  border:0;
-
-  border-radius:50%;
-
-  background:rgba(255,255,255,.94);
-
-  cursor:pointer;
+    padding:17px;
 }
 
-.card-body{
-  padding:17px;
+.product-info h3{
+
+    margin-bottom:7px;
+
+    font-size:17px;
 }
 
-.code{
-  font-size:11px;
-  color:#999;
-  letter-spacing:1px;
-}
+.category{
 
-.name{
-  font-size:17px;
-  font-weight:800;
-  margin:6px 0;
+    margin-bottom:12px;
+
+    color:#888;
+
+    font-size:12px;
 }
 
 .price{
-  color:#777;
-  font-size:13px;
-  margin-bottom:14px;
+
+    margin-bottom:14px;
+
+    color:#ff4f91;
+
+    font-size:17px;
+
+    font-weight:bold;
 }
 
-.actions{
-  display:flex;
-  gap:8px;
+.product-buttons{
+
+    display:grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap:8px;
 }
 
-.actions button{
-  flex:1;
+.btn{
 
-  border:0;
+    padding:10px 8px;
 
-  border-radius:9px;
+    border:0;
 
-  padding:11px;
+    border-radius:8px;
 
-  cursor:pointer;
+    cursor:pointer;
 
-  font-weight:700;
+    font-size:12px;
+
+    font-weight:bold;
 }
 
-.add{
-  background:#111;
-  color:#fff;
+.btn-cart{
+
+    background:#111;
+
+    color:white;
 }
 
-.wa{
-  background:#25d366;
-  color:#fff;
+.btn-cart:hover{
+
+    background:#333;
 }
 
-/* =========================
-   PROMOCION
-========================= */
+.btn-whatsapp{
 
-.promo{
-  max-width:1400px;
-  margin:0 auto 70px;
+    background:#25D366;
 
-  padding:0 28px;
+    color:white;
 }
 
-.promo-box{
-  background:
-    linear-gradient(
-      120deg,
-      #171717,
-      #303030
-    );
+.btn-whatsapp:hover{
 
-  color:#fff;
-
-  border-radius:24px;
-
-  padding:42px 50px;
-
-  display:flex;
-
-  align-items:center;
-
-  justify-content:space-between;
-
-  gap:25px;
+    background:#1ebe5d;
 }
 
-.promo-box h3{
-  font-family:Georgia,serif;
 
-  font-size:32px;
+/* =====================================================
+   VISOR DE IMÁGENES
+===================================================== */
 
-  margin-bottom:8px;
+.image-viewer{
+
+    display:none;
+
+    position:fixed;
+
+    inset:0;
+
+    z-index:5000;
+
+    padding:25px;
+
+    background:
+        rgba(0,0,0,.94);
+
+    align-items:center;
+
+    justify-content:center;
 }
 
-.promo-box p{
-  color:#ddd;
+.image-viewer.show{
+
+    display:flex;
 }
 
-.promo-box button{
-  background:var(--pink);
+.image-viewer img{
 
-  border:0;
+    max-width:90%;
 
-  color:#fff;
+    max-height:88vh;
 
-  padding:13px 23px;
+    width:auto;
 
-  border-radius:25px;
+    height:auto;
 
-  font-weight:800;
+    object-fit:contain;
 
-  cursor:pointer;
+    border-radius:10px;
+
+    box-shadow:
+        0 0 40px rgba(0,0,0,.6);
+
+    cursor:default;
 }
 
-/* =========================
+.close-viewer{
+
+    position:absolute;
+
+    top:20px;
+    right:25px;
+
+    z-index:10;
+
+    width:48px;
+    height:48px;
+
+    border:0;
+
+    border-radius:50%;
+
+    background:#ff4f91;
+
+    color:white;
+
+    font-size:30px;
+
+    line-height:48px;
+
+    cursor:pointer;
+}
+
+.close-viewer:hover{
+
+    background:#ff337f;
+}
+
+.viewer-prev,
+.viewer-next{
+
+    position:absolute;
+
+    top:50%;
+
+    z-index:10;
+
+    transform:translateY(-50%);
+
+    width:52px;
+    height:52px;
+
+    border:0;
+
+    border-radius:50%;
+
+    background:#ff4f91;
+
+    color:white;
+
+    font-size:34px;
+
+    line-height:40px;
+
+    cursor:pointer;
+
+    box-shadow:
+        0 4px 15px rgba(0,0,0,.4);
+}
+
+.viewer-prev{
+
+    left:25px;
+}
+
+.viewer-next{
+
+    right:25px;
+}
+
+.viewer-prev:hover,
+.viewer-next:hover{
+
+    background:#ff337f;
+
+}
+
+.viewer-counter{
+
+    position:absolute;
+
+    bottom:20px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    z-index:10;
+
+    padding:8px 15px;
+
+    border-radius:20px;
+
+    background:rgba(0,0,0,.7);
+
+    color:white;
+
+    font-size:13px;
+}
+
+
+/* =====================================================
    NOSOTROS
-========================= */
+===================================================== */
 
 .about{
-  background:var(--cream);
+
+    background:white;
 }
 
 .about-grid{
-  max-width:1100px;
 
-  margin:auto;
+    display:grid;
 
-  display:grid;
+    grid-template-columns:
+        1fr 1fr;
 
-  grid-template-columns:1fr 1fr;
+    gap:50px;
 
-  gap:40px;
-
-  align-items:center;
+    align-items:center;
 }
 
-.about-card{
-  background:#fff;
+.about-box h2{
 
-  border-radius:20px;
+    margin-bottom:18px;
 
-  padding:35px;
-
-  box-shadow:var(--shadow);
+    font-size:35px;
 }
 
-.about-card h3{
-  font-family:Georgia,serif;
+.about-box p{
 
-  font-size:30px;
+    margin-bottom:15px;
 
-  margin-bottom:15px;
+    color:#666;
+
+    line-height:1.8;
 }
 
-.about-card p{
-  color:#666;
+.about-list{
 
-  line-height:1.8;
+    margin-top:20px;
+
+    list-style:none;
 }
 
-/* =========================
+.about-list li{
+
+    margin-bottom:12px;
+
+    font-weight:bold;
+}
+
+.about-list li::before{
+
+    content:"✓";
+
+    margin-right:10px;
+
+    color:#ff4f91;
+}
+
+.about-highlight{
+
+    padding:40px;
+
+    border-radius:20px;
+
+    background:#111;
+
+    color:white;
+
+    text-align:center;
+}
+
+.about-highlight h3{
+
+    margin-bottom:15px;
+
+    color:#ff4f91;
+
+    font-size:28px;
+}
+
+.about-highlight p{
+
+    color:#ddd;
+
+    line-height:1.7;
+}
+
+
+/* =====================================================
    CONTACTO
-========================= */
+===================================================== */
 
 .contact{
-  text-align:center;
+
+    background:#f3f3f3;
 }
 
-.contact-btn{
-  display:inline-block;
+.contact-grid{
 
-  margin-top:20px;
+    display:grid;
 
-  background:#25d366;
+    grid-template-columns:
+        repeat(3,1fr);
 
-  color:#fff;
-
-  padding:15px 30px;
-
-  border-radius:30px;
-
-  font-weight:800;
+    gap:20px;
 }
 
-/* =========================
-   FOOTER
-========================= */
+.contact-card{
 
-footer{
-  background:#111;
+    padding:30px 20px;
 
-  color:#fff;
+    background:white;
 
-  padding:40px 28px;
+    border-radius:15px;
 
-  text-align:center;
+    box-shadow:
+        0 4px 15px rgba(0,0,0,.06);
+
+    text-align:center;
 }
 
-footer .footer-brand{
-  font-family:Georgia,serif;
+.contact-card .icon{
 
-  font-size:27px;
+    margin-bottom:12px;
+
+    font-size:30px;
 }
 
-footer span{
-  color:var(--pink);
+.contact-card h3{
+
+    margin-bottom:8px;
 }
 
-footer p{
-  color:#aaa;
+.contact-card p{
 
-  margin-top:9px;
-
-  font-size:13px;
+    color:#777;
 }
 
-/* =========================
+.contact-card a{
+
+    color:#ff4f91;
+
+    text-decoration:none;
+
+    font-weight:bold;
+}
+
+
+/* =====================================================
    CARRITO
-========================= */
+===================================================== */
 
-.overlay{
-  position:fixed;
+.cart-overlay{
 
-  inset:0;
+    display:none;
 
-  background:rgba(0,0,0,.45);
+    position:fixed;
 
-  z-index:1900;
+    inset:0;
 
-  display:none;
+    z-index:2000;
+
+    background:
+        rgba(0,0,0,.55);
 }
 
-.overlay.show{
-  display:block;
+.cart-overlay.show{
+
+    display:block;
 }
 
-.cart{
-  position:fixed;
+.cart-panel{
 
-  right:-430px;
+    position:absolute;
 
-  top:0;
+    top:0;
+    right:0;
 
-  width:420px;
+    width:400px;
 
-  max-width:100%;
+    max-width:95%;
 
-  height:100vh;
+    height:100%;
 
-  background:#fff;
+    padding:25px;
 
-  z-index:2000;
+    overflow-y:auto;
 
-  transition:.3s;
+    background:white;
 
-  padding:25px;
-
-  overflow:auto;
+    box-shadow:
+        -5px 0 20px rgba(0,0,0,.2);
 }
 
-.cart.open{
-  right:0;
+.cart-header{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    margin-bottom:25px;
 }
 
-.cart-head{
-  display:flex;
+.cart-header h2{
 
-  justify-content:space-between;
-
-  align-items:center;
-
-  margin-bottom:20px;
+    font-size:24px;
 }
 
-.cart-head h3{
-  font-family:Georgia,serif;
+.close-cart{
 
-  font-size:27px;
-}
+    width:35px;
+    height:35px;
 
-.close{
-  border:0;
+    border:0;
 
-  background:none;
+    border-radius:50%;
 
-  font-size:30px;
+    background:#eee;
 
-  cursor:pointer;
+    cursor:pointer;
+
+    font-size:18px;
 }
 
 .cart-item{
-  display:flex;
 
-  gap:12px;
+    display:flex;
 
-  padding:14px 0;
+    gap:12px;
 
-  border-bottom:1px solid #eee;
+    padding:12px 0;
+
+    border-bottom:1px solid #eee;
 }
 
 .cart-item img{
-  width:72px;
 
-  height:88px;
+    width:65px;
+    height:75px;
 
-  object-fit:cover;
+    object-fit:cover;
 
-  border-radius:10px;
+    border-radius:8px;
+
+    background:#eee;
 }
 
 .cart-item-info{
-  flex:1;
+
+    flex:1;
 }
 
 .cart-item-info strong{
-  display:block;
+
+    display:block;
+
+    margin-bottom:6px;
 }
 
 .cart-item-info small{
-  color:#777;
+
+    color:#888;
 }
 
-.remove{
-  margin-top:8px;
+.remove-item{
 
-  border:0;
+    border:0;
 
-  background:#eee;
+    background:none;
 
-  border-radius:7px;
+    color:#e53935;
 
-  padding:6px 10px;
+    cursor:pointer;
+}
 
-  cursor:pointer;
+.cart-total{
+
+    margin-top:25px;
+
+    padding-top:20px;
+
+    border-top:2px solid #eee;
+
+    font-size:20px;
+
+    font-weight:bold;
 }
 
 .checkout{
-  width:100%;
 
-  margin-top:22px;
+    width:100%;
 
-  border:0;
+    margin-top:20px;
 
-  border-radius:10px;
+    padding:14px;
 
-  background:#25d366;
+    border:0;
 
-  color:#fff;
+    border-radius:8px;
 
-  padding:14px;
+    background:#25D366;
 
-  font-weight:800;
+    color:white;
 
-  cursor:pointer;
+    cursor:pointer;
+
+    font-size:15px;
+
+    font-weight:bold;
 }
 
-.empty{
-  color:#888;
+.empty-cart{
 
-  padding:30px 0;
+    padding:40px 10px;
 
-  text-align:center;
+    color:#888;
+
+    text-align:center;
 }
 
-/* =========================
+
+/* =====================================================
    WHATSAPP
-========================= */
+===================================================== */
 
-.float-wa{
-  position:fixed;
+.whatsapp-float{
 
-  right:22px;
+    position:fixed;
 
-  bottom:22px;
+    right:20px;
+    bottom:20px;
 
-  width:58px;
+    z-index:1500;
 
-  height:58px;
+    width:58px;
+    height:58px;
 
-  border-radius:50%;
+    display:flex;
 
-  display:grid;
+    align-items:center;
+    justify-content:center;
 
-  place-items:center;
+    border-radius:50%;
 
-  background:#25d366;
+    background:#25D366;
 
-  color:#fff;
+    color:white;
 
-  font-size:26px;
+    text-decoration:none;
 
-  z-index:1500;
+    font-size:29px;
 
-  box-shadow:0 8px 20px rgba(0,0,0,.2);
+    box-shadow:
+        0 5px 20px rgba(0,0,0,.25);
+
+    transition:.25s;
 }
 
-/* =========================
+.whatsapp-float:hover{
+
+    transform:scale(1.08);
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer{
+
+    padding:40px 20px;
+
+    background:#111;
+
+    color:white;
+
+    text-align:center;
+}
+
+.footer-logo{
+
+    margin-bottom:10px;
+
+    color:#ff4f91;
+
+    font-size:25px;
+
+    font-weight:bold;
+}
+
+footer p{
+
+    margin:5px;
+
+    color:#aaa;
+
+    font-size:13px;
+}
+
+
+/* =====================================================
    RESPONSIVE
-========================= */
+===================================================== */
 
-.mobile-menu{
-  display:none;
+@media(max-width:1000px){
 
-  border:0;
+    .products-grid{
 
-  background:none;
+        grid-template-columns:
+            repeat(3,1fr);
+    }
 
-  color:#fff;
+    .benefits{
 
-  font-size:26px;
-}
-
-@media(max-width:1100px){
-
-  .nav{
-    gap:18px;
-  }
-
-  .header-search{
-    width:210px;
-  }
-
-  .products{
-    grid-template-columns:repeat(3,1fr);
-  }
+        grid-template-columns:
+            repeat(2,1fr);
+    }
 
 }
 
-@media(max-width:800px){
 
-  .header-inner{
-    padding:12px 16px;
-  }
+@media(max-width:750px){
 
-  .brand{
-    min-width:0;
-  }
+    .navbar{
 
-  .brand-name{
-    font-size:24px;
-  }
+        flex-wrap:wrap;
 
-  .mobile-menu{
-    display:block;
-  }
+        justify-content:center;
+    }
 
-  .nav{
-    display:none;
-  }
+    .logo{
 
-  .header-search{
-    display:none;
-  }
+        width:100%;
 
-  .benefits-inner{
-    grid-template-columns:1fr 1fr;
-    gap:16px;
-  }
+        text-align:center;
+    }
 
-  .benefit{
-    border-right:0;
-  }
+    nav{
 
-  .products{
-    grid-template-columns:repeat(2,1fr);
-    gap:14px;
-  }
+        order:3;
 
-  .photo{
-    height:280px;
-  }
+        width:100%;
 
-  .about-grid{
-    grid-template-columns:1fr;
-  }
+        justify-content:center;
 
-  .promo-box{
-    padding:30px;
+        gap:14px;
+    }
 
-    flex-direction:column;
+    nav a{
 
-    align-items:flex-start;
-  }
+        font-size:12px;
+    }
+
+    .header-right{
+
+        width:100%;
+
+        justify-content:center;
+    }
+
+    .search-box{
+
+        width:230px;
+    }
+
+    .hero{
+
+        min-height:500px;
+    }
+
+    .hero-content h1{
+
+        font-size:45px;
+    }
+
+    .hero-content p{
+
+        font-size:17px;
+    }
+
+    .products-grid{
+
+        grid-template-columns:
+            repeat(2,1fr);
+
+        gap:13px;
+    }
+
+    .product-image{
+
+        height:260px;
+    }
+
+    .about-grid{
+
+        grid-template-columns:1fr;
+    }
+
+    .contact-grid{
+
+        grid-template-columns:1fr;
+    }
+
+    .image-viewer img{
+
+        max-width:95%;
+
+        max-height:80vh;
+    }
+
+    .viewer-prev,
+    .viewer-next{
+
+        width:44px;
+
+        height:44px;
+
+        font-size:27px;
+    }
+
+    .viewer-prev{
+
+        left:8px;
+    }
+
+    .viewer-next{
+
+        right:8px;
+    }
 
 }
 
-@media(max-width:500px){
 
-  .hero{
-    min-height:430px;
-  }
+@media(max-width:480px){
 
-  .benefits-inner{
-    grid-template-columns:1fr;
-  }
+    section{
 
-  .section{
-    padding:55px 16px;
-  }
+        padding:50px 13px;
+    }
 
-  .section-head h2{
-    font-size:32px;
-  }
+    .hero{
 
-  .products{
-    grid-template-columns:1fr 1fr;
-  }
+        min-height:440px;
+    }
 
-  .photo{
-    height:230px;
-  }
+    .hero-content h1{
 
-  .card-body{
-    padding:12px;
-  }
+        font-size:38px;
+    }
 
-  .name{
-    font-size:14px;
-  }
+    .hero-content p{
 
-  .actions{
-    flex-direction:column;
-  }
+        font-size:15px;
+    }
 
-  .promo{
-    padding:0 16px;
-  }
+    .benefit{
 
-  .promo-box h3{
-    font-size:26px;
-  }
+        padding:14px 7px;
+    }
 
+    .benefit-icon{
+
+        font-size:20px;
+    }
+
+    .benefit span{
+
+        font-size:10px;
+    }
+
+    .products-grid{
+
+        grid-template-columns:
+            repeat(2,1fr);
+    }
+
+    .product-image{
+
+        height:220px;
+    }
+
+    .product-info{
+
+        padding:12px;
+    }
+
+    .product-info h3{
+
+        font-size:14px;
+    }
+
+    .product-buttons{
+
+        grid-template-columns:1fr;
+    }
+
+    .btn{
+
+        padding:9px 5px;
+    }
+
+    .cart-panel{
+
+        width:100%;
+    }
+
+    .image-viewer{
+
+        padding:10px;
+    }
+
+    .close-viewer{
+
+        top:10px;
+
+        right:10px;
+
+        width:42px;
+
+        height:42px;
+
+        line-height:42px;
+
+        font-size:25px;
+    }
+
+}
+
+
+/* =====================================================
+   EVITAR SELECCIÓN ACCIDENTAL EN VISOR
+===================================================== */
+
+.image-viewer,
+.image-viewer img,
+.viewer-prev,
+.viewer-next,
+.close-viewer{
+
+    user-select:none;
+
+    -webkit-user-select:none;
 }
 
 </style>
+
 </head>
+
 
 <body>
 
-<!-- =========================
+
+<!-- =====================================================
      HEADER
-========================= -->
+===================================================== -->
 
-<header class="header">
+<header>
 
-  <div class="header-inner">
-
-    <a class="brand" href="#inicio">
-
-      <div class="brand-name">
-        Elda <span>Style</span>
-      </div>
-
-      <div class="brand-heart">
-        ♡
-      </div>
-
-    </a>
+<div class="navbar">
 
 
-    <nav class="nav">
-
-      <a class="active" href="#inicio">
-        Inicio
-      </a>
-
-      <a href="#productos">
-        Productos
-      </a>
-
-      <a href="#nosotros">
-        Nosotros
-      </a>
-
-      <a href="#contacto">
-        Contacto
-      </a>
-
-    </nav>
+<a
+    href="#inicio"
+    class="logo"
+>
+    Elda <span>Style</span>
+</a>
 
 
-    <div class="header-search">
+<nav>
 
-      🔎
+<a href="#inicio">
+    Inicio
+</a>
 
-      <input
-        id="topSearch"
-        placeholder="Buscar por código..."
-        oninput="syncSearch(this.value)"
-      >
+<a href="#productos">
+    Productos
+</a>
 
-    </div>
+<a href="#nosotros">
+    Nosotros
+</a>
 
+<a href="#contacto">
+    Contacto
+</a>
 
-    <button
-      class="cart-btn"
-      onclick="openCart()">
-
-      🛒
-
-      <span
-        class="cart-count"
-        id="cartCount">
-
-        0
-
-      </span>
-
-    </button>
+</nav>
 
 
-    <button
-      class="mobile-menu"
-      onclick="document.getElementById('productos').scrollIntoView({behavior:'smooth'})">
+<div class="header-right">
 
-      ☰
 
-    </button>
+<div class="search-box">
 
-  </div>
+<input
+    type="text"
+    id="searchInput"
+    placeholder="Buscar producto..."
+    onkeyup="buscarProductos()"
+>
+
+<button
+    onclick="buscarProductos()"
+>
+    🔍
+</button>
+
+</div>
+
+
+<button
+    class="cart-button"
+    onclick="abrirCarrito()"
+>
+
+🛒
+
+<span
+    class="cart-count"
+    id="cartCount"
+>
+0
+</span>
+
+</button>
+
+
+</div>
+
+</div>
 
 </header>
 
 
-<!-- =========================
-     INICIO
-========================= -->
 
-<main id="inicio">
+<!-- =====================================================
+     HERO
+===================================================== -->
 
+<section
+    class="hero"
+    id="inicio"
+>
 
-  <!-- HERO -->
+<div class="hero-content">
 
-  <section class="hero-wrap">
+<h1>
+Elda Style
+</h1>
 
-    <div class="hero">
+<p>
+MODA, ESTILO Y ELEGANCIA PARA TI
+</p>
 
-      <div class="hero-overlay"></div>
+<a
+    href="#productos"
+    class="hero-button"
+>
+Ver colección
+</a>
 
-      <button
-        class="hero-button"
-        onclick="document.getElementById('productos').scrollIntoView({behavior:'smooth'})">
+</div>
 
-        Ver colección →
+</section>
 
-      </button>
 
-    </div>
 
-  </section>
+<!-- =====================================================
+     BENEFICIOS
+===================================================== -->
 
+<div class="benefits">
 
-  <!-- BENEFICIOS -->
 
-  <section class="benefits">
+<div class="benefit">
 
-    <div class="benefits-inner">
+<div class="benefit-icon">
+✨
+</div>
 
-      <div class="benefit">
+<strong>
+Moda
+</strong>
 
-        <div class="benefit-icon">
-          🚚
-        </div>
+<span>
+Estilos para ti
+</span>
 
-        <div>
-          <strong>
-            Envíos seguros
-          </strong>
+</div>
 
-          <small>
-            A todo el país
-          </small>
-        </div>
 
-      </div>
+<div class="benefit">
 
+<div class="benefit-icon">
+💖
+</div>
 
-      <div class="benefit">
+<strong>
+Calidad
+</strong>
 
-        <div class="benefit-icon">
-          ♡
-        </div>
+<span>
+Prendas seleccionadas
+</span>
 
-        <div>
+</div>
 
-          <strong>
-            Calidad garantizada
-          </strong>
 
-          <small>
-            Ropa seleccionada
-          </small>
+<div class="benefit">
 
-        </div>
+<div class="benefit-icon">
+📱
+</div>
 
-      </div>
+<strong>
+Pedidos
+</strong>
 
+<span>
+Directamente por WhatsApp
+</span>
 
-      <div class="benefit">
+</div>
 
-        <div class="benefit-icon">
-          ▣
-        </div>
 
-        <div>
+<div class="benefit">
 
-          <strong>
-            Pagos fáciles
-          </strong>
+<div class="benefit-icon">
+🚚
+</div>
 
-          <small>
-            Múltiples opciones
-          </small>
+<strong>
+Atención
+</strong>
 
-        </div>
+<span>
+Consulta disponibilidad
+</span>
 
-      </div>
+</div>
 
 
-      <div class="benefit">
+</div>
 
-        <div class="benefit-icon">
-          ♧
-        </div>
 
-        <div>
 
-          <strong>
-            Atención personalizada
-          </strong>
+<!-- =====================================================
+     PRODUCTOS
+===================================================== -->
 
-          <small>
-            Siempre para ti
-          </small>
+<section
+    id="productos"
+>
 
-        </div>
+<div class="section-container">
 
-      </div>
 
-    </div>
+<div class="section-title">
 
-  </section>
+<h2>
+Nuestra colección
+</h2>
 
+<p>
+Encuentra tu próximo estilo en Elda Style
+</p>
 
-  <!-- PRODUCTOS -->
+</div>
 
-  <section
-    class="section"
-    id="productos">
 
-    <div class="section-head">
+<div class="filters">
 
-      <div class="eyebrow">
-        Nueva colección
-      </div>
 
-      <h2>
-        Encuentra tu estilo
-      </h2>
+<button
+    class="filter-btn active"
+    onclick="filtrarCategoria('todos',this)"
+>
+Todos
+</button>
 
-      <p>
-        Explora nuestras prendas y consulta disponibilidad directamente por WhatsApp.
-      </p>
 
-    </div>
+<button
+    class="filter-btn"
+    onclick="filtrarCategoria('ropa',this)"
+>
+Ropa
+</button>
 
 
-    <div class="controls">
+<button
+    class="filter-btn"
+    onclick="filtrarCategoria('calzado',this)"
+>
+Calzado
+</button>
 
-      <input
-        class="search-main"
-        id="search"
-        placeholder="🔎 Buscar por código o producto..."
-        oninput="renderProducts()"
-      >
 
+<button
+    class="filter-btn"
+    onclick="filtrarCategoria('accesorios',this)"
+>
+Accesorios
+</button>
 
-      <div class="filters">
 
-        <button
-          class="filter active"
-          onclick="setCategory('todos',this)">
+</div>
 
-          Todos
 
-        </button>
+<div
+    class="products-grid"
+    id="productsGrid"
+>
+</div>
 
 
-        <button
-          class="filter"
-          onclick="setCategory('ropa',this)">
+</div>
 
-          Ropa
+</section>
 
-        </button>
 
 
-        <button
-          class="filter"
-          onclick="setCategory('calzado',this)">
+<!-- =====================================================
+     NOSOTROS
+===================================================== -->
 
-          Calzado
-
-        </button>
-
-
-        <button
-          class="filter"
-          onclick="setCategory('accesorios',this)">
-
-          Accesorios
-
-        </button>
-
-      </div>
-
-    </div>
-
-
-    <div
-      class="products"
-      id="products">
-
-    </div>
-
-  </section>
-
-
-  <!-- PROMOCION -->
-
-  <div class="promo">
-
-    <div class="promo-box">
-
-      <div>
-
-        <h3>
-          Tu próximo look empieza aquí.
-        </h3>
-
-        <p>
-          Consulta tallas, colores, disponibilidad y precio por WhatsApp.
-        </p>
-
-      </div>
-
-
-      <button
-        onclick="window.open('https://wa.me/59162131042','_blank')">
-
-        Hablar por WhatsApp
-
-      </button>
-
-    </div>
-
-  </div>
-
-
-  <!-- NOSOTROS -->
-
-  <section
+<section
     class="about"
-    id="nosotros">
+    id="nosotros"
+>
 
-    <div class="section">
-
-      <div class="section-head">
-
-        <div class="eyebrow">
-          Conócenos
-        </div>
-
-        <h2>
-          Sobre Elda Style
-        </h2>
-
-      </div>
+<div class="section-container">
 
 
-      <div class="about-grid">
-
-        <div class="about-card">
-
-          <h3>
-            Moda que te inspira
-          </h3>
-
-          <p>
-            Seleccionamos prendas para que puedas encontrar
-            opciones modernas, cómodas y con personalidad.
-            Elda Style nace para hacer más fácil descubrir
-            tu próximo look.
-          </p>
-
-        </div>
+<div class="about-grid">
 
 
-        <div class="about-card">
+<div class="about-box">
 
-          <h3>
-            Compra de forma sencilla
-          </h3>
-
-          <p>
-            Elige tus productos, agrégalos al carrito y
-            envíanos tu pedido por WhatsApp.
-            Nosotros te confirmamos disponibilidad y precio.
-          </p>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
+<h2>
+Sobre Elda Style
+</h2>
 
 
-  <!-- CONTACTO -->
-
-  <section
-    class="section contact"
-    id="contacto">
-
-    <div class="eyebrow">
-      Estamos para ayudarte
-    </div>
+<p>
+En Elda Style buscamos ofrecer prendas modernas,
+elegantes y con estilo para que puedas encontrar
+tu look ideal.
+</p>
 
 
-    <h2
-      style="
-        font-family:Georgia,serif;
-        font-size:38px;
-        margin-top:8px;
-      ">
-
-      ¿Tienes alguna consulta?
-
-    </h2>
+<p>
+Nuestra tienda está pensada para que puedas
+ver nuestros productos fácilmente y realizar
+tu consulta directamente por WhatsApp.
+</p>
 
 
-    <p
-      style="
-        color:#777;
-        margin-top:10px;
-      ">
+<ul class="about-list">
 
-      Escríbenos y te atendemos directamente.
+<li>
+Moda y estilo
+</li>
 
-    </p>
+<li>
+Atención personalizada
+</li>
 
+<li>
+Pedidos por WhatsApp
+</li>
 
-    <a
-      class="contact-btn"
-      href="https://wa.me/59162131042"
-      target="_blank">
+<li>
+Productos seleccionados
+</li>
 
-      💬 Contactar por WhatsApp
+</ul>
 
-    </a>
-
-  </section>
-
-</main>
+</div>
 
 
-<!-- =========================
+<div class="about-highlight">
+
+<h3>
+Moda que te inspira
+</h3>
+
+<p>
+Tu estilo habla por ti.
+Descubre prendas que se adapten a tu personalidad
+y crea tu propio estilo con Elda Style.
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CONTACTO
+===================================================== -->
+
+<section
+    class="contact"
+    id="contacto"
+>
+
+<div class="section-container">
+
+
+<div class="section-title">
+
+<h2>
+Contáctanos
+</h2>
+
+<p>
+Estamos para ayudarte con tu pedido
+</p>
+
+</div>
+
+
+<div class="contact-grid">
+
+
+<div class="contact-card">
+
+<div class="icon">
+📱
+</div>
+
+<h3>
+WhatsApp
+</h3>
+
+<p>
+
+<a
+    href="https://wa.me/59162131042"
+    target="_blank"
+>
+62131042
+</a>
+
+</p>
+
+</div>
+
+
+<div class="contact-card">
+
+<div class="icon">
+🛍️
+</div>
+
+<h3>
+Pedidos
+</h3>
+
+<p>
+Consulta disponibilidad, tallas y precios.
+</p>
+
+</div>
+
+
+<div class="contact-card">
+
+<div class="icon">
+💖
+</div>
+
+<h3>
+Elda Style
+</h3>
+
+<p>
+Moda, estilo y elegancia para ti.
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CARRITO
+===================================================== -->
+
+<div
+    class="cart-overlay"
+    id="cartOverlay"
+    onclick="cerrarCarrito(event)"
+>
+
+<div
+    class="cart-panel"
+    onclick="event.stopPropagation()"
+>
+
+
+<div class="cart-header">
+
+<h2>
+Mi carrito
+</h2>
+
+<button
+    class="close-cart"
+    onclick="cerrarCarrito()"
+>
+×
+</button>
+
+</div>
+
+
+<div id="cartItems">
+</div>
+
+
+<div class="cart-total">
+
+Productos:
+
+<span id="cartTotal">
+0
+</span>
+
+</div>
+
+
+<button
+    class="checkout"
+    onclick="enviarCarritoWhatsApp()"
+>
+📱 Pedir por WhatsApp
+</button>
+
+
+</div>
+
+</div>
+
+
+
+<!-- =====================================================
+     VISOR DE IMÁGENES
+===================================================== -->
+
+<div
+    class="image-viewer"
+    id="imageViewer"
+    onclick="cerrarVisor(event)"
+>
+
+
+<button
+    class="close-viewer"
+    onclick="cerrarVisor()"
+    aria-label="Cerrar imagen"
+>
+×
+</button>
+
+
+<button
+    class="viewer-prev"
+    id="viewerPrev"
+    onclick="imagenAnterior(event)"
+    aria-label="Imagen anterior"
+>
+‹
+</button>
+
+
+<img
+    id="viewerImage"
+    src=""
+    alt="Imagen ampliada del producto"
+>
+
+
+<button
+    class="viewer-next"
+    id="viewerNext"
+    onclick="imagenSiguiente(event)"
+    aria-label="Imagen siguiente"
+>
+›
+</button>
+
+
+<div
+    class="viewer-counter"
+    id="viewerCounter"
+>
+</div>
+
+
+</div>
+
+
+
+<!-- =====================================================
+     WHATSAPP FLOTANTE
+===================================================== -->
+
+<a
+    href="https://wa.me/59162131042"
+    target="_blank"
+    class="whatsapp-float"
+    title="Escribir por WhatsApp"
+>
+☎
+</a>
+
+
+
+<!-- =====================================================
      FOOTER
-========================= -->
+===================================================== -->
 
 <footer>
 
-  <div class="footer-brand">
+<div class="footer-logo">
+Elda Style
+</div>
 
-    Elda <span>Style</span> ♡
+<p>
+Moda, estilo y elegancia para ti
+</p>
 
-  </div>
-
-  <p>
-    Moda, estilo y elegancia para ti · © 2026 Elda Style
-  </p>
+<p>
+© 2026 Elda Style - Todos los derechos reservados
+</p>
 
 </footer>
 
 
-<!-- =========================
-     CARRITO
-========================= -->
-
-<div
-  class="overlay"
-  id="overlay"
-  onclick="closeCart()">
-</div>
-
-
-<aside
-  class="cart"
-  id="cart">
-
-  <div class="cart-head">
-
-    <h3>
-      Mi carrito
-    </h3>
-
-    <button
-      class="close"
-      onclick="closeCart()">
-
-      ×
-
-    </button>
-
-  </div>
-
-
-  <div id="cartItems"></div>
-
-
-  <button
-    class="checkout"
-    onclick="checkout()">
-
-    🟢 Pedir por WhatsApp
-
-  </button>
-
-</aside>
-
-
-<!-- WHATSAPP FLOTANTE -->
-
-<a
-  class="float-wa"
-  href="https://wa.me/59162131042"
-  target="_blank"
-  aria-label="WhatsApp">
-
-  ◉
-
-</a>
-
 
 <script>
 
-/* =========================
-   WHATSAPP
-========================= */
 
-const WHATSAPP = "59162131042";
+/* =====================================================
+   CONFIGURACIÓN
+===================================================== */
+
+const WHATSAPP =
+    "59162131042";
 
 
-/* =========================
+/*
+   IMPORTANTE:
+   Las imágenes están en la rama MAIN.
+*/
+
+const RAW_BASE =
+    "https://raw.githubusercontent.com/juancar533/elda-style/main/imagenes/";
+
+
+/* =====================================================
    PRODUCTOS
-========================= */
+===================================================== */
 
-const products = [
+const productos = [
 
-  ["T1","Prenda T1",
-    ["imagenes/T1/T1-1.jpeg"]],
+{
+    codigo:"T1",
+    nombre:"Prenda T1",
+    categoria:"ropa",
+    imagenes:[
+        "T1/T1-1.jpeg"
+    ]
+},
 
-  ["T2","Prenda T2",
-    [
-      "imagenes/T2/T2-1.jpeg",
-      "imagenes/T2/T2-2.jpeg"
-    ]],
+{
+    codigo:"T2",
+    nombre:"Prenda T2",
+    categoria:"ropa",
+    imagenes:[
+        "T2/T2-1.jpeg",
+        "T2/T2-2.jpeg"
+    ]
+},
 
-  ["T3","Prenda T3",
-    ["imagenes/T3/T3-1.jpeg"]],
+{
+    codigo:"T3",
+    nombre:"Prenda T3",
+    categoria:"ropa",
+    imagenes:[
+        "T3/T3-1.jpeg"
+    ]
+},
 
-  ["T4","Prenda T4",
-    ["imagenes/T4/T4-1.jpeg"]],
+{
+    codigo:"T4",
+    nombre:"Prenda T4",
+    categoria:"ropa",
+    imagenes:[
+        "T4/T4-1.jpeg"
+    ]
+},
 
-  ["T5","Prenda T5",
-    ["imagenes/T5/T5-1.jpeg"]],
+{
+    codigo:"T5",
+    nombre:"Prenda T5",
+    categoria:"ropa",
+    imagenes:[
+        "T5/T5-1.jpeg"
+    ]
+},
 
-  ["T6","Prenda T6",
-    ["imagenes/T6/T6-1.jpeg"]],
+{
+    codigo:"T6",
+    nombre:"Prenda T6",
+    categoria:"ropa",
+    imagenes:[
+        "T6/T6-1.jpeg"
+    ]
+},
 
-  ["T7","Prenda T7",
-    ["imagenes/T7/T7-1.jpeg"]],
+{
+    codigo:"T7",
+    nombre:"Prenda T7",
+    categoria:"ropa",
+    imagenes:[
+        "T7/T7-1.jpeg"
+    ]
+},
 
-  ["T8","Prenda T8",
-    ["imagenes/T8/T8-1.jpeg"]],
+{
+    codigo:"T8",
+    nombre:"Prenda T8",
+    categoria:"ropa",
+    imagenes:[
+        "T8/T8-1.jpeg"
+    ]
+},
 
-  ["T9","Prenda T9",
-    ["imagenes/T9/T9-1.jpeg"]],
+{
+    codigo:"T9",
+    nombre:"Prenda T9",
+    categoria:"ropa",
+    imagenes:[
+        "T9/T9-1.jpeg"
+    ]
+},
 
-  ["T10","Prenda T10",
-    ["imagenes/T10/T10-1.jpeg"]],
+{
+    codigo:"T10",
+    nombre:"Prenda T10",
+    categoria:"ropa",
+    imagenes:[
+        "T10/T10-1.jpeg"
+    ]
+},
 
-  ["T11","Prenda T11",
-    ["imagenes/T11/T11-1.jpeg"]],
+{
+    codigo:"T11",
+    nombre:"Prenda T11",
+    categoria:"ropa",
+    imagenes:[
+        "T11/T11-1.jpeg"
+    ]
+},
 
-  ["T12","Prenda T12",
-    [
-      "imagenes/T12/T12-1.jpeg",
-      "imagenes/T12/T12-2.jpeg"
-    ]],
+{
+    codigo:"T12",
+    nombre:"Prenda T12",
+    categoria:"ropa",
+    imagenes:[
+        "T12/T12-1.jpeg",
+        "T12/T12-2.jpeg"
+    ]
+},
 
-  ["T13","Prenda T13",
-    ["imagenes/T13/T13-1.jpeg"]],
+{
+    codigo:"T13",
+    nombre:"Prenda T13",
+    categoria:"ropa",
+    imagenes:[
+        "T13/T13-1.jpeg"
+    ]
+},
 
-  ["T14","Prenda T14",
-    ["imagenes/T14/T14-1.jpeg"]],
+{
+    codigo:"T14",
+    nombre:"Prenda T14",
+    categoria:"ropa",
+    imagenes:[
+        "T14/T14-1.jpeg"
+    ]
+},
 
-  ["T15","Prenda T15",
-    ["imagenes/T15/T15-1.jpeg"]],
+{
+    codigo:"T15",
+    nombre:"Prenda T15",
+    categoria:"ropa",
+    imagenes:[
+        "T15/T15-1.jpeg"
+    ]
+},
 
-  ["T16","Prenda T16",
-    ["imagenes/T16/T16-1.jpeg"]],
+{
+    codigo:"T16",
+    nombre:"Prenda T16",
+    categoria:"ropa",
+    imagenes:[
+        "T16/T16-1.jpeg"
+    ]
+},
 
-  ["T17","Prenda T17",
-    ["imagenes/T17/T17-1.jpeg"]],
+{
+    codigo:"T17",
+    nombre:"Prenda T17",
+    categoria:"ropa",
+    imagenes:[
+        "T17/T17-1.jpeg"
+    ]
+},
 
-  ["T18","Prenda T18",
-    ["imagenes/T18/T18-1.jpeg"]],
+{
+    codigo:"T18",
+    nombre:"Prenda T18",
+    categoria:"ropa",
+    imagenes:[
+        "T18/T18-1.jpeg"
+    ]
+},
 
-  ["T20","Prenda T20",
-    ["imagenes/T20/T20-1.jpeg"]],
+{
+    codigo:"T20",
+    nombre:"Prenda T20",
+    categoria:"ropa",
+    imagenes:[
+        "T20/T20-1.jpeg"
+    ]
+},
 
-  ["T21","Prenda T21",
-    ["imagenes/T21/T21-1.jpeg"]],
+{
+    codigo:"T21",
+    nombre:"Prenda T21",
+    categoria:"ropa",
+    imagenes:[
+        "T21/T21-1.jpeg"
+    ]
+},
 
-  ["T22","Prenda T22",
-    ["imagenes/T22/T22-1.jpeg"]],
+{
+    codigo:"T22",
+    nombre:"Prenda T22",
+    categoria:"ropa",
+    imagenes:[
+        "T22/T22-1.jpeg"
+    ]
+},
 
-  ["T23","Prenda T23",
-    ["imagenes/T23/T23-1.jpeg"]],
+{
+    codigo:"T23",
+    nombre:"Prenda T23",
+    categoria:"ropa",
+    imagenes:[
+        "T23/T23-1.jpeg"
+    ]
+},
 
-  ["T24","Prenda T24",
-    ["imagenes/T24/T24-1.jpeg"]],
+{
+    codigo:"T24",
+    nombre:"Prenda T24",
+    categoria:"ropa",
+    imagenes:[
+        "T24/T24-1.jpeg"
+    ]
+},
 
-  ["T25","Prenda T25",
-    ["imagenes/T25/T25-1.jpeg"]],
+{
+    codigo:"T25",
+    nombre:"Prenda T25",
+    categoria:"ropa",
+    imagenes:[
+        "T25/T25-1.jpeg"
+    ]
+},
 
-  ["T26","Prenda T26",
-    [
-      "imagenes/T26/T26-1.jpeg",
-      "imagenes/T26/T26-2.jpeg"
-    ]],
+{
+    codigo:"T26",
+    nombre:"Prenda T26",
+    categoria:"ropa",
+    imagenes:[
+        "T26/T26-1.jpeg",
+        "T26/T26-2.jpeg"
+    ]
+},
 
-  ["T27","Prenda T27",
-    ["imagenes/T27/T27-1.jpeg"]],
+{
+    codigo:"T27",
+    nombre:"Prenda T27",
+    categoria:"ropa",
+    imagenes:[
+        "T27/T27-1.jpeg"
+    ]
+},
 
-  ["T28","Prenda T28",
-    ["imagenes/T28/T28-1.jpeg"]],
+{
+    codigo:"T28",
+    nombre:"Prenda T28",
+    categoria:"ropa",
+    imagenes:[
+        "T28/T28-1.jpeg"
+    ]
+},
 
-  ["T30","Prenda T30",
-    ["imagenes/T30/T30-1.jpeg"]],
+{
+    codigo:"T30",
+    nombre:"Prenda T30",
+    categoria:"ropa",
+    imagenes:[
+        "T30/T30-1.jpeg"
+    ]
+},
 
-  ["T31","Prenda T31",
-    ["imagenes/T31/T31-1.jpeg"]],
+{
+    codigo:"T31",
+    nombre:"Prenda T31",
+    categoria:"ropa",
+    imagenes:[
+        "T31/T31-1.jpeg"
+    ]
+},
 
-  ["T32","Prenda T32",
-    [
-      "imagenes/T32/T32-1.jpeg",
-      "imagenes/T32/T32-2.jpeg"
-    ]],
+{
+    codigo:"T32",
+    nombre:"Prenda T32",
+    categoria:"ropa",
+    imagenes:[
+        "T32/T32-1.jpeg",
+        "T32/T32-2.jpeg"
+    ]
+},
 
-  ["T33","Prenda T33",
-    [
-      "imagenes/T33/T33-1.jpeg",
-      "imagenes/T33/T33-2.jpeg"
-    ]],
+{
+    codigo:"T33",
+    nombre:"Prenda T33",
+    categoria:"ropa",
+    imagenes:[
+        "T33/T33-1.jpeg",
+        "T33/T33-2.jpeg"
+    ]
+},
 
-  ["T34","Prenda T34",
-    [
-      "imagenes/T34/T34-1.jpeg",
-      "imagenes/T34/T34-2.jpeg"
-    ]],
+{
+    codigo:"T34",
+    nombre:"Prenda T34",
+    categoria:"ropa",
+    imagenes:[
+        "T34/T34-1.jpeg",
+        "T34/T34-2.jpeg"
+    ]
+},
 
-  ["T35","Prenda T35",
-    ["imagenes/T35/T35-1.jpeg"]]
+{
+    codigo:"T35",
+    nombre:"Prenda T35",
+    categoria:"ropa",
+    imagenes:[
+        "T35/T35-1.jpeg",
+        "T35/T35-2.jpeg"
+    ]
+}
 
-].map(x => ({
-
-  codigo:x[0],
-
-  nombre:x[1],
-
-  categoria:"ropa",
-
-  imagenes:x[2]
-
-}));
+];
 
 
-/* =========================
+/* =====================================================
    VARIABLES
-========================= */
+===================================================== */
 
-let category = "todos";
+let productosActuales =
+    [...productos];
 
-let cart = [];
-
-let gallery = {};
+let carrito = [];
 
 
-/* =========================
+/* =====================================================
    MOSTRAR PRODUCTOS
-========================= */
+===================================================== */
 
-function renderProducts(){
+function mostrarProductos(lista){
 
-  const q =
-    (
-      document
-      .getElementById("search")
-      .value || ""
-    )
-    .toLowerCase()
-    .trim();
+    const grid =
+        document.getElementById(
+            "productsGrid"
+        );
+
+    grid.innerHTML = "";
 
 
-  const list =
-    products.filter(p =>
+    if(lista.length === 0){
 
-      (
-        category === "todos" ||
-        p.categoria === category
-      )
+        grid.innerHTML = `
 
-      &&
-
-      (
-        p.codigo
-        .toLowerCase()
-        .includes(q)
-
-        ||
-
-        p.nombre
-        .toLowerCase()
-        .includes(q)
-      )
-
-    );
-
-
-  const box =
-    document.getElementById("products");
-
-
-  if(!list.length){
-
-    box.innerHTML = `
-
-      <div
-        style="
-          grid-column:1/-1;
-          text-align:center;
-          padding:50px;
-          color:#777;
-        ">
-
-        No encontramos productos.
-
-      </div>
-
-    `;
-
-    return;
-
-  }
-
-
-  box.innerHTML =
-
-    list.map(p => {
-
-      const i =
-        gallery[p.codigo] || 0;
-
-
-      return `
-
-        <article class="card">
-
-          <div class="photo">
-
-            <span class="badge">
-              ${p.codigo}
-            </span>
-
-
-            <img
-              src="${p.imagenes[i]}"
-              alt="${p.nombre}"
-
-              onerror="
-                this.src=
-                'https://placehold.co/700x850/f0eeee/777?text=${p.codigo}'
-              "
+            <div
+                style="
+                    grid-column:1/-1;
+                    text-align:center;
+                    padding:50px;
+                    color:#888;
+                "
             >
 
+                <h3>
+                    No encontramos productos
+                </h3>
 
-            ${
-              p.imagenes.length > 1
+                <p>
+                    Prueba con otro código o nombre.
+                </p>
 
-              ?
+            </div>
 
-              `
+        `;
 
-                <div class="gallery">
-
-                  <button
-                    onclick="
-                      changeImg('${p.codigo}',-1)
-                    ">
-
-                    ‹
-
-                  </button>
+        return;
+    }
 
 
-                  <button
-                    onclick="
-                      changeImg('${p.codigo}',1)
-                    ">
+    lista.forEach(producto => {
 
-                    ›
+        const imagenPrincipal =
+            RAW_BASE +
+            producto.imagenes[0];
 
-                  </button>
+
+        const imagenesJSON =
+            JSON.stringify(
+                producto.imagenes
+            );
+
+
+        const card =
+            document.createElement("div");
+
+
+        card.className =
+            "product-card";
+
+
+        card.innerHTML = `
+
+            <div class="product-image">
+
+                <span class="product-code">
+                    ${producto.codigo}
+                </span>
+
+
+                <img
+                    src="${imagenPrincipal}"
+                    alt="${producto.nombre}"
+                    loading="lazy"
+                    onclick='abrirVisor(${imagenesJSON},0)'
+                >
+
+            </div>
+
+
+            <div class="product-info">
+
+                <h3>
+                    ${producto.nombre}
+                </h3>
+
+
+                <div class="category">
+                    ${producto.categoria}
+                </div>
+
+
+                <div class="price">
+                    Consultar precio
+                </div>
+
+
+                <div class="product-buttons">
+
+
+                    <button
+                        class="btn btn-cart"
+                        onclick="
+                            agregarCarrito(
+                                '${producto.codigo}'
+                            )
+                        "
+                    >
+                        🛒 Agregar
+                    </button>
+
+
+                    <button
+                        class="btn btn-whatsapp"
+                        onclick="
+                            consultarProducto(
+                                '${producto.codigo}'
+                            )
+                        "
+                    >
+                        WhatsApp
+                    </button>
+
 
                 </div>
 
-              `
-
-              :
-
-              ""
-
-            }
-
-          </div>
-
-
-          <div class="card-body">
-
-            <div class="code">
-              CÓDIGO ${p.codigo}
             </div>
 
-
-            <div class="name">
-              ${p.nombre}
-            </div>
+        `;
 
 
-            <div class="price">
-              Consultar precio y disponibilidad
-            </div>
+        grid.appendChild(card);
 
-
-            <div class="actions">
-
-              <button
-                class="add"
-                onclick="
-                  add('${p.codigo}')
-                ">
-
-                🛒 Agregar
-
-              </button>
-
-
-              <button
-                class="wa"
-                onclick="
-                  send('${p.codigo}')
-                ">
-
-                WhatsApp
-
-              </button>
-
-            </div>
-
-          </div>
-
-        </article>
-
-      `;
-
-    }).join("");
+    });
 
 }
 
 
-/* =========================
-   CAMBIAR FOTO
-========================= */
+/* =====================================================
+   FILTRAR CATEGORÍA
+===================================================== */
 
-function changeImg(code,d){
+function filtrarCategoria(
+    categoria,
+    boton
+){
 
-  const p =
-    products.find(
-      x => x.codigo === code
-    );
+    document
+        .querySelectorAll(".filter-btn")
+        .forEach(btn => {
 
+            btn.classList.remove(
+                "active"
+            );
 
-  if(!p) return;
+        });
 
 
-  gallery[code] =
-    (gallery[code] || 0) + d;
+    boton.classList.add("active");
 
 
-  if(gallery[code] < 0){
+    if(categoria === "todos"){
 
-    gallery[code] =
-      p.imagenes.length - 1;
+        productosActuales =
+            [...productos];
 
-  }
+    }else{
 
-
-  if(
-    gallery[code] >=
-    p.imagenes.length
-  ){
-
-    gallery[code] = 0;
-
-  }
-
-
-  renderProducts();
-
-}
-
-
-/* =========================
-   CATEGORIA
-========================= */
-
-function setCategory(c,btn){
-
-  category = c;
-
-
-  document
-    .querySelectorAll(".filter")
-    .forEach(
-      b =>
-        b.classList.remove("active")
-    );
-
-
-  btn.classList.add("active");
-
-
-  renderProducts();
-
-}
-
-
-/* =========================
-   BUSCADOR SUPERIOR
-========================= */
-
-function syncSearch(v){
-
-  document
-    .getElementById("search")
-    .value = v;
-
-
-  renderProducts();
-
-}
-
-
-/* =========================
-   BUSCAR PRODUCTO
-========================= */
-
-function product(code){
-
-  return products.find(
-    p => p.codigo === code
-  );
-
-}
-
-
-/* =========================
-   WHATSAPP PRODUCTO
-========================= */
-
-function send(code){
-
-  const p = product(code);
-
-
-  const image =
-    location.href.substring(
-      0,
-      location.href.lastIndexOf("/") + 1
-    )
-    +
-    p.imagenes[0];
-
-
-  const msg =
-
-`Hola, Elda Style 👋
-
-Estoy interesado/a en:
-
-🆔 Código: ${p.codigo}
-
-🛍️ Producto: ${p.nombre}
-
-🖼️ Foto:
-${image}
-
-¿Está disponible y cuál es su precio?`;
-
-
-  window.open(
-
-    `https://wa.me/${WHATSAPP}?text=${
-      encodeURIComponent(msg)
-    }`,
-
-    "_blank"
-
-  );
-
-}
-
-
-/* =========================
-   AGREGAR AL CARRITO
-========================= */
-
-function add(code){
-
-  cart.push(
-    product(code)
-  );
-
-
-  updateCart();
-
-  openCart();
-
-}
-
-
-/* =========================
-   ELIMINAR
-========================= */
-
-function remove(i){
-
-  cart.splice(i,1);
-
-  updateCart();
-
-}
-
-
-/* =========================
-   ACTUALIZAR CARRITO
-========================= */
-
-function updateCart(){
-
-  document
-    .getElementById("cartCount")
-    .textContent =
-      cart.length;
-
-
-  const box =
-    document.getElementById(
-      "cartItems"
-    );
-
-
-  if(!cart.length){
-
-    box.innerHTML = `
-
-      <div class="empty">
-
-        Tu carrito está vacío.
-
-      </div>
-
-    `;
-
-    return;
-
-  }
-
-
-  box.innerHTML =
-
-    cart.map(
-      (p,i) => `
-
-        <div class="cart-item">
-
-          <img
-            src="${p.imagenes[0]}"
-
-            onerror="
-              this.src=
-              'https://placehold.co/200x250/f0eeee/777?text=${p.codigo}'
-            "
-          >
-
-
-          <div class="cart-item-info">
-
-            <strong>
-              ${p.nombre}
-            </strong>
-
-
-            <small>
-              Código: ${p.codigo}
-            </small>
-
-
-            <br>
-
-
-            <button
-              class="remove"
-              onclick="
-                remove(${i})
-              ">
-
-              Eliminar
-
-            </button>
-
-          </div>
-
-        </div>
-
-      `
-    ).join("");
-
-}
-
-
-/* =========================
-   ABRIR CARRITO
-========================= */
-
-function openCart(){
-
-  document
-    .getElementById("cart")
-    .classList.add("open");
-
-
-  document
-    .getElementById("overlay")
-    .classList.add("show");
-
-}
-
-
-/* =========================
-   CERRAR CARRITO
-========================= */
-
-function closeCart(){
-
-  document
-    .getElementById("cart")
-    .classList.remove("open");
-
-
-  document
-    .getElementById("overlay")
-    .classList.remove("show");
-
-}
-
-
-/* =========================
-   PEDIDO POR WHATSAPP
-========================= */
-
-function checkout(){
-
-  if(!cart.length){
-
-    alert(
-      "Tu carrito está vacío."
-    );
-
-    return;
-
-  }
-
-
-  let msg =
-`Hola, Elda Style 👋
-
-Quiero consultar por:
-
-`;
-
-
-  cart.forEach(
-    (p,i) => {
-
-      msg +=
-`${i+1}. ${p.codigo} - ${p.nombre}
-`;
+        productosActuales =
+            productos.filter(
+                producto =>
+                    producto.categoria ===
+                    categoria
+            );
 
     }
-  );
 
 
-  msg +=
-`
-¿Me indican disponibilidad y precios?`;
-
-
-  window.open(
-
-    `https://wa.me/${WHATSAPP}?text=${
-      encodeURIComponent(msg)
-    }`,
-
-    "_blank"
-
-  );
+    mostrarProductos(
+        productosActuales
+    );
 
 }
 
 
-/* =========================
-   INICIAR
-========================= */
+/* =====================================================
+   BUSCADOR
+===================================================== */
 
-renderProducts();
+function buscarProductos(){
 
-updateCart();
+    const texto =
+        document
+        .getElementById(
+            "searchInput"
+        )
+        .value
+        .toLowerCase()
+        .trim();
+
+
+    if(texto === ""){
+
+        mostrarProductos(
+            productosActuales
+        );
+
+        return;
+    }
+
+
+    const resultado =
+        productosActuales.filter(
+            producto =>
+
+                producto.codigo
+                    .toLowerCase()
+                    .includes(texto)
+
+                ||
+
+                producto.nombre
+                    .toLowerCase()
+                    .includes(texto)
+
+                ||
+
+                producto.categoria
+                    .toLowerCase()
+                    .includes(texto)
+
+        );
+
+
+    mostrarProductos(
+        resultado
+    );
+
+}
+
+
+/* =====================================================
+   CONSULTAR PRODUCTO POR WHATSAPP
+===================================================== */
+
+function consultarProducto(codigo){
+
+    const producto =
+        productos.find(
+            producto =>
+                producto.codigo ===
+                codigo
+        );
+
+
+    if(!producto){
+
+        return;
+
+    }
+
+
+    const imagen =
+        RAW_BASE +
+        producto.imagenes[0];
+
+
+    const mensaje =
+`Hola 👋, estoy interesado/a en este producto de Elda Style:
+
+Código: ${producto.codigo}
+Producto: ${producto.nombre}
+
+¿Me podrían indicar el precio y disponibilidad?
+
+Foto:
+${imagen}`;
+
+
+    const url =
+        "https://wa.me/" +
+        WHATSAPP +
+        "?text=" +
+        encodeURIComponent(
+            mensaje
+        );
+
+
+    window.open(
+        url,
+        "_blank"
+    );
+
+}
+
+
+/* =====================================================
+   CARRITO - AGREGAR
+===================================================== */
+
+function agregarCarrito(codigo){
+
+    const producto =
+        productos.find(
+            producto =>
+                producto.codigo ===
+                codigo
+        );
+
+
+    if(!producto){
+
+        return;
+
+    }
+
+
+    carrito.push(producto);
+
+
+    actualizarCarrito();
+
+
+    alert(
+        producto.codigo +
+        " fue agregado al carrito."
+    );
+
+}
+
+
+/* =====================================================
+   CARRITO - ACTUALIZAR
+===================================================== */
+
+function actualizarCarrito(){
+
+    const count =
+        document.getElementById(
+            "cartCount"
+        );
+
+
+    count.textContent =
+        carrito.length;
+
+
+    const container =
+        document.getElementById(
+            "cartItems"
+        );
+
+
+    if(carrito.length === 0){
+
+        container.innerHTML = `
+
+            <div class="empty-cart">
+
+                <div
+                    style="
+                        font-size:40px;
+                    "
+                >
+                    🛒
+                </div>
+
+                <p>
+                    Tu carrito está vacío.
+                </p>
+
+            </div>
+
+        `;
+
+
+        document
+            .getElementById(
+                "cartTotal"
+            )
+            .textContent = "0";
+
+
+        return;
+    }
+
+
+    container.innerHTML = "";
+
+
+    carrito.forEach(
+        (producto,index) => {
+
+
+            const imagen =
+                RAW_BASE +
+                producto.imagenes[0];
+
+
+            const item =
+                document.createElement(
+                    "div"
+                );
+
+
+            item.className =
+                "cart-item";
+
+
+            item.innerHTML = `
+
+                <img
+                    src="${imagen}"
+                    alt="${producto.nombre}"
+                >
+
+
+                <div
+                    class="cart-item-info"
+                >
+
+                    <strong>
+                        ${producto.codigo}
+                    </strong>
+
+                    <small>
+                        ${producto.nombre}
+                    </small>
+
+                </div>
+
+
+                <button
+                    class="remove-item"
+                    onclick="
+                        eliminarCarrito(
+                            ${index}
+                        )
+                    "
+                >
+                    ✕
+                </button>
+
+            `;
+
+
+            container.appendChild(item);
+
+        }
+    );
+
+
+    document
+        .getElementById(
+            "cartTotal"
+        )
+        .textContent =
+            carrito.length;
+
+}
+
+
+/* =====================================================
+   CARRITO - ELIMINAR
+===================================================== */
+
+function eliminarCarrito(index){
+
+    carrito.splice(
+        index,
+        1
+    );
+
+    actualizarCarrito();
+
+}
+
+
+/* =====================================================
+   CARRITO - ABRIR
+===================================================== */
+
+function abrirCarrito(){
+
+    document
+        .getElementById(
+            "cartOverlay"
+        )
+        .classList.add(
+            "show"
+        );
+
+}
+
+
+/* =====================================================
+   CARRITO - CERRAR
+===================================================== */
+
+function cerrarCarrito(event){
+
+    if(
+        event &&
+        event.target !==
+        event.currentTarget
+    ){
+
+        return;
+
+    }
+
+
+    document
+        .getElementById(
+            "cartOverlay"
+        )
+        .classList.remove(
+            "show"
+        );
+
+}
+
+
+/* =====================================================
+   CARRITO - WHATSAPP
+===================================================== */
+
+function enviarCarritoWhatsApp(){
+
+    if(carrito.length === 0){
+
+        alert(
+            "Tu carrito está vacío."
+        );
+
+        return;
+
+    }
+
+
+    let mensaje =
+`Hola 👋, quiero consultar estos productos de Elda Style:
+
+`;
+
+
+    carrito.forEach(
+        (producto,index) => {
+
+            mensaje +=
+`${index + 1}. ${producto.codigo} - ${producto.nombre}
+`;
+
+        }
+    );
+
+
+    mensaje +=
+`
+¿Me pueden indicar precios y disponibilidad?`;
+
+
+    const url =
+        "https://wa.me/" +
+        WHATSAPP +
+        "?text=" +
+        encodeURIComponent(
+            mensaje
+        );
+
+
+    window.open(
+        url,
+        "_blank"
+    );
+
+}
+
+
+/* =====================================================
+   VISOR DE IMÁGENES
+===================================================== */
+
+let imagenesVisor = [];
+
+let indiceImagenVisor = 0;
+
+
+/* -----------------------------------------------------
+   ABRIR VISOR
+----------------------------------------------------- */
+
+function abrirVisor(
+    imagenes,
+    indice = 0
+){
+
+    imagenesVisor =
+        imagenes;
+
+    indiceImagenVisor =
+        indice;
+
+
+    mostrarImagenVisor();
+
+
+    document
+        .getElementById(
+            "imageViewer"
+        )
+        .classList.add(
+            "show"
+        );
+
+
+    document.body.style.overflow =
+        "hidden";
+
+}
+
+
+/* -----------------------------------------------------
+   MOSTRAR IMAGEN
+----------------------------------------------------- */
+
+function mostrarImagenVisor(){
+
+    if(
+        imagenesVisor.length === 0
+    ){
+
+        return;
+
+    }
+
+
+    const imagen =
+        RAW_BASE +
+        imagenesVisor[
+            indiceImagenVisor
+        ];
+
+
+    const viewerImage =
+        document.getElementById(
+            "viewerImage"
+        );
+
+
+    viewerImage.src =
+        imagen;
+
+
+    const anterior =
+        document.getElementById(
+            "viewerPrev"
+        );
+
+
+    const siguiente =
+        document.getElementById(
+            "viewerNext"
+        );
+
+
+    const contador =
+        document.getElementById(
+            "viewerCounter"
+        );
+
+
+    /*
+       Si tiene una sola foto,
+       no mostramos flechas.
+    */
+
+    if(
+        imagenesVisor.length <= 1
+    ){
+
+        anterior.style.display =
+            "none";
+
+        siguiente.style.display =
+            "none";
+
+        contador.style.display =
+            "none";
+
+    }else{
+
+        anterior.style.display =
+            "flex";
+
+        siguiente.style.display =
+            "flex";
+
+        contador.style.display =
+            "block";
+
+
+        contador.textContent =
+            (
+                indiceImagenVisor + 1
+            )
+            +
+            " / "
+            +
+            imagenesVisor.length;
+
+    }
+
+}
+
+
+/* -----------------------------------------------------
+   CERRAR VISOR
+----------------------------------------------------- */
+
+function cerrarVisor(event){
+
+    /*
+       Si se hace clic sobre la imagen
+       o las flechas, no cerrar.
+    */
+
+    if(
+        event &&
+        event.target !==
+        event.currentTarget
+    ){
+
+        return;
+
+    }
+
+
+    document
+        .getElementById(
+            "imageViewer"
+        )
+        .classList.remove(
+            "show"
+        );
+
+
+    document.body.style.overflow =
+        "";
+
+}
+
+
+/* -----------------------------------------------------
+   FOTO ANTERIOR
+----------------------------------------------------- */
+
+function imagenAnterior(event){
+
+    if(event){
+
+        event.stopPropagation();
+
+    }
+
+
+    if(
+        imagenesVisor.length <= 1
+    ){
+
+        return;
+
+    }
+
+
+    indiceImagenVisor--;
+
+
+    if(
+        indiceImagenVisor < 0
+    ){
+
+        indiceImagenVisor =
+            imagenesVisor.length - 1;
+
+    }
+
+
+    mostrarImagenVisor();
+
+}
+
+
+/* -----------------------------------------------------
+   FOTO SIGUIENTE
+----------------------------------------------------- */
+
+function imagenSiguiente(event){
+
+    if(event){
+
+        event.stopPropagation();
+
+    }
+
+
+    if(
+        imagenesVisor.length <= 1
+    ){
+
+        return;
+
+    }
+
+
+    indiceImagenVisor++;
+
+
+    if(
+        indiceImagenVisor >=
+        imagenesVisor.length
+    ){
+
+        indiceImagenVisor = 0;
+
+    }
+
+
+    mostrarImagenVisor();
+
+}
+
+
+/* =====================================================
+   TECLADO PARA VISOR
+===================================================== */
+
+document.addEventListener(
+    "keydown",
+    function(event){
+
+        const visor =
+            document.getElementById(
+                "imageViewer"
+            );
+
+
+        if(
+            !visor.classList.contains(
+                "show"
+            )
+        ){
+
+            return;
+
+        }
+
+
+        if(
+            event.key ===
+            "Escape"
+        ){
+
+            cerrarVisor();
+
+        }
+
+
+        if(
+            event.key ===
+            "ArrowLeft"
+        ){
+
+            imagenAnterior();
+
+        }
+
+
+        if(
+            event.key ===
+            "ArrowRight"
+        ){
+
+            imagenSiguiente();
+
+        }
+
+    }
+);
+
+
+/* =====================================================
+   SOPORTE PARA SWIPE EN CELULAR
+===================================================== */
+
+let touchStartX = 0;
+
+let touchEndX = 0;
+
+
+const visor =
+    document.getElementById(
+        "imageViewer"
+    );
+
+
+visor.addEventListener(
+    "touchstart",
+    function(event){
+
+        touchStartX =
+            event.changedTouches[0].screenX;
+
+    }
+);
+
+
+visor.addEventListener(
+    "touchend",
+    function(event){
+
+        touchEndX =
+            event.changedTouches[0].screenX;
+
+
+        const diferencia =
+            touchEndX -
+            touchStartX;
+
+
+        if(
+            Math.abs(diferencia) < 50
+        ){
+
+            return;
+
+        }
+
+
+        if(diferencia < 0){
+
+            imagenSiguiente();
+
+        }else{
+
+            imagenAnterior();
+
+        }
+
+    }
+);
+
+
+/* =====================================================
+   INICIAR TIENDA
+===================================================== */
+
+mostrarProductos(
+    productos
+);
+
+actualizarCarrito();
 
 </script>
+
 
 </body>
 </html>
