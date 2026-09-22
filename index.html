@@ -606,6 +606,24 @@ section{
     font-weight:bold;
 }
 
+
+.product-description{
+    margin-bottom:12px;
+    color:#666;
+    font-size:13px;
+    line-height:1.5;
+}
+
+.product-size{
+    margin-bottom:14px;
+    color:#555;
+    font-size:13px;
+}
+
+.product-size strong{
+    color:#222;
+}
+
 .product-buttons{
 
     display:grid;
@@ -2443,6 +2461,42 @@ const productos = [
         "T35/T35-1.jpeg"
         
     ]
+},
+
+{
+    codigo:"Z1",
+    nombre:"Zapatilla Deportiva Celeste",
+    categoria:"calzado",
+    descripcion:"Zapatilla deportiva ligera y cómoda, ideal para uso diario y actividades deportivas.",
+    precio:420,
+    talla:"8.5",
+    imagenes:[
+        "Z1/Z1-1.jpeg"
+    ]
+},
+
+{
+    codigo:"Z2",
+    nombre:"Zapatilla Deportiva Blanca",
+    categoria:"calzado",
+    descripcion:"Diseño moderno y elegante, con gran comodidad y soporte. Perfecta para tu día a día.",
+    precio:420,
+    talla:"10",
+    imagenes:[
+        "Z2/Z2-1.jpeg"
+    ]
+},
+
+{
+    codigo:"Z3",
+    nombre:"Zapatilla Deportiva Azul",
+    categoria:"calzado",
+    descripcion:"Zapatilla moderna y resistente, con diseño deportivo y excelente presencia para uso diario.",
+    precio:420,
+    talla:"9.5",
+    imagenes:[
+        "Z3/Z3-1.jpeg"
+    ]
 }
 
 ];
@@ -2553,9 +2607,23 @@ function mostrarProductos(lista){
                 </div>
 
 
+                ${producto.descripcion ? `
+                    <div class="product-description">
+                        ${producto.descripcion}
+                    </div>
+                ` : ""}
+
+
                 <div class="price">
-                    Consultar precio
+                    ${producto.precio ? "Precio: " + producto.precio + " Bs" : "Consultar precio"}
                 </div>
+
+
+                ${producto.talla ? `
+                    <div class="product-size">
+                        Talla: <strong>${producto.talla}</strong>
+                    </div>
+                ` : ""}
 
 
                 <div class="product-buttons">
@@ -2848,8 +2916,8 @@ function consultarProducto(codigo){
 
 Código: ${producto.codigo}
 Producto: ${producto.nombre}
-
-¿Me podrían indicar el precio y disponibilidad?
+${producto.precio ? "Precio: " + producto.precio + " Bs\n" : ""}${producto.talla ? "Talla: " + producto.talla + "\n" : ""}
+¿Me podrían confirmar disponibilidad?
 
 Foto:
 ${imagen}`;
@@ -3126,7 +3194,7 @@ function enviarCarritoWhatsApp(){
         (producto,index) => {
 
             mensaje +=
-`${index + 1}. ${producto.codigo} - ${producto.nombre}
+`${index + 1}. ${producto.codigo} - ${producto.nombre}${producto.precio ? " - " + producto.precio + " Bs" : ""}${producto.talla ? " - Talla " + producto.talla : ""}
 `;
 
         }
