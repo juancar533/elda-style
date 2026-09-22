@@ -417,6 +417,73 @@ section{
 }
 
 
+
+/* =====================================================
+   SUBMENÚ DE ROPA
+===================================================== */
+
+.ropa-dropdown{
+    position:relative;
+    display:inline-block;
+}
+
+.ropa-menu{
+    display:none;
+    position:absolute;
+    top:calc(100% + 8px);
+    left:50%;
+    transform:translateX(-50%);
+    min-width:210px;
+    padding:8px;
+    background:white;
+    border-radius:14px;
+    box-shadow:0 8px 25px rgba(0,0,0,.15);
+    z-index:100;
+}
+
+.ropa-menu.show{
+    display:block;
+}
+
+.ropa-menu::before{
+    content:"";
+    position:absolute;
+    top:-7px;
+    left:50%;
+    transform:translateX(-50%);
+    border-left:7px solid transparent;
+    border-right:7px solid transparent;
+    border-bottom:7px solid white;
+}
+
+.ropa-sub-btn{
+    display:block;
+    width:100%;
+    padding:10px 14px;
+    border:0;
+    border-radius:9px;
+    background:white;
+    color:#333;
+    text-align:left;
+    cursor:pointer;
+    font-size:13px;
+    font-weight:bold;
+}
+
+.ropa-sub-btn:hover,
+.ropa-sub-btn.active{
+    background:#ff4f91;
+    color:white;
+}
+
+@media(max-width:480px){
+    .ropa-menu{
+        left:0;
+        transform:none;
+        min-width:190px;
+    }
+}
+
 /* =====================================================
    PRODUCTOS
 ===================================================== */
@@ -1629,12 +1696,59 @@ Todos
 </button>
 
 
+<div class="ropa-dropdown">
+
 <button
     class="filter-btn"
-    onclick="filtrarCategoria('ropa',this)"
+    id="ropaButton"
+    onclick="toggleRopaMenu(event)"
 >
-Ropa
+Ropa ▾
 </button>
+
+<div
+    class="ropa-menu"
+    id="ropaMenu"
+>
+
+<button
+    class="ropa-sub-btn active"
+    onclick="filtrarTipoRopa('todos',this)"
+>
+Todas las prendas
+</button>
+
+<button
+    class="ropa-sub-btn"
+    onclick="filtrarTipoRopa('T',this)"
+>
+T — Tops
+</button>
+
+<button
+    class="ropa-sub-btn"
+    onclick="filtrarTipoRopa('M',this)"
+>
+M — Manga larga
+</button>
+
+<button
+    class="ropa-sub-btn"
+    onclick="filtrarTipoRopa('C',this)"
+>
+C — Calzas
+</button>
+
+<button
+    class="ropa-sub-btn"
+    onclick="filtrarTipoRopa('S',this)"
+>
+S — Sudaderas
+</button>
+
+</div>
+
+</div>
 
 
 <button
@@ -2489,6 +2603,106 @@ function mostrarProductos(lista){
    FILTRAR CATEGORÍA
 ===================================================== */
 
+function toggleRopaMenu(event){
+
+    event.stopPropagation();
+
+    const menu =
+        document.getElementById("ropaMenu");
+
+    const boton =
+        document.getElementById("ropaButton");
+
+    document
+        .querySelectorAll(".filter-btn")
+        .forEach(btn => {
+            btn.classList.remove("active");
+        });
+
+    boton.classList.add("active");
+
+    const mostrar =
+        !menu.classList.contains("show");
+
+    menu.classList.toggle("show", mostrar);
+
+    productosActuales =
+        productos.filter(
+            producto => producto.categoria === "ropa"
+        );
+
+    document
+        .querySelectorAll(".ropa-sub-btn")
+        .forEach(btn => {
+            btn.classList.remove("active");
+        });
+
+    document
+        .querySelector(".ropa-sub-btn")
+        .classList.add("active");
+
+    mostrarProductos(productosActuales);
+
+}
+
+
+/*
+   TIPOS DE ROPA SEGÚN EL CÓDIGO DEL PRODUCTO:
+   T = Tops
+   M = Manga larga
+   C = Calzas
+   S = Sudaderas
+*/
+
+function filtrarTipoRopa(tipo, boton){
+
+    event.stopPropagation();
+
+    const menu =
+        document.getElementById("ropaMenu");
+
+    document
+        .querySelectorAll(".filter-btn")
+        .forEach(btn => {
+            btn.classList.remove("active");
+        });
+
+    document
+        .getElementById("ropaButton")
+        .classList.add("active");
+
+    document
+        .querySelectorAll(".ropa-sub-btn")
+        .forEach(btn => {
+            btn.classList.remove("active");
+        });
+
+    boton.classList.add("active");
+
+    if(tipo === "todos"){
+
+        productosActuales =
+            productos.filter(
+                producto => producto.categoria === "ropa"
+            );
+
+    }else{
+
+        productosActuales =
+            productos.filter(producto =>
+                producto.categoria === "ropa" &&
+                producto.codigo.toUpperCase().startsWith(tipo)
+            );
+
+    }
+
+    mostrarProductos(productosActuales);
+
+    menu.classList.remove("show");
+
+}
+
+
 function filtrarCategoria(
     categoria,
     boton
@@ -2504,9 +2718,17 @@ function filtrarCategoria(
 
         });
 
-
     boton.classList.add("active");
 
+    document
+        .getElementById("ropaMenu")
+        .classList.remove("show");
+
+    document
+        .querySelectorAll(".ropa-sub-btn")
+        .forEach(btn => {
+            btn.classList.remove("active");
+        });
 
     if(categoria === "todos"){
 
@@ -2524,13 +2746,20 @@ function filtrarCategoria(
 
     }
 
-
     mostrarProductos(
         productosActuales
     );
 
 }
 
+
+document.addEventListener("click", function(){
+
+    document
+        .getElementById("ropaMenu")
+        .classList.remove("show");
+
+});
 
 /* =====================================================
    BUSCADOR
