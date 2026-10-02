@@ -3610,5 +3610,1717 @@ actualizarCarrito();
 </script>
 
 
+
+<script>
+/* =====================================================
+   CATALOGO NUEVO: C1-C138 + SU1-SU8 + SIN CODIGO
+   Datos basados exclusivamente en el chat exportado.
+   No modifica el diseño existente.
+===================================================== */
+(function(){
+    const catalogoNuevo = [
+    {
+        "codigo": "C1",
+        "nombre": "Calza C1",
+        "categoria": "ropa",
+        "descripcion": "Precio: 80 Bs",
+        "imagenes": [
+            "C1/C1-1.jpeg",
+            "C1/C1-2.jpeg"
+        ],
+        "precio": 80
+    },
+    {
+        "codigo": "C10",
+        "nombre": "Calza C10",
+        "categoria": "ropa",
+        "descripcion": "Precio: 80 Bs",
+        "imagenes": [
+            "C10/C10-1.jpeg",
+            "C10/C10-2.jpeg"
+        ],
+        "precio": 80
+    },
+    {
+        "codigo": "C100",
+        "nombre": "Calza C100",
+        "categoria": "ropa",
+        "descripcion": "Talla: M · Precio: 80 Bs",
+        "imagenes": [
+            "C100/C100-1.jpeg",
+            "C100/C100-2.jpeg"
+        ],
+        "precio": 80,
+        "talla": "M"
+    },
+    {
+        "codigo": "C101",
+        "nombre": "Calza C101",
+        "categoria": "ropa",
+        "descripcion": "Talla: M · Precio: 80 Bs",
+        "imagenes": [
+            "C101/C101-1.jpeg",
+            "C101/C101-2.jpeg"
+        ],
+        "precio": 80,
+        "talla": "M"
+    },
+    {
+        "codigo": "C102",
+        "nombre": "Calza C102",
+        "categoria": "ropa",
+        "descripcion": "Sin precio ni talla indicados en el chat.",
+        "imagenes": [
+            "C102/C102-1.jpeg",
+            "C102/C102-2.jpeg"
+        ]
+    },
+    {
+        "codigo": "C103",
+        "nombre": "Calza C103",
+        "categoria": "ropa",
+        "descripcion": "Sin precio ni talla indicados en el chat.",
+        "imagenes": [
+            "C103/C103-1.jpeg",
+            "C103/C103-2.jpeg"
+        ]
+    },
+    {
+        "codigo": "C104",
+        "nombre": "Calza C104",
+        "categoria": "ropa",
+        "descripcion": "Sin precio ni talla indicados en el chat.",
+        "imagenes": [
+            "C104/C104-1.jpeg",
+            "C104/C104-2.jpeg"
+        ]
+    },
+    {
+        "codigo": "C105",
+        "nombre": "Calza C105",
+        "categoria": "ropa",
+        "descripcion": "Sin precio ni talla indicados en el chat.",
+        "imagenes": [
+            "C105/C105-1.jpeg",
+            "C105/C105-2.jpeg"
+        ]
+    },
+    {
+        "codigo": "C106",
+        "nombre": "Calza C106",
+        "categoria": "ropa",
+        "descripcion": "Talla: M · Precio: 80 Bs",
+        "imagenes": [
+            "C106/C106-1.jpeg",
+            "C106/C106-2.jpeg",
+            "C106/C106-3.jpeg"
+        ],
+        "precio": 80,
+        "talla": "M"
+    },
+    {
+        "codigo": "C107",
+        "nombre": "Calza C107",
+        "categoria": "ropa",
+        "descripcion": "Talla: M · Precio: 40 Bs",
+        "imagenes": [
+            "C107/C107-1.jpeg",
+            "C107/C107-2.jpeg"
+        ],
+        "precio": 40,
+        "talla": "M"
+    },
+    {
+        "codigo": "C108",
+        "nombre": "Calza C108",
+        "categoria": "ropa",
+        "descripcion": "Talla: M · Precio: 80 Bs",
+        "imagenes": [
+            "C108/C108-1.jpeg",
+            "C108/C108-2.jpeg"
+        ],
+        "precio": 80,
+        "talla": "M"
+    },
+    {
+        "codigo": "C109",
+        "nombre": "Calza C109",
+        "categoria": "ropa",
+        "descripcion": "Talla: M · Precio: 60 Bs",
+        "imagenes": [
+            "C109/C109-1.jpeg",
+            "C109/C109-2.jpeg"
+        ],
+        "precio": 60,
+        "talla": "M"
+    },
+    {
+        "codigo": "C11",
+        "nombre": "Calza C11",
+        "categoria": "ropa",
+        "descripcion": "Precio: 80 Bs",
+        "imagenes": [
+            "C11/C11-1.jpeg",
+            "C11/C11-2.jpeg"
+        ],
+        "precio": 80
+    },
+    {
+        "codigo": "C110",
+        "nombre": "Calza C110",
+        "categoria": "ropa",
+        "descripcion": "Talla: L · Precio: 80 Bs",
+        "imagenes": [
+            "C110/C110-1.jpeg",
+            "C110/C110-2.jpeg"
+        ],
+        "precio": 80,
+        "talla": "L"
+    },
+    {
+        "codigo": "C111",
+        "nombre": "Calza C111",
+        "categoria": "ropa",
+        "descripcion": "Talla: M · Precio: 80 Bs",
+        "imagenes": [
+            "C111/C111-1.jpeg",
+            "C111/C111-2.jpeg"
+        ],
+        "precio": 80,
+        "talla": "M"
+    },
+    {
+        "codigo": "C112",
+        "nombre": "Calza C112",
+        "categoria": "ropa",
+        "descripcion": "Talla: M · Precio: 80 Bs · Sin trenza",
+        "imagenes": [
+            "C112/C112-1.jpeg",
+            "C112/C112-2.jpeg"
+        ],
+        "precio": 80,
+        "talla": "M"
+    },
+    {
+        "codigo": "C113",
+        "nombre": "Calza C113",
+        "categoria": "ropa",
+        "descripcion": "Talla: S · Precio: 80 Bs",
+        "imagenes": [
+            "C113/C113-1.jpeg",
+            "C113/C113-2.jpeg"
+        ],
+        "precio": 80,
+        "talla": "S"
+    },
+    {
+        "codigo": "C114",
+        "nombre": "Calza C114",
+        "categoria": "ropa",
+        "descripcion": "Talla: L · Precio: 80 Bs",
+        "imagenes": [
+            "C114/C114-1.jpeg",
+            "C114/C114-2.jpeg"
+        ],
+        "precio": 80,
+        "talla": "L"
+    },
+    {
+        "codigo": "C115",
+        "nombre": "Calza C115",
+        "categoria": "ropa",
+        "descripcion": "Talla: M · Precio: 80 Bs",
+        "imagenes": [
+            "C115/C115-1.jpeg",
+            "C115/C115-2.jpeg"
+        ],
+        "precio": 80,
+        "talla": "M"
+    },
+    {
+        "codigo": "C116",
+        "nombre": "Calza C116",
+        "categoria": "ropa",
+        "descripcion": "Talla: M · Precio: 80 Bs",
+        "imagenes": [
+            "C116/C116-1.jpeg",
+            "C116/C116-2.jpeg"
+        ],
+        "precio": 80,
+        "talla": "M"
+    },
+    {
+        "codigo": "C117",
+        "nombre": "Calza C117",
+        "categoria": "ropa",
+        "descripcion": "Talla: M · Precio: 80 Bs",
+        "imagenes": [
+            "C117/C117-1.jpeg",
+            "C117/C117-2.jpeg",
+            "C117/C117-3.jpeg",
+            "C117/C117-4.jpeg",
+            "C117/C117-5.jpeg"
+        ],
+        "precio": 80,
+        "talla": "M"
+    },
+    {
+        "codigo": "C118",
+        "nombre": "Calza C118",
+        "categoria": "ropa",
+        "descripcion": "Talla: M · Precio: 60 Bs",
+        "imagenes": [
+            "C118/C118-1.jpeg",
+            "C118/C118-2.jpeg"
+        ],
+        "precio": 60,
+        "talla": "M"
+    },
+    {
+        "codigo": "C119",
+        "nombre": "Calza C119",
+        "categoria": "ropa",
+        "descripcion": "Talla: M · Precio: 80 Bs",
+        "imagenes": [
+            "C119/C119-1.jpeg",
+            "C119/C119-2.jpeg"
+        ],
+        "precio": 80,
+        "talla": "M"
+    },
+    {
+        "codigo": "C12",
+        "nombre": "Calza C12",
+        "categoria": "ropa",
+        "descripcion": "Precio: 80 Bs",
+        "imagenes": [
+            "C12/C12-1.jpeg",
+            "C12/C12-2.jpeg"
+        ],
+        "precio": 80
+    },
+    {
+        "codigo": "C120",
+        "nombre": "Calza C120",
+        "categoria": "ropa",
+        "descripcion": "Talla: M · Precio: 100 Bs",
+        "imagenes": [
+            "C120/C120-1.jpeg",
+            "C120/C120-2.jpeg"
+        ],
+        "precio": 100,
+        "talla": "M"
+    },
+    {
+        "codigo": "C121",
+        "nombre": "Calza C121",
+        "categoria": "ropa",
+        "descripcion": "Talla: M · Precio: 80 Bs",
+        "imagenes": [
+            "C121/C121-1.jpeg",
+            "C121/C121-2.jpeg"
+        ],
+        "precio": 80,
+        "talla": "M"
+    },
+    {
+        "codigo": "C122",
+        "nombre": "Calza C122",
+        "categoria": "ropa",
+        "descripcion": "Talla: M · Precio: 60 Bs",
+        "imagenes": [
+            "C122/C122-1.jpeg",
+            "C122/C122-2.jpeg"
+        ],
+        "precio": 60,
+        "talla": "M"
+    },
+    {
+        "codigo": "C123",
+        "nombre": "Calza C123",
+        "categoria": "ropa",
+        "descripcion": "Talla: M · Precio: 80 Bs",
+        "imagenes": [
+            "C123/C123-1.jpeg",
+            "C123/C123-2.jpeg",
+            "C123/C123-3.jpeg"
+        ],
+        "precio": 80,
+        "talla": "M"
+    },
+    {
+        "codigo": "C124",
+        "nombre": "Calza C124",
+        "categoria": "ropa",
+        "descripcion": "Talla: M · Precio: 80 Bs",
+        "imagenes": [
+            "C124/C124-1.jpeg",
+            "C124/C124-2.jpeg"
+        ],
+        "precio": 80,
+        "talla": "M"
+    },
+    {
+        "codigo": "C125",
+        "nombre": "Calza C125",
+        "categoria": "ropa",
+        "descripcion": "Talla: M · Precio: 60 Bs",
+        "imagenes": [
+            "C125/C125-1.jpeg",
+            "C125/C125-2.jpeg"
+        ],
+        "precio": 60,
+        "talla": "M"
+    },
+    {
+        "codigo": "C126",
+        "nombre": "Calza C126",
+        "categoria": "ropa",
+        "descripcion": "Talla: M · Precio: 80 Bs",
+        "imagenes": [
+            "C126/C126-1.jpeg",
+            "C126/C126-2.jpeg"
+        ],
+        "precio": 80,
+        "talla": "M"
+    },
+    {
+        "codigo": "C127",
+        "nombre": "Calza C127",
+        "categoria": "ropa",
+        "descripcion": "Talla: S · Precio: 80 Bs",
+        "imagenes": [
+            "C127/C127-1.jpeg",
+            "C127/C127-2.jpeg"
+        ],
+        "precio": 80,
+        "talla": "S"
+    },
+    {
+        "codigo": "C128",
+        "nombre": "Calza C128",
+        "categoria": "ropa",
+        "descripcion": "Talla: M · Precio: 60 Bs",
+        "imagenes": [
+            "C128/C128-1.jpeg",
+            "C128/C128-2.jpeg"
+        ],
+        "precio": 60,
+        "talla": "M"
+    },
+    {
+        "codigo": "C129",
+        "nombre": "Calza C129",
+        "categoria": "ropa",
+        "descripcion": "Talla: M · Precio: 80 Bs",
+        "imagenes": [
+            "C129/C129-1.jpeg",
+            "C129/C129-2.jpeg"
+        ],
+        "precio": 80,
+        "talla": "M"
+    },
+    {
+        "codigo": "C13",
+        "nombre": "Calza C13",
+        "categoria": "ropa",
+        "descripcion": "Precio: 80 Bs",
+        "imagenes": [
+            "C13/C13-1.jpeg",
+            "C13/C13-2.jpeg"
+        ],
+        "precio": 80
+    },
+    {
+        "codigo": "C130",
+        "nombre": "Calza C130",
+        "categoria": "ropa",
+        "descripcion": "Talla: XS · Precio: 60 Bs",
+        "imagenes": [
+            "C130/C130-1.jpeg",
+            "C130/C130-2.jpeg"
+        ],
+        "precio": 60,
+        "talla": "XS"
+    },
+    {
+        "codigo": "C131",
+        "nombre": "Calza C131",
+        "categoria": "ropa",
+        "descripcion": "Talla: M · Precio: 50 Bs",
+        "imagenes": [
+            "C131/C131-1.jpeg",
+            "C131/C131-2.jpeg"
+        ],
+        "precio": 50,
+        "talla": "M"
+    },
+    {
+        "codigo": "C132",
+        "nombre": "Calza C132",
+        "categoria": "ropa",
+        "descripcion": "Talla: M · Precio: 50 Bs",
+        "imagenes": [
+            "C132/C132-1.jpeg",
+            "C132/C132-2.jpeg"
+        ],
+        "precio": 50,
+        "talla": "M"
+    },
+    {
+        "codigo": "C133",
+        "nombre": "Calza C133",
+        "categoria": "ropa",
+        "descripcion": "Talla: L",
+        "imagenes": [
+            "C133/C133-1.jpeg",
+            "C133/C133-2.jpeg"
+        ],
+        "talla": "L"
+    },
+    {
+        "codigo": "C134",
+        "nombre": "Calza C134",
+        "categoria": "ropa",
+        "descripcion": "Talla: L",
+        "imagenes": [
+            "C134/C134-1.jpeg",
+            "C134/C134-2.jpeg"
+        ],
+        "talla": "L"
+    },
+    {
+        "codigo": "C135",
+        "nombre": "Calza C135",
+        "categoria": "ropa",
+        "descripcion": "Talla: M · Precio: 50 Bs",
+        "imagenes": [
+            "C135/C135-1.jpeg",
+            "C135/C135-2.jpeg",
+            "C135/C135-3.jpeg"
+        ],
+        "precio": 50,
+        "talla": "M"
+    },
+    {
+        "codigo": "C136",
+        "nombre": "Calza C136",
+        "categoria": "ropa",
+        "descripcion": "Talla: S · Precio: 55 Bs",
+        "imagenes": [
+            "C136/C136-1.jpeg",
+            "C136/C136-2.jpeg"
+        ],
+        "precio": 55,
+        "talla": "S"
+    },
+    {
+        "codigo": "C137",
+        "nombre": "Calza C137",
+        "categoria": "ropa",
+        "descripcion": "Talla: L · Precio: 35 Bs · Un poco descagastada",
+        "imagenes": [
+            "C137/C137-1.jpeg",
+            "C137/C137-2.jpeg"
+        ],
+        "precio": 35,
+        "talla": "L"
+    },
+    {
+        "codigo": "C138",
+        "nombre": "Calza C138",
+        "categoria": "ropa",
+        "descripcion": "Talla: S · Precio: 80 Bs",
+        "imagenes": [
+            "C138/C138-1.jpeg",
+            "C138/C138-2.jpeg",
+            "C138/C138-3.jpeg"
+        ],
+        "precio": 80,
+        "talla": "S"
+    },
+    {
+        "codigo": "C14",
+        "nombre": "Calza C14",
+        "categoria": "ropa",
+        "descripcion": "Precio: 70 Bs",
+        "imagenes": [
+            "C14/C14-1.jpeg",
+            "C14/C14-2.jpeg"
+        ],
+        "precio": 70
+    },
+    {
+        "codigo": "C15",
+        "nombre": "Calza C15",
+        "categoria": "ropa",
+        "descripcion": "Precio: 80 Bs",
+        "imagenes": [
+            "C15/C15-1.jpeg",
+            "C15/C15-2.jpeg"
+        ],
+        "precio": 80
+    },
+    {
+        "codigo": "C16",
+        "nombre": "Calza C16",
+        "categoria": "ropa",
+        "descripcion": "Precio: 80 Bs",
+        "imagenes": [
+            "C16/C16-1.jpeg",
+            "C16/C16-2.jpeg"
+        ],
+        "precio": 80
+    },
+    {
+        "codigo": "C17",
+        "nombre": "Calza C17",
+        "categoria": "ropa",
+        "descripcion": "Precio: 80 Bs",
+        "imagenes": [
+            "C17/C17-1.jpeg",
+            "C17/C17-2.jpeg"
+        ],
+        "precio": 80
+    },
+    {
+        "codigo": "C18",
+        "nombre": "Calza C18",
+        "categoria": "ropa",
+        "descripcion": "Precio: 80 Bs",
+        "imagenes": [
+            "C18/C18-1.jpeg",
+            "C18/C18-2.jpeg"
+        ],
+        "precio": 80
+    },
+    {
+        "codigo": "C19",
+        "nombre": "Calza C19",
+        "categoria": "ropa",
+        "descripcion": "Precio: 100 Bs",
+        "imagenes": [
+            "C19/C19-1.jpeg",
+            "C19/C19-2.jpeg"
+        ],
+        "precio": 100
+    },
+    {
+        "codigo": "C2",
+        "nombre": "Calza C2",
+        "categoria": "ropa",
+        "descripcion": "Precio: 100 Bs",
+        "imagenes": [
+            "C2/C2-1.jpeg",
+            "C2/C2-2.jpeg"
+        ],
+        "precio": 100
+    },
+    {
+        "codigo": "C20",
+        "nombre": "Calza C20",
+        "categoria": "ropa",
+        "descripcion": "Precio: 80 Bs",
+        "imagenes": [
+            "C20/C20-1.jpeg",
+            "C20/C20-2.jpeg"
+        ],
+        "precio": 80
+    },
+    {
+        "codigo": "C21",
+        "nombre": "Calza C21",
+        "categoria": "ropa",
+        "descripcion": "Precio: 80 Bs",
+        "imagenes": [
+            "C21/C21-1.jpeg",
+            "C21/C21-2.jpeg"
+        ],
+        "precio": 80
+    },
+    {
+        "codigo": "C22",
+        "nombre": "Calza C22",
+        "categoria": "ropa",
+        "descripcion": "Precio: 80 Bs",
+        "imagenes": [
+            "C22/C22-1.jpeg",
+            "C22/C22-2.jpeg"
+        ],
+        "precio": 80
+    },
+    {
+        "codigo": "C23",
+        "nombre": "Calza C23",
+        "categoria": "ropa",
+        "descripcion": "Precio: 80 Bs",
+        "imagenes": [
+            "C23/C23-1.jpeg",
+            "C23/C23-2.jpeg"
+        ],
+        "precio": 80
+    },
+    {
+        "codigo": "C24",
+        "nombre": "Calza C24",
+        "categoria": "ropa",
+        "descripcion": "Precio: 80 Bs",
+        "imagenes": [
+            "C24/C24-1.jpeg",
+            "C24/C24-2.jpeg"
+        ],
+        "precio": 80
+    },
+    {
+        "codigo": "C25",
+        "nombre": "Calza C25",
+        "categoria": "ropa",
+        "descripcion": "Precio: 80 Bs",
+        "imagenes": [
+            "C25/C25-1.jpeg",
+            "C25/C25-2.jpeg"
+        ],
+        "precio": 80
+    },
+    {
+        "codigo": "C26",
+        "nombre": "Calza C26",
+        "categoria": "ropa",
+        "descripcion": "Precio: 80 Bs",
+        "imagenes": [
+            "C26/C26-1.jpeg",
+            "C26/C26-2.jpeg"
+        ],
+        "precio": 80
+    },
+    {
+        "codigo": "C27",
+        "nombre": "Calza C27",
+        "categoria": "ropa",
+        "descripcion": "Precio: 80 Bs",
+        "imagenes": [
+            "C27/C27-1.jpeg",
+            "C27/C27-2.jpeg"
+        ],
+        "precio": 80
+    },
+    {
+        "codigo": "C28",
+        "nombre": "Calza C28",
+        "categoria": "ropa",
+        "descripcion": "Precio: 80 Bs",
+        "imagenes": [
+            "C28/C28-1.jpeg",
+            "C28/C28-2.jpeg"
+        ],
+        "precio": 80
+    },
+    {
+        "codigo": "C29",
+        "nombre": "Calza C29",
+        "categoria": "ropa",
+        "descripcion": "Precio: 80 Bs",
+        "imagenes": [
+            "C29/C29-1.jpeg",
+            "C29/C29-2.jpeg"
+        ],
+        "precio": 80
+    },
+    {
+        "codigo": "C3",
+        "nombre": "Calza C3",
+        "categoria": "ropa",
+        "descripcion": "Precio: 80 Bs",
+        "imagenes": [
+            "C3/C3-1.jpeg",
+            "C3/C3-2.jpeg"
+        ],
+        "precio": 80
+    },
+    {
+        "codigo": "C30",
+        "nombre": "Calza C30",
+        "categoria": "ropa",
+        "descripcion": "Precio: 80 Bs",
+        "imagenes": [
+            "C30/C30-1.jpeg",
+            "C30/C30-2.jpeg"
+        ],
+        "precio": 80
+    },
+    {
+        "codigo": "C31",
+        "nombre": "Calza C31",
+        "categoria": "ropa",
+        "descripcion": "Precio: 80 Bs",
+        "imagenes": [
+            "C31/C31-1.jpeg",
+            "C31/C31-2.jpeg"
+        ],
+        "precio": 80
+    },
+    {
+        "codigo": "C32",
+        "nombre": "Calza C32",
+        "categoria": "ropa",
+        "descripcion": "Precio: 80 Bs",
+        "imagenes": [
+            "C32/C32-1.jpeg",
+            "C32/C32-2.jpeg"
+        ],
+        "precio": 80
+    },
+    {
+        "codigo": "C33",
+        "nombre": "Calza C33",
+        "categoria": "ropa",
+        "descripcion": "Precio: 80 Bs",
+        "imagenes": [
+            "C33/C33-1.jpeg",
+            "C33/C33-2.jpeg"
+        ],
+        "precio": 80
+    },
+    {
+        "codigo": "C34",
+        "nombre": "Calza C34",
+        "categoria": "ropa",
+        "descripcion": "Talla: L",
+        "imagenes": [
+            "C34/C34-1.jpeg",
+            "C34/C34-2.jpeg"
+        ],
+        "talla": "L"
+    },
+    {
+        "codigo": "C35",
+        "nombre": "Calza C35",
+        "categoria": "ropa",
+        "descripcion": "Talla: L",
+        "imagenes": [
+            "C35/C35-1.jpeg",
+            "C35/C35-2.jpeg"
+        ],
+        "talla": "L"
+    },
+    {
+        "codigo": "C37",
+        "nombre": "Calza C37",
+        "categoria": "ropa",
+        "descripcion": "Talla: L / XL · Precios registrados: 100 Bs / 70 Bs",
+        "imagenes": [
+            "C37/C37-1.jpeg",
+            "C37/C37-2.jpeg",
+            "C37/C37-3.jpeg",
+            "C37/C37-4.jpeg",
+            "C37/C37-5.jpeg"
+        ],
+        "precio": 100,
+        "talla": "L / XL"
+    },
+    {
+        "codigo": "C38",
+        "nombre": "Calza C38",
+        "categoria": "ropa",
+        "descripcion": "Talla: M · Precio: 80 Bs · Con friza",
+        "imagenes": [
+            "C38/C38-1.jpeg",
+            "C38/C38-2.jpeg",
+            "C38/C38-3.jpeg"
+        ],
+        "precio": 80,
+        "talla": "M"
+    },
+    {
+        "codigo": "C39",
+        "nombre": "Calza C39",
+        "categoria": "ropa",
+        "descripcion": "Talla: L · Precio: 80 Bs",
+        "imagenes": [
+            "C39/C39-1.jpeg",
+            "C39/C39-2.jpeg"
+        ],
+        "precio": 80,
+        "talla": "L"
+    },
+    {
+        "codigo": "C4",
+        "nombre": "Calza C4",
+        "categoria": "ropa",
+        "descripcion": "Precio: 80 Bs",
+        "imagenes": [
+            "C4/C4-1.jpeg",
+            "C4/C4-2.jpeg"
+        ],
+        "precio": 80
+    },
+    {
+        "codigo": "C40",
+        "nombre": "Calza C40",
+        "categoria": "ropa",
+        "descripcion": "Talla: XL · Precio: 80 Bs",
+        "imagenes": [
+            "C40/C40-1.jpeg",
+            "C40/C40-2.jpeg"
+        ],
+        "precio": 80,
+        "talla": "XL"
+    },
+    {
+        "codigo": "C41",
+        "nombre": "Calza C41",
+        "categoria": "ropa",
+        "descripcion": "Talla: S · Precio: 80 Bs",
+        "imagenes": [
+            "C41/C41-1.jpeg",
+            "C41/C41-2.jpeg"
+        ],
+        "precio": 80,
+        "talla": "S"
+    },
+    {
+        "codigo": "C42",
+        "nombre": "Calza C42",
+        "categoria": "ropa",
+        "descripcion": "Talla: S · Precio: 80 Bs",
+        "imagenes": [
+            "C42/C42-1.jpeg",
+            "C42/C42-2.jpeg"
+        ],
+        "precio": 80,
+        "talla": "S"
+    },
+    {
+        "codigo": "C43",
+        "nombre": "Calza C43",
+        "categoria": "ropa",
+        "descripcion": "Talla: S · Precio: 80 Bs",
+        "imagenes": [
+            "C43/C43-1.jpeg",
+            "C43/C43-2.jpeg"
+        ],
+        "precio": 80,
+        "talla": "S"
+    },
+    {
+        "codigo": "C44",
+        "nombre": "Calza C44",
+        "categoria": "ropa",
+        "descripcion": "Talla: S · Precio: 80 Bs",
+        "imagenes": [
+            "C44/C44-1.jpeg",
+            "C44/C44-2.jpeg"
+        ],
+        "precio": 80,
+        "talla": "S"
+    },
+    {
+        "codigo": "C46",
+        "nombre": "Calza C46",
+        "categoria": "ropa",
+        "descripcion": "Talla: S · Precio: 100 Bs",
+        "imagenes": [
+            "C46/C46-1.jpeg",
+            "C46/C46-2.jpeg"
+        ],
+        "precio": 100,
+        "talla": "S"
+    },
+    {
+        "codigo": "C47",
+        "nombre": "Calza C47",
+        "categoria": "ropa",
+        "descripcion": "Talla: M · Precio: 80 Bs",
+        "imagenes": [
+            "C47/C47-1.jpeg",
+            "C47/C47-2.jpeg"
+        ],
+        "precio": 80,
+        "talla": "M"
+    },
+    {
+        "codigo": "C48",
+        "nombre": "Calza C48",
+        "categoria": "ropa",
+        "descripcion": "Talla: M · Precio: 80 Bs",
+        "imagenes": [
+            "C48/C48-1.jpeg",
+            "C48/C48-2.jpeg"
+        ],
+        "precio": 80,
+        "talla": "M"
+    },
+    {
+        "codigo": "C49",
+        "nombre": "Calza C49",
+        "categoria": "ropa",
+        "descripcion": "Talla: M · Precio: 80 Bs",
+        "imagenes": [
+            "C49/C49-1.jpeg",
+            "C49/C49-2.jpeg"
+        ],
+        "precio": 80,
+        "talla": "M"
+    },
+    {
+        "codigo": "C5",
+        "nombre": "Calza C5",
+        "categoria": "ropa",
+        "descripcion": "Precio: 100 Bs",
+        "imagenes": [
+            "C5/C5-1.jpeg",
+            "C5/C5-2.jpeg"
+        ],
+        "precio": 100
+    },
+    {
+        "codigo": "C50",
+        "nombre": "Calza C50",
+        "categoria": "ropa",
+        "descripcion": "Talla: M · Precio: 80 Bs",
+        "imagenes": [
+            "C50/C50-1.jpeg",
+            "C50/C50-2.jpeg"
+        ],
+        "precio": 80,
+        "talla": "M"
+    },
+    {
+        "codigo": "C51",
+        "nombre": "Calza C51",
+        "categoria": "ropa",
+        "descripcion": "Talla: S · Precio: 80 Bs",
+        "imagenes": [
+            "C51/C51-1.jpeg",
+            "C51/C51-2.jpeg"
+        ],
+        "precio": 80,
+        "talla": "S"
+    },
+    {
+        "codigo": "C52",
+        "nombre": "Calza C52",
+        "categoria": "ropa",
+        "descripcion": "Talla: M · Precio: 80 Bs",
+        "imagenes": [
+            "C52/C52-1.jpeg"
+        ],
+        "precio": 80,
+        "talla": "M"
+    },
+    {
+        "codigo": "C53",
+        "nombre": "Calza C53",
+        "categoria": "ropa",
+        "descripcion": "Talla: S · Precio: 80 Bs",
+        "imagenes": [
+            "C53/C53-1.jpeg",
+            "C53/C53-2.jpeg"
+        ],
+        "precio": 80,
+        "talla": "S"
+    },
+    {
+        "codigo": "C54",
+        "nombre": "Calza C54",
+        "categoria": "ropa",
+        "descripcion": "Talla: S",
+        "imagenes": [
+            "C54/C54-1.jpeg",
+            "C54/C54-2.jpeg"
+        ],
+        "talla": "S"
+    },
+    {
+        "codigo": "C55",
+        "nombre": "Calza C55",
+        "categoria": "ropa",
+        "descripcion": "Talla: M · Precio: 80 Bs",
+        "imagenes": [
+            "C55/C55-1.jpeg",
+            "C55/C55-2.jpeg"
+        ],
+        "precio": 80,
+        "talla": "M"
+    },
+    {
+        "codigo": "C56",
+        "nombre": "Calza C56",
+        "categoria": "ropa",
+        "descripcion": "Talla: M · Precio: 80 Bs",
+        "imagenes": [
+            "C56/C56-1.jpeg",
+            "C56/C56-2.jpeg"
+        ],
+        "precio": 80,
+        "talla": "M"
+    },
+    {
+        "codigo": "C57",
+        "nombre": "Calza C57",
+        "categoria": "ropa",
+        "descripcion": "Talla: M · Precio: 80 Bs",
+        "imagenes": [
+            "C57/C57-1.jpeg",
+            "C57/C57-2.jpeg"
+        ],
+        "precio": 80,
+        "talla": "M"
+    },
+    {
+        "codigo": "C58",
+        "nombre": "Calza C58",
+        "categoria": "ropa",
+        "descripcion": "Talla: S · Precio: 80 Bs",
+        "imagenes": [
+            "C58/C58-1.jpeg",
+            "C58/C58-2.jpeg"
+        ],
+        "precio": 80,
+        "talla": "S"
+    },
+    {
+        "codigo": "C59",
+        "nombre": "Calza C59",
+        "categoria": "ropa",
+        "descripcion": "Talla: M · Precio: 80 Bs",
+        "imagenes": [
+            "C59/C59-1.jpeg",
+            "C59/C59-2.jpeg"
+        ],
+        "precio": 80,
+        "talla": "M"
+    },
+    {
+        "codigo": "C6",
+        "nombre": "Calza C6",
+        "categoria": "ropa",
+        "descripcion": "Precio: 80 Bs",
+        "imagenes": [
+            "C6/C6-1.jpeg",
+            "C6/C6-2.jpeg"
+        ],
+        "precio": 80
+    },
+    {
+        "codigo": "C60",
+        "nombre": "Calza C60",
+        "categoria": "ropa",
+        "descripcion": "Talla: M · Precio: 80 Bs",
+        "imagenes": [
+            "C60/C60-1.jpeg",
+            "C60/C60-2.jpeg"
+        ],
+        "precio": 80,
+        "talla": "M"
+    },
+    {
+        "codigo": "C61",
+        "nombre": "Calza C61",
+        "categoria": "ropa",
+        "descripcion": "Talla: S · Precio: 80 Bs",
+        "imagenes": [
+            "C61/C61-1.jpeg",
+            "C61/C61-2.jpeg"
+        ],
+        "precio": 80,
+        "talla": "S"
+    },
+    {
+        "codigo": "C62",
+        "nombre": "Calza C62",
+        "categoria": "ropa",
+        "descripcion": "Precio: 80 Bs",
+        "imagenes": [
+            "C62/C62-1.jpeg",
+            "C62/C62-2.jpeg"
+        ],
+        "precio": 80
+    },
+    {
+        "codigo": "C63",
+        "nombre": "Calza C63",
+        "categoria": "ropa",
+        "descripcion": "Precio: 80 Bs",
+        "imagenes": [
+            "C63/C63-1.jpeg",
+            "C63/C63-2.jpeg"
+        ],
+        "precio": 80
+    },
+    {
+        "codigo": "C64",
+        "nombre": "Calza C64",
+        "categoria": "ropa",
+        "descripcion": "Precio: 80 Bs",
+        "imagenes": [
+            "C64/C64-1.jpeg",
+            "C64/C64-2.jpeg"
+        ],
+        "precio": 80
+    },
+    {
+        "codigo": "C65",
+        "nombre": "Calza C65",
+        "categoria": "ropa",
+        "descripcion": "Precio: 100 Bs",
+        "imagenes": [
+            "C65/C65-1.jpeg",
+            "C65/C65-2.jpeg"
+        ],
+        "precio": 100
+    },
+    {
+        "codigo": "C66",
+        "nombre": "Calza C66",
+        "categoria": "ropa",
+        "descripcion": "Talla: S · Precio: 80 Bs",
+        "imagenes": [
+            "C66/C66-1.jpeg",
+            "C66/C66-2.jpeg"
+        ],
+        "precio": 80,
+        "talla": "S"
+    },
+    {
+        "codigo": "C67",
+        "nombre": "Calza C67",
+        "categoria": "ropa",
+        "descripcion": "Talla: S",
+        "imagenes": [
+            "C67/C67-1.jpeg",
+            "C67/C67-2.jpeg"
+        ],
+        "talla": "S"
+    },
+    {
+        "codigo": "C68",
+        "nombre": "Calza C68",
+        "categoria": "ropa",
+        "descripcion": "Talla: M · Precio: 80 Bs",
+        "imagenes": [
+            "C68/C68-1.jpeg",
+            "C68/C68-2.jpeg"
+        ],
+        "precio": 80,
+        "talla": "M"
+    },
+    {
+        "codigo": "C69",
+        "nombre": "Calza C69",
+        "categoria": "ropa",
+        "descripcion": "Talla: S · Precio: 80 Bs",
+        "imagenes": [
+            "C69/C69-1.jpeg",
+            "C69/C69-2.jpeg"
+        ],
+        "precio": 80,
+        "talla": "S"
+    },
+    {
+        "codigo": "C7",
+        "nombre": "Calza C7",
+        "categoria": "ropa",
+        "descripcion": "Precio: 80 Bs",
+        "imagenes": [
+            "C7/C7-1.jpeg",
+            "C7/C7-2.jpeg"
+        ],
+        "precio": 80
+    },
+    {
+        "codigo": "C70",
+        "nombre": "Calza C70",
+        "categoria": "ropa",
+        "descripcion": "Talla: S · Precio: 80 Bs",
+        "imagenes": [
+            "C70/C70-1.jpeg",
+            "C70/C70-2.jpeg"
+        ],
+        "precio": 80,
+        "talla": "S"
+    },
+    {
+        "codigo": "C71",
+        "nombre": "Calza C71",
+        "categoria": "ropa",
+        "descripcion": "Talla: M · Precio: 80 Bs",
+        "imagenes": [
+            "C71/C71-1.jpeg",
+            "C71/C71-2.jpeg"
+        ],
+        "precio": 80,
+        "talla": "M"
+    },
+    {
+        "codigo": "C72",
+        "nombre": "Calza C72",
+        "categoria": "ropa",
+        "descripcion": "Talla: S · Precio: 80 Bs",
+        "imagenes": [
+            "C72/C72-1.jpeg",
+            "C72/C72-2.jpeg"
+        ],
+        "precio": 80,
+        "talla": "S"
+    },
+    {
+        "codigo": "C73",
+        "nombre": "Calza C73",
+        "categoria": "ropa",
+        "descripcion": "Talla: M · Precio: 80 Bs",
+        "imagenes": [
+            "C73/C73-1.jpeg",
+            "C73/C73-2.jpeg"
+        ],
+        "precio": 80,
+        "talla": "M"
+    },
+    {
+        "codigo": "C74",
+        "nombre": "Calza C74",
+        "categoria": "ropa",
+        "descripcion": "Talla: M · Precio: 80 Bs",
+        "imagenes": [
+            "C74/C74-1.jpeg",
+            "C74/C74-2.jpeg"
+        ],
+        "precio": 80,
+        "talla": "M"
+    },
+    {
+        "codigo": "C75",
+        "nombre": "Calza C75",
+        "categoria": "ropa",
+        "descripcion": "Talla: S · Precio: 100 Bs",
+        "imagenes": [
+            "C75/C75-1.jpeg",
+            "C75/C75-2.jpeg"
+        ],
+        "precio": 100,
+        "talla": "S"
+    },
+    {
+        "codigo": "C76",
+        "nombre": "Calza C76",
+        "categoria": "ropa",
+        "descripcion": "Talla: S · Precio: 80 Bs",
+        "imagenes": [
+            "C76/C76-1.jpeg",
+            "C76/C76-2.jpeg"
+        ],
+        "precio": 80,
+        "talla": "S"
+    },
+    {
+        "codigo": "C77",
+        "nombre": "Calza C77",
+        "categoria": "ropa",
+        "descripcion": "Talla: S · Precio: 100 Bs",
+        "imagenes": [
+            "C77/C77-1.jpeg",
+            "C77/C77-2.jpeg"
+        ],
+        "precio": 100,
+        "talla": "S"
+    },
+    {
+        "codigo": "C78",
+        "nombre": "Calza C78",
+        "categoria": "ropa",
+        "descripcion": "Talla: S · Precio: 80 Bs",
+        "imagenes": [
+            "C78/C78-1.jpeg",
+            "C78/C78-2.jpeg"
+        ],
+        "precio": 80,
+        "talla": "S"
+    },
+    {
+        "codigo": "C79",
+        "nombre": "Calza C79",
+        "categoria": "ropa",
+        "descripcion": "Talla: S · Precio: 80 Bs",
+        "imagenes": [
+            "C79/C79-1.jpeg",
+            "C79/C79-2.jpeg"
+        ],
+        "precio": 80,
+        "talla": "S"
+    },
+    {
+        "codigo": "C8",
+        "nombre": "Calza C8",
+        "categoria": "ropa",
+        "descripcion": "Sin precio ni talla indicados en el chat.",
+        "imagenes": [
+            "C8/C8-1.jpeg",
+            "C8/C8-2.jpeg"
+        ]
+    },
+    {
+        "codigo": "C80",
+        "nombre": "Calza C80",
+        "categoria": "ropa",
+        "descripcion": "Talla: S · Precio: 80 Bs",
+        "imagenes": [
+            "C80/C80-1.jpeg",
+            "C80/C80-2.jpeg"
+        ],
+        "precio": 80,
+        "talla": "S"
+    },
+    {
+        "codigo": "C81",
+        "nombre": "Calza C81",
+        "categoria": "ropa",
+        "descripcion": "Talla: M · Precio: 80 Bs",
+        "imagenes": [
+            "C81/C81-1.jpeg",
+            "C81/C81-2.jpeg"
+        ],
+        "precio": 80,
+        "talla": "M"
+    },
+    {
+        "codigo": "C82",
+        "nombre": "Calza C82",
+        "categoria": "ropa",
+        "descripcion": "Talla: M · Precio: 80 Bs",
+        "imagenes": [
+            "C82/C82-1.jpeg",
+            "C82/C82-2.jpeg"
+        ],
+        "precio": 80,
+        "talla": "M"
+    },
+    {
+        "codigo": "C83",
+        "nombre": "Calza C83",
+        "categoria": "ropa",
+        "descripcion": "Talla: S · Precio: 80 Bs",
+        "imagenes": [
+            "C83/C83-1.jpeg",
+            "C83/C83-2.jpeg"
+        ],
+        "precio": 80,
+        "talla": "S"
+    },
+    {
+        "codigo": "C84",
+        "nombre": "Calza C84",
+        "categoria": "ropa",
+        "descripcion": "Talla: L · Precio: 80 Bs",
+        "imagenes": [
+            "C84/C84-1.jpeg",
+            "C84/C84-2.jpeg"
+        ],
+        "precio": 80,
+        "talla": "L"
+    },
+    {
+        "codigo": "C85",
+        "nombre": "Calza C85",
+        "categoria": "ropa",
+        "descripcion": "Talla: L · Precio: 80 Bs",
+        "imagenes": [
+            "C85/C85-1.jpeg",
+            "C85/C85-2.jpeg"
+        ],
+        "precio": 80,
+        "talla": "L"
+    },
+    {
+        "codigo": "C86",
+        "nombre": "Calza C86",
+        "categoria": "ropa",
+        "descripcion": "Talla: M · Precio: 50 Bs",
+        "imagenes": [
+            "C86/C86-1.jpeg",
+            "C86/C86-2.jpeg"
+        ],
+        "precio": 50,
+        "talla": "M"
+    },
+    {
+        "codigo": "C87",
+        "nombre": "Calza C87",
+        "categoria": "ropa",
+        "descripcion": "Talla: M · Precio: 80 Bs",
+        "imagenes": [
+            "C87/C87-1.jpeg",
+            "C87/C87-2.jpeg"
+        ],
+        "precio": 80,
+        "talla": "M"
+    },
+    {
+        "codigo": "C88",
+        "nombre": "Calza C88",
+        "categoria": "ropa",
+        "descripcion": "Talla: M · Precio: 50 Bs",
+        "imagenes": [
+            "C88/C88-1.jpeg",
+            "C88/C88-2.jpeg"
+        ],
+        "precio": 50,
+        "talla": "M"
+    },
+    {
+        "codigo": "C89",
+        "nombre": "Calza C89",
+        "categoria": "ropa",
+        "descripcion": "Talla: M · Precio: 50 Bs",
+        "imagenes": [
+            "C89/C89-1.jpeg",
+            "C89/C89-2.jpeg"
+        ],
+        "precio": 50,
+        "talla": "M"
+    },
+    {
+        "codigo": "C9",
+        "nombre": "Calza C9",
+        "categoria": "ropa",
+        "descripcion": "Precio: 80 Bs",
+        "imagenes": [
+            "C9/C9-1.jpeg",
+            "C9/C9-2.jpeg"
+        ],
+        "precio": 80
+    },
+    {
+        "codigo": "C90",
+        "nombre": "Calza C90",
+        "categoria": "ropa",
+        "descripcion": "Talla: M · Precio: 80 Bs",
+        "imagenes": [
+            "C90/C90-1.jpeg",
+            "C90/C90-2.jpeg"
+        ],
+        "precio": 80,
+        "talla": "M"
+    },
+    {
+        "codigo": "C91",
+        "nombre": "Calza C91",
+        "categoria": "ropa",
+        "descripcion": "Talla: M · Precio: 80 Bs",
+        "imagenes": [
+            "C91/C91-1.jpeg",
+            "C91/C91-2.jpeg"
+        ],
+        "precio": 80,
+        "talla": "M"
+    },
+    {
+        "codigo": "C92",
+        "nombre": "Calza C92",
+        "categoria": "ropa",
+        "descripcion": "Talla: M · Precio: 80 Bs",
+        "imagenes": [
+            "C92/C92-1.jpeg",
+            "C92/C92-2.jpeg"
+        ],
+        "precio": 80,
+        "talla": "M"
+    },
+    {
+        "codigo": "C93",
+        "nombre": "Calza C93",
+        "categoria": "ropa",
+        "descripcion": "Talla: M · Precio: 80 Bs",
+        "imagenes": [
+            "C93/C93-1.jpeg",
+            "C93/C93-2.jpeg"
+        ],
+        "precio": 80,
+        "talla": "M"
+    },
+    {
+        "codigo": "C94",
+        "nombre": "Calza C94",
+        "categoria": "ropa",
+        "descripcion": "Talla: M · Precio: 60 Bs",
+        "imagenes": [
+            "C94/C94-1.jpeg",
+            "C94/C94-2.jpeg"
+        ],
+        "precio": 60,
+        "talla": "M"
+    },
+    {
+        "codigo": "C95",
+        "nombre": "Calza C95",
+        "categoria": "ropa",
+        "descripcion": "Talla: M · Precio: 60 Bs",
+        "imagenes": [
+            "C95/C95-1.jpeg",
+            "C95/C95-2.jpeg"
+        ],
+        "precio": 60,
+        "talla": "M"
+    },
+    {
+        "codigo": "C96",
+        "nombre": "Calza C96",
+        "categoria": "ropa",
+        "descripcion": "Talla: M · Precio: 60 Bs",
+        "imagenes": [
+            "C96/C96-1.jpeg",
+            "C96/C96-2.jpeg"
+        ],
+        "precio": 60,
+        "talla": "M"
+    },
+    {
+        "codigo": "C97",
+        "nombre": "Calza C97",
+        "categoria": "ropa",
+        "descripcion": "Talla: M · Precio: 80 Bs",
+        "imagenes": [
+            "C97/C97-1.jpeg",
+            "C97/C97-2.jpeg"
+        ],
+        "precio": 80,
+        "talla": "M"
+    },
+    {
+        "codigo": "C98",
+        "nombre": "Calza C98",
+        "categoria": "ropa",
+        "descripcion": "Talla: S · Precio: 60 Bs",
+        "imagenes": [
+            "C98/C98-1.jpeg",
+            "C98/C98-2.jpeg"
+        ],
+        "precio": 60,
+        "talla": "S"
+    },
+    {
+        "codigo": "C99",
+        "nombre": "Calza C99",
+        "categoria": "ropa",
+        "descripcion": "Talla: S · Precio: 80 Bs",
+        "imagenes": [
+            "C99/C99-1.jpeg",
+            "C99/C99-2.jpeg"
+        ],
+        "precio": 80,
+        "talla": "S"
+    },
+    {
+        "codigo": "SIN1",
+        "nombre": "Prenda sin código",
+        "categoria": "ropa",
+        "descripcion": "No se indicó código en el chat exportado.",
+        "imagenes": [
+            "SIN_CODIGO/SIN_CODIGO-1.jpeg"
+        ]
+    },
+    {
+        "codigo": "SIN2",
+        "nombre": "Prenda sin código",
+        "categoria": "ropa",
+        "descripcion": "No se indicó código en el chat exportado.",
+        "imagenes": [
+            "SIN_CODIGO/SIN_CODIGO-2.jpeg"
+        ]
+    },
+    {
+        "codigo": "SIN3",
+        "nombre": "Prenda sin código",
+        "categoria": "ropa",
+        "descripcion": "No se indicó código en el chat exportado.",
+        "imagenes": [
+            "SIN_CODIGO/SIN_CODIGO-3.jpeg"
+        ]
+    },
+    {
+        "codigo": "SU1",
+        "nombre": "Sudadera SU1",
+        "categoria": "ropa",
+        "descripcion": "El chat exportado no indica precio ni talla.",
+        "imagenes": [
+            "SU1/SU1-1.jpeg"
+        ]
+    },
+    {
+        "codigo": "SU2",
+        "nombre": "Sudadera SU2",
+        "categoria": "ropa",
+        "descripcion": "El chat exportado no indica precio ni talla.",
+        "imagenes": [
+            "SU2/SU2-1.jpeg"
+        ]
+    },
+    {
+        "codigo": "SU3",
+        "nombre": "Sudadera SU3",
+        "categoria": "ropa",
+        "descripcion": "El chat exportado no indica precio ni talla.",
+        "imagenes": [
+            "SU3/SU3-1.jpeg"
+        ]
+    },
+    {
+        "codigo": "SU4",
+        "nombre": "Sudadera SU4",
+        "categoria": "ropa",
+        "descripcion": "El chat exportado no indica precio ni talla.",
+        "imagenes": [
+            "SU4/SU4-1.jpeg"
+        ]
+    },
+    {
+        "codigo": "SU5",
+        "nombre": "Sudadera SU5",
+        "categoria": "ropa",
+        "descripcion": "El chat exportado no indica precio ni talla.",
+        "imagenes": [
+            "SU5/SU5-1.jpeg"
+        ]
+    },
+    {
+        "codigo": "SU6",
+        "nombre": "Sudadera SU6",
+        "categoria": "ropa",
+        "descripcion": "El chat exportado no indica precio ni talla.",
+        "imagenes": [
+            "SU6/SU6-1.jpeg"
+        ]
+    },
+    {
+        "codigo": "SU7",
+        "nombre": "Sudadera SU7",
+        "categoria": "ropa",
+        "descripcion": "El chat exportado no indica precio ni talla.",
+        "imagenes": [
+            "SU7/SU7-1.jpeg"
+        ]
+    },
+    {
+        "codigo": "SU8",
+        "nombre": "Sudadera SU8",
+        "categoria": "ropa",
+        "descripcion": "El chat exportado no indica precio ni talla.",
+        "imagenes": [
+            "SU8/SU8-1.jpeg"
+        ]
+    }
+];
+
+    catalogoNuevo.forEach(function(productoNuevo){
+        const existe = productos.some(function(producto){
+            return producto.codigo === productoNuevo.codigo;
+        });
+        if(!existe) productos.push(productoNuevo);
+    });
+
+    /* Mostrar todo el catálogo al cargar la página */
+    productosActuales = [...productos];
+    mostrarProductos(productosActuales);
+})();
+</script>
 </body>
 </html>
