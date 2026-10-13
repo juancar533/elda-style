@@ -2607,9 +2607,9 @@ function mostrarProductos(lista){
                 </div>
 
 
-                ${producto.descripcion ? `
+                ${producto.descripcion && producto.descripcion.replace(/(?:[·|,]\s*)?Precio:\s*\d+(?:[.,]\d+)?\s*Bs/gi, "").replace(/(?:[·|,]\s*)?Talla:\s*[^·|,]+/gi, "").replace(/^\s*[·|,]\s*|\s*[·|,]\s*$/g, "").trim() ? `
                     <div class="product-description">
-                        ${producto.descripcion}
+                        ${producto.descripcion.replace(/(?:[·|,]\s*)?Precio:\s*\d+(?:[.,]\d+)?\s*Bs/gi, "").replace(/(?:[·|,]\s*)?Talla:\s*[^·|,]+/gi, "").replace(/^\s*[·|,]\s*|\s*[·|,]\s*$/g, "").trim()}
                     </div>
                 ` : ""}
 
@@ -3623,7 +3623,6 @@ actualizarCarrito();
         "codigo": "C1",
         "nombre": "Calza C1",
         "categoria": "ropa",
-        "descripcion": "Precio: 80 Bs",
         "imagenes": [
             "C1/C1-1.jpg"
         ],
@@ -3633,7 +3632,6 @@ actualizarCarrito();
         "codigo": "C10",
         "nombre": "Calza C10",
         "categoria": "ropa",
-        "descripcion": "Precio: 80 Bs",
         "imagenes": [
             "C10/C10-1.jpg"
         ],
@@ -3745,7 +3743,6 @@ actualizarCarrito();
         "codigo": "C11",
         "nombre": "Calza C11",
         "categoria": "ropa",
-        "descripcion": "Precio: 80 Bs",
         "imagenes": [
             "C11/C11-1.jpg"
         ],
@@ -3854,7 +3851,6 @@ actualizarCarrito();
         "codigo": "C12",
         "nombre": "Calza C12",
         "categoria": "ropa",
-        "descripcion": "Precio: 80 Bs",
         "imagenes": [
             "C12/C12-1.jpg"
         ],
@@ -3974,7 +3970,6 @@ actualizarCarrito();
         "codigo": "C13",
         "nombre": "Calza C13",
         "categoria": "ropa",
-        "descripcion": "Precio: 80 Bs",
         "imagenes": [
             "C13/C13-1.jpg"
         ],
@@ -4081,7 +4076,6 @@ actualizarCarrito();
         "codigo": "C14",
         "nombre": "Calza C14",
         "categoria": "ropa",
-        "descripcion": "Precio: 70 Bs",
         "imagenes": [
             "C14/C14-1.jpg"
         ],
@@ -4091,7 +4085,6 @@ actualizarCarrito();
         "codigo": "C16",
         "nombre": "Calza C16",
         "categoria": "ropa",
-        "descripcion": "Precio: 80 Bs",
         "imagenes": [
             "C16/C16-1.jpg"
         ],
@@ -4101,7 +4094,6 @@ actualizarCarrito();
         "codigo": "C17",
         "nombre": "Calza C17",
         "categoria": "ropa",
-        "descripcion": "Precio: 80 Bs",
         "imagenes": [
             "C17/C17-1.jpg"
         ],
@@ -4111,7 +4103,6 @@ actualizarCarrito();
         "codigo": "C18",
         "nombre": "Calza C18",
         "categoria": "ropa",
-        "descripcion": "Precio: 80 Bs",
         "imagenes": [
             "C18/C18-1.jpg"
         ],
@@ -4121,7 +4112,6 @@ actualizarCarrito();
         "codigo": "C19",
         "nombre": "Calza C19",
         "categoria": "ropa",
-        "descripcion": "Precio: 100 Bs",
         "imagenes": [
             "C19/C19-1.jpg"
         ],
@@ -4131,7 +4121,6 @@ actualizarCarrito();
         "codigo": "C2",
         "nombre": "Calza C2",
         "categoria": "ropa",
-        "descripcion": "Precio: 100 Bs",
         "imagenes": [
             "C2/C2-1.jpg"
         ],
@@ -4141,7 +4130,6 @@ actualizarCarrito();
         "codigo": "C20",
         "nombre": "Calza C20",
         "categoria": "ropa",
-        "descripcion": "Precio: 80 Bs",
         "imagenes": [
             "C20/C20-1.jpg"
         ],
@@ -4151,7 +4139,6 @@ actualizarCarrito();
         "codigo": "C21",
         "nombre": "Calza C21",
         "categoria": "ropa",
-        "descripcion": "Precio: 80 Bs",
         "imagenes": [
             "C21/C21-1.jpg"
         ],
@@ -4161,7 +4148,6 @@ actualizarCarrito();
         "codigo": "C22",
         "nombre": "Calza C22",
         "categoria": "ropa",
-        "descripcion": "Precio: 80 Bs",
         "imagenes": [
             "C22/C22-1.jpg"
         ],
@@ -4171,7 +4157,6 @@ actualizarCarrito();
         "codigo": "C23",
         "nombre": "Calza C23",
         "categoria": "ropa",
-        "descripcion": "Precio: 80 Bs",
         "imagenes": [
             "C23/C23-1.jpg"
         ],
@@ -4181,7 +4166,6 @@ actualizarCarrito();
         "codigo": "C24",
         "nombre": "Calza C24",
         "categoria": "ropa",
-        "descripcion": "Precio: 80 Bs",
         "imagenes": [
             "C24/C24-1.jpg"
         ],
@@ -4191,7 +4175,6 @@ actualizarCarrito();
         "codigo": "C25",
         "nombre": "Calza C25",
         "categoria": "ropa",
-        "descripcion": "Precio: 80 Bs",
         "imagenes": [
             "C25/C25-1.jpg"
         ],
@@ -4201,7 +4184,6 @@ actualizarCarrito();
         "codigo": "C26",
         "nombre": "Calza C26",
         "categoria": "ropa",
-        "descripcion": "Precio: 80 Bs",
         "imagenes": [
             "C26/C26-1.jpg"
         ],
@@ -4211,7 +4193,6 @@ actualizarCarrito();
         "codigo": "C27",
         "nombre": "Calza C27",
         "categoria": "ropa",
-        "descripcion": "Precio: 80 Bs",
         "imagenes": [
             "C27/C27-1.jpg"
         ],
@@ -4221,7 +4202,6 @@ actualizarCarrito();
         "codigo": "C28",
         "nombre": "Calza C28",
         "categoria": "ropa",
-        "descripcion": "Precio: 80 Bs",
         "imagenes": [
             "C28/C28-1.jpg"
         ],
@@ -4231,7 +4211,6 @@ actualizarCarrito();
         "codigo": "C29",
         "nombre": "Calza C29",
         "categoria": "ropa",
-        "descripcion": "Precio: 80 Bs",
         "imagenes": [
             "C29/C29-1.jpg"
         ],
@@ -4241,7 +4220,6 @@ actualizarCarrito();
         "codigo": "C3",
         "nombre": "Calza C3",
         "categoria": "ropa",
-        "descripcion": "Precio: 80 Bs",
         "imagenes": [
             "C3/C3-1.jpg"
         ],
@@ -4251,7 +4229,6 @@ actualizarCarrito();
         "codigo": "C30",
         "nombre": "Calza C30",
         "categoria": "ropa",
-        "descripcion": "Precio: 80 Bs",
         "imagenes": [
             "C30/C30-1.jpg"
         ],
@@ -4261,7 +4238,6 @@ actualizarCarrito();
         "codigo": "C31",
         "nombre": "Calza C31",
         "categoria": "ropa",
-        "descripcion": "Precio: 80 Bs",
         "imagenes": [
             "C31/C31-1.jpg"
         ],
@@ -4271,7 +4247,6 @@ actualizarCarrito();
         "codigo": "C32",
         "nombre": "Calza C32",
         "categoria": "ropa",
-        "descripcion": "Precio: 80 Bs",
         "imagenes": [
             "C32/C32-1.jpg"
         ],
@@ -4281,7 +4256,6 @@ actualizarCarrito();
         "codigo": "C33",
         "nombre": "Calza C33",
         "categoria": "ropa",
-        "descripcion": "Precio: 80 Bs",
         "imagenes": [
             "C33/C33-1.jpg"
         ],
@@ -4344,7 +4318,6 @@ actualizarCarrito();
         "codigo": "C4",
         "nombre": "Calza C4",
         "categoria": "ropa",
-        "descripcion": "Precio: 80 Bs",
         "imagenes": [
             "C4/C4-1.jpg"
         ],
@@ -4453,7 +4426,6 @@ actualizarCarrito();
         "codigo": "C5",
         "nombre": "Calza C5",
         "categoria": "ropa",
-        "descripcion": "Precio: 100 Bs",
         "imagenes": [
             "C5/C5-1.jpg"
         ],
@@ -4572,7 +4544,6 @@ actualizarCarrito();
         "codigo": "C6",
         "nombre": "Calza C6",
         "categoria": "ropa",
-        "descripcion": "Precio: 80 Bs",
         "imagenes": [
             "C6/C6-1.jpg"
         ],
@@ -4604,7 +4575,6 @@ actualizarCarrito();
         "codigo": "C62",
         "nombre": "Calza C62",
         "categoria": "ropa",
-        "descripcion": "Precio: 80 Bs",
         "imagenes": [
             "C62/C62-1.jpg"
         ],
@@ -4614,7 +4584,6 @@ actualizarCarrito();
         "codigo": "C63",
         "nombre": "Calza C63",
         "categoria": "ropa",
-        "descripcion": "Precio: 80 Bs",
         "imagenes": [
             "C63/C63-1.jpg"
         ],
@@ -4624,7 +4593,6 @@ actualizarCarrito();
         "codigo": "C64",
         "nombre": "Calza C64",
         "categoria": "ropa",
-        "descripcion": "Precio: 80 Bs",
         "imagenes": [
             "C64/C64-1.jpg"
         ],
@@ -4634,7 +4602,6 @@ actualizarCarrito();
         "codigo": "C65",
         "nombre": "Calza C65",
         "categoria": "ropa",
-        "descripcion": "Precio: 100 Bs",
         "imagenes": [
             "C65/C65-1.jpg"
         ],
@@ -4687,7 +4654,6 @@ actualizarCarrito();
         "codigo": "C7",
         "nombre": "Calza C7",
         "categoria": "ropa",
-        "descripcion": "Precio: 80 Bs",
         "imagenes": [
             "C7/C7-1.jpg"
         ],
@@ -4926,7 +4892,6 @@ actualizarCarrito();
         "codigo": "C9",
         "nombre": "Calza C9",
         "categoria": "ropa",
-        "descripcion": "Precio: 80 Bs",
         "imagenes": [
             "C9/C9-1.jpg"
         ],
@@ -5155,5 +5120,29 @@ actualizarCarrito();
     mostrarProductos(productosActuales);
 })();
 </script>
+
+<script id="actualizacion-planilla-ventas">
+(function(){
+  const datosPlanilla = {"T1":{"categoriaOriginal":"TOP","descripcionOriginal":"MIXSC","color":"FUTSIA","talla":"S","precio":50,"estado":"DISPONIBLE"},"T2":{"categoriaOriginal":"TOP","descripcionOriginal":"","color":"","talla":"","precio":null,"estado":""},"T3":{"categoriaOriginal":"TOP","descripcionOriginal":"","color":"ROSADO","talla":"S","precio":50,"estado":"DISPONIBLE"},"T4":{"categoriaOriginal":"TOP","descripcionOriginal":"TIENE AMARILLO","color":"MIX DE COLORES","talla":"S","precio":45,"estado":"DISPONIBLE"},"T5":{"categoriaOriginal":"TOP","descripcionOriginal":"ADIDAS","color":"VERDE CLARO","talla":"S","precio":60,"estado":"DISPONIBLE"},"T6":{"categoriaOriginal":"TOP","descripcionOriginal":"NIKE","color":"NEGRO/NARANJA","talla":"S","precio":60,"estado":"DISPONIBLE"},"T7":{"categoriaOriginal":"TOP","descripcionOriginal":"NIKE","color":"CELESTE/AMARILLO","talla":"S","precio":35,"estado":"DISPONIBLE"},"T8":{"categoriaOriginal":"TOP","descripcionOriginal":"CRUZADO","color":"VERDE OSCURO","talla":"S","precio":30,"estado":"DISPONIBLE"},"T9":{"categoriaOriginal":"TOP","descripcionOriginal":"","color":"MOSTAZA","talla":"S","precio":50,"estado":"DISPONIBLE"},"T10":{"categoriaOriginal":"TOP","descripcionOriginal":"VIVIAN - DEBE","color":"PLOMO","talla":"M","precio":40,"estado":"VENDIDA"},"T11":{"categoriaOriginal":"TOP","descripcionOriginal":"NIKE","color":"NEGRO","talla":"XS","precio":60,"estado":"DISPONIBLE"},"T12":{"categoriaOriginal":"TOP","descripcionOriginal":"NIKE","color":"PLOMO","talla":"S","precio":60,"estado":"DISPONIBLE"},"T13":{"categoriaOriginal":"TOP","descripcionOriginal":"SUMBA","color":"MIX DE COLORES","talla":"S","precio":45,"estado":"DISPONIBLE"},"T14":{"categoriaOriginal":"TOP","descripcionOriginal":"","color":"NEGRO","talla":"S","precio":50,"estado":"DISPONIBLE"},"T15":{"categoriaOriginal":"TOP","descripcionOriginal":"CIERRE","color":"NEGRO","talla":"S","precio":55,"estado":"DISPONIBLE"},"T16":{"categoriaOriginal":"TOP","descripcionOriginal":"ROLYFIT","color":"ROSADO","talla":"S","precio":50,"estado":"DISPONIBLE"},"T17":{"categoriaOriginal":"TOP","descripcionOriginal":"","color":"AZUL","talla":"S","precio":50,"estado":"DISPONIBLE"},"T18":{"categoriaOriginal":"TOP","descripcionOriginal":"","color":"AZUL","talla":"M","precio":50,"estado":"DISPONIBLE"},"T19":{"categoriaOriginal":"TOP","descripcionOriginal":"CRUZADO","color":"NEGRO","talla":"S","precio":30,"estado":"VENDIDA"},"T20":{"categoriaOriginal":"TOP","descripcionOriginal":"","color":"GRIS/FUTSIA","talla":"S","precio":45,"estado":"DISPONIBLE"},"T21":{"categoriaOriginal":"TOP","descripcionOriginal":"ADIDAS","color":"AZUL/NEGRO","talla":"S","precio":60,"estado":"DISPONIBLE"},"T22":{"categoriaOriginal":"TOP","descripcionOriginal":"ZUMBA","color":"NARANJA","talla":"S","precio":40,"estado":"DISPONIBLE"},"T23":{"categoriaOriginal":"TOP","descripcionOriginal":"2XU","color":"GRIS/NEGRO","talla":"S","precio":45,"estado":"DISPONIBLE"},"T24":{"categoriaOriginal":"TOP","descripcionOriginal":"CALVIN KLEIN","color":"MORADO/GRIS","talla":"S","precio":50,"estado":"DISPONIBLE"},"T25":{"categoriaOriginal":"TOP","descripcionOriginal":"PLAY WATER","color":"FUTSIA","talla":"S","precio":50,"estado":"DISPONIBLE"},"T26":{"categoriaOriginal":"TOP","descripcionOriginal":"","color":"","talla":"","precio":null,"estado":""},"T27":{"categoriaOriginal":"TOP","descripcionOriginal":"NIKE/CRUZADO","color":"AMARILLO/NEGRO","talla":"S","precio":45,"estado":"DISPONIBLE"},"T28":{"categoriaOriginal":"TOP","descripcionOriginal":"EVERLAST","color":"NARANJA","talla":"S","precio":50,"estado":"DISPONIBLE"},"T29":{"categoriaOriginal":"TOP","descripcionOriginal":"","color":"AZUL/BLANCO","talla":"S","precio":30,"estado":"VENDIDA"},"T30":{"categoriaOriginal":"TOP","descripcionOriginal":"","color":"","talla":"","precio":null,"estado":""},"T31":{"categoriaOriginal":"TOP","descripcionOriginal":"","color":"ROSADO","talla":"M","precio":50,"estado":"DISPONIBLE"},"T32":{"categoriaOriginal":"TOP","descripcionOriginal":"NIKE","color":"NEGRO","talla":"S","precio":60,"estado":"VENDIDA"},"T33":{"categoriaOriginal":"TOP","descripcionOriginal":"","color":"ROSADO","talla":"S","precio":50,"estado":"DISPONIBLE"},"T34":{"categoriaOriginal":"TOP","descripcionOriginal":"ADIDAS","color":"AZUL/NARANJA","talla":"S","precio":50,"estado":"DISPONIBLE"},"T35":{"categoriaOriginal":"TOP","descripcionOriginal":"","color":"BLANCO","talla":"S","precio":45,"estado":"DISPONIBLE"},"T36":{"categoriaOriginal":"TOP","descripcionOriginal":"","color":"AMARILLO","talla":"M","precio":60,"estado":"VENDIDA"},"C1":{"categoriaOriginal":"CALZA","descripcionOriginal":"YOGER","color":"PALO ROSA","talla":"M","precio":70,"estado":"DISPONIBLE"},"C2":{"categoriaOriginal":"CALZA","descripcionOriginal":"JUST DO IT","color":"NEGRA","talla":"S","precio":80,"estado":"DISPONIBLE"},"C3":{"categoriaOriginal":"CALZA","descripcionOriginal":"YOGER","color":"NEGRA","talla":"M","precio":70,"estado":"DISPONIBLE"},"C4":{"categoriaOriginal":"CALZA","descripcionOriginal":"","color":"NEGRA","talla":"M","precio":80,"estado":"VENDIDA"},"C5":{"categoriaOriginal":"CALZA","descripcionOriginal":"ADIDAS","color":"NEGRA","talla":"S","precio":100,"estado":"DISPONIBLE"},"C6":{"categoriaOriginal":"CALZA","descripcionOriginal":"","color":"NEGRA","talla":"M","precio":80,"estado":"DISPONIBLE"},"C7":{"categoriaOriginal":"CALZA","descripcionOriginal":"","color":"VERDE","talla":"S","precio":80,"estado":"DISPONIBLE"},"C8":{"categoriaOriginal":"CALZA","descripcionOriginal":"","color":"AZUL","talla":"S","precio":80,"estado":"RESERVADA"},"C9":{"categoriaOriginal":"CALZA","descripcionOriginal":"PALAZO","color":"NEGRA","talla":"M","precio":80,"estado":"VENDIDA"},"C10":{"categoriaOriginal":"CALZA","descripcionOriginal":"","color":"NEGRA/ROSADO","talla":"S","precio":70,"estado":"DISPONIBLE"},"C11":{"categoriaOriginal":"CALZA","descripcionOriginal":"","color":"NEGRA","talla":"S","precio":80,"estado":"DISPONIBLE"},"C12":{"categoriaOriginal":"CALZA","descripcionOriginal":"","color":"CAFÉ","talla":"S","precio":80,"estado":"DISPONIBLE"},"C13":{"categoriaOriginal":"CALZA","descripcionOriginal":"PALAZO","color":"CAFÉ","talla":"M","precio":80,"estado":"RESERVADA"},"C14":{"categoriaOriginal":"CALZA","descripcionOriginal":"DALE","color":"MIX DE COLORES","talla":"S","precio":50,"estado":"DISPONIBLE"},"C15":{"categoriaOriginal":"CALZA","descripcionOriginal":"","color":"","talla":"","precio":null,"estado":""},"C16":{"categoriaOriginal":"CALZA","descripcionOriginal":"","color":"NEGRA","talla":"S","precio":80,"estado":"DISPONIBLE"},"C17":{"categoriaOriginal":"CALZA","descripcionOriginal":"NIKE","color":"NEGRA/ROSADO","talla":"S","precio":80,"estado":"DISPONIBLE"},"C18":{"categoriaOriginal":"CALZA","descripcionOriginal":"ANDAR","color":"NEGRA","talla":"S","precio":80,"estado":"DISPONIBLE"},"C19":{"categoriaOriginal":"CALZA","descripcionOriginal":"ADIDAS","color":"NEGRA","talla":"S","precio":100,"estado":"DISPONIBLE"},"C20":{"categoriaOriginal":"CALZA","descripcionOriginal":"","color":"NEGRA","talla":"S","precio":80,"estado":"DISPONIBLE"},"C21":{"categoriaOriginal":"CALZA","descripcionOriginal":"","color":"VERDE","talla":"S","precio":80,"estado":"DISPONIBLE"},"C22":{"categoriaOriginal":"CALZA","descripcionOriginal":"","color":"AZUL","talla":"S","precio":80,"estado":"VENDIDA"},"C23":{"categoriaOriginal":"CALZA","descripcionOriginal":"XEXYMIX","color":"ROSADO","talla":"S","precio":80,"estado":"DISPONIBLE"},"C24":{"categoriaOriginal":"CALZA","descripcionOriginal":"PALAZO","color":"BEIGE","talla":"M","precio":80,"estado":"DISPONIBLE"},"C25":{"categoriaOriginal":"CALZA","descripcionOriginal":"NNDUR","color":"NEGRA","talla":"S","precio":80,"estado":"DISPONIBLE"},"C26":{"categoriaOriginal":"CALZA","descripcionOriginal":"","color":"NEGRA","talla":"S","precio":80,"estado":"DISPONIBLE"},"C27":{"categoriaOriginal":"CALZA","descripcionOriginal":"","color":"GRIS","talla":"S","precio":80,"estado":"DISPONIBLE"},"C28":{"categoriaOriginal":"CALZA","descripcionOriginal":"","color":"AZUL/CELESTE","talla":"S","precio":80,"estado":"DISPONIBLE"},"C29":{"categoriaOriginal":"CALZA","descripcionOriginal":"SKULIPIG","color":"VERDE","talla":"S","precio":80,"estado":"DISPONIBLE"},"C30":{"categoriaOriginal":"CALZA","descripcionOriginal":"","color":"ROJA/BLACO","talla":"S","precio":80,"estado":"DISPONIBLE"},"C31":{"categoriaOriginal":"CALZA","descripcionOriginal":"","color":"NEGRA","talla":"S","precio":80,"estado":"DISPONIBLE"},"C32":{"categoriaOriginal":"CALZA","descripcionOriginal":"ARRUCHADA","color":"NEGRA","talla":"S","precio":80,"estado":"DISPONIBLE"},"C33":{"categoriaOriginal":"CALZA","descripcionOriginal":"","color":"ROSADA","talla":"S","precio":80,"estado":"DISPONIBLE"},"C34":{"categoriaOriginal":"CALZA","descripcionOriginal":"PALAZO","color":"NEGRA","talla":"M","precio":80,"estado":"DISPONIBLE"},"C35":{"categoriaOriginal":"CALZA","descripcionOriginal":"YOGER","color":"NEGRA","talla":"M","precio":70,"estado":"RESERVADA"},"C36":{"categoriaOriginal":"CALZA","descripcionOriginal":"NIKE","color":"AZUL","talla":"S","precio":100,"estado":"DISPONIBLE"},"C37":{"categoriaOriginal":"CALZA","descripcionOriginal":"YOGER","color":"NEGRA","talla":"M","precio":70,"estado":"DISPONIBLE"},"C38":{"categoriaOriginal":"CALZA","descripcionOriginal":"ANDAR","color":"NEGRA","talla":"M","precio":80,"estado":"DISPONIBLE"},"C39":{"categoriaOriginal":"CALZA","descripcionOriginal":"XEXYMIX","color":"FUTSIA","talla":"M","precio":80,"estado":"RESERVADA"},"C40":{"categoriaOriginal":"CALZA","descripcionOriginal":"REVISARLA / FRIZADA","color":"NEGRA","talla":"M","precio":80,"estado":"VENDIDA"},"C41":{"categoriaOriginal":"CALZA","descripcionOriginal":"","color":"NEGRA","talla":"M","precio":80,"estado":"DISPONIBLE"},"C42":{"categoriaOriginal":"CALZA","descripcionOriginal":"","color":"NEGRA","talla":"S","precio":80,"estado":"DISPONIBLE"},"C43":{"categoriaOriginal":"CALZA","descripcionOriginal":"ZUMBA","color":"ROJA/AZUL","talla":"S","precio":50,"estado":"DISPONIBLE"},"C44":{"categoriaOriginal":"CALZA","descripcionOriginal":"XEXYMIX","color":"GRIS","talla":"S","precio":80,"estado":"DISPONIBLE"},"C45":{"categoriaOriginal":"CALZA","descripcionOriginal":"","color":"","talla":"","precio":null,"estado":""},"C46":{"categoriaOriginal":"CALZA","descripcionOriginal":"FLOREADA","color":"MIX DE COLORES","talla":"S","precio":60,"estado":"DISPONIBLE"},"C47":{"categoriaOriginal":"CALZA","descripcionOriginal":"JE.TAIME","color":"NEGRA/BLACO","talla":"M","precio":80,"estado":"DISPONIBLE"},"C48":{"categoriaOriginal":"CALZA","descripcionOriginal":"XEXYMIX","color":"NEGRO","talla":"M","precio":80,"estado":"DISPONIBLE"},"C49":{"categoriaOriginal":"CALZA","descripcionOriginal":"ANIMAL PRINT","color":"MIX DE COLORES","talla":"M","precio":50,"estado":"DISPONIBLE"},"C50":{"categoriaOriginal":"CALZA","descripcionOriginal":"","color":"FUTSIA/NEGRO","talla":"M","precio":60,"estado":"DISPONIBLE"},"C51":{"categoriaOriginal":"CALZA","descripcionOriginal":"","color":"PLOMO","talla":"S","precio":80,"estado":"DISPONIBLE"},"C52":{"categoriaOriginal":"CALZA","descripcionOriginal":"","color":"GRIS /FUTSIA","talla":"M","precio":70,"estado":"DISPONIBLE"},"C53":{"categoriaOriginal":"CALZA","descripcionOriginal":"","color":"AZUL","talla":"S","precio":80,"estado":"DISPONIBLE"},"C54":{"categoriaOriginal":"CALZA","descripcionOriginal":"","color":"CELESTE OPACO","talla":"S","precio":80,"estado":"DISPONIBLE"},"C55":{"categoriaOriginal":"CALZA","descripcionOriginal":"CELESTE/NEGRO","color":"MIX DE COLORES","talla":"M","precio":60,"estado":"DISPONIBLE"},"C56":{"categoriaOriginal":"CALZA","descripcionOriginal":"","color":"AZUL","talla":"M","precio":80,"estado":"DISPONIBLE"},"C57":{"categoriaOriginal":"CALZA","descripcionOriginal":"","color":"CAFÉ","talla":"M","precio":80,"estado":"DISPONIBLE"},"C58":{"categoriaOriginal":"CALZA","descripcionOriginal":"","color":"AZUL MARINO","talla":"S","precio":80,"estado":"DISPONIBLE"},"C59":{"categoriaOriginal":"CALZA","descripcionOriginal":"MEDIA LILA - MEDIANA","color":"AZUL ELECTRICO","talla":"M","precio":70,"estado":"DISPONIBLE"},"C60":{"categoriaOriginal":"CALZA","descripcionOriginal":"MEDIANA","color":"MIX DE COLORES","talla":"M","precio":50,"estado":"DISPONIBLE"},"C61":{"categoriaOriginal":"CALZA","descripcionOriginal":"","color":"NEGRA","talla":"S","precio":80,"estado":"DISPONIBLE"},"C62":{"categoriaOriginal":"CALZA","descripcionOriginal":"","color":"OPACO /GRIS","talla":"S","precio":80,"estado":"DISPONIBLE"},"C63":{"categoriaOriginal":"CALZA","descripcionOriginal":"","color":"VERDE/BLANCO","talla":"S","precio":80,"estado":"DISPONIBLE"},"C64":{"categoriaOriginal":"CALZA","descripcionOriginal":"ANDAR","color":"NEGRO","talla":"S","precio":80,"estado":"DISPONIBLE"},"C65":{"categoriaOriginal":"CALZA","descripcionOriginal":"NIKE","color":"NEGRA","talla":"S","precio":80,"estado":"DISPONIBLE"},"C66":{"categoriaOriginal":"CALZA","descripcionOriginal":"","color":"CELESTE","talla":"S","precio":80,"estado":"DISPONIBLE"},"C67":{"categoriaOriginal":"CALZA","descripcionOriginal":"PALAZO","color":"NEGRA","talla":"S","precio":80,"estado":"RESERVADA"},"C68":{"categoriaOriginal":"CALZA","descripcionOriginal":"PALAZO","color":"NEGRA","talla":"M","precio":80,"estado":"DISPONIBLE"},"C69":{"categoriaOriginal":"CALZA","descripcionOriginal":"ANDAR","color":"AZUL","talla":"S","precio":80,"estado":"DISPONIBLE"},"C70":{"categoriaOriginal":"CALZA","descripcionOriginal":"","color":"LILA","talla":"S","precio":80,"estado":"DISPONIBLE"},"C71":{"categoriaOriginal":"CALZA","descripcionOriginal":"BOLSILLO","color":"ROSADA","talla":"S","precio":70,"estado":"DISPONIBLE"},"C72":{"categoriaOriginal":"CALZA","descripcionOriginal":"","color":"GRIS","talla":"S","precio":80,"estado":"DISPONIBLE"},"C73":{"categoriaOriginal":"CALZA","descripcionOriginal":"","color":"GRIS","talla":"M","precio":80,"estado":"DISPONIBLE"},"C74":{"categoriaOriginal":"CALZA","descripcionOriginal":"","color":"NEGRO","talla":"M","precio":800,"estado":"DISPONIBLE"},"C75":{"categoriaOriginal":"CALZA","descripcionOriginal":"ADIDAS","color":"NEGRA/BLANCO","talla":"S","precio":100,"estado":"DISPONIBLE"},"C76":{"categoriaOriginal":"CALZA","descripcionOriginal":"NIKE","color":"NEGRA","talla":"S","precio":60,"estado":"DISPONIBLE"},"C77":{"categoriaOriginal":"CALZA","descripcionOriginal":"ADIDAS","color":"NEGRA","talla":"S","precio":100,"estado":"DISPONIBLE"},"C78":{"categoriaOriginal":"CALZA","descripcionOriginal":"","color":"AZUL MARINO","talla":"S","precio":80,"estado":"DISPONIBLE"},"C79":{"categoriaOriginal":"CALZA","descripcionOriginal":"MEDIA CELESTE","color":"AZUL ELECTRICO","talla":"S","precio":80,"estado":"DISPONIBLE"},"C80":{"categoriaOriginal":"CALZA","descripcionOriginal":"ANDAR","color":"CELESTE","talla":"S","precio":80,"estado":"DISPONIBLE"},"C81":{"categoriaOriginal":"CALZA","descripcionOriginal":"ANDAR","color":"NEGRA","talla":"M","precio":80,"estado":"DISPONIBLE"},"C82":{"categoriaOriginal":"CALZA","descripcionOriginal":"ANDAR","color":"CAFÉ","talla":"M","precio":80,"estado":"DISPONIBLE"},"C83":{"categoriaOriginal":"CALZA","descripcionOriginal":"","color":"NEGRA","talla":"S","precio":80,"estado":"DISPONIBLE"},"C84":{"categoriaOriginal":"CALZA","descripcionOriginal":"ETIQUETA","color":"NEGRA","talla":"L","precio":100,"estado":"RESERVADA"},"C85":{"categoriaOriginal":"CALZA","descripcionOriginal":"YOGER","color":"NEGRA","talla":"L","precio":70,"estado":"DISPONIBLE"},"C86":{"categoriaOriginal":"CALZA","descripcionOriginal":"TELA DISTINTA","color":"NEGRA","talla":"M","precio":50,"estado":"DISPONIBLE"},"C87":{"categoriaOriginal":"CALZA","descripcionOriginal":"","color":"AZUL","talla":"M","precio":80,"estado":"DISPONIBLE"},"C88":{"categoriaOriginal":"CALZA","descripcionOriginal":"DOMYOS","color":"NEGRO/AZUL","talla":"M","precio":55,"estado":"DISPONIBLE"},"C89":{"categoriaOriginal":"CALZA","descripcionOriginal":"MEDIANA","color":"NEGRA","talla":"M","precio":55,"estado":"DISPONIBLE"},"C90":{"categoriaOriginal":"CALZA","descripcionOriginal":"","color":"LILA CLARO","talla":"M","precio":80,"estado":"DISPONIBLE"},"C91":{"categoriaOriginal":"CALZA","descripcionOriginal":"HEAD","color":"NEGRA","talla":"M","precio":80,"estado":"DISPONIBLE"},"C92":{"categoriaOriginal":"CALZA","descripcionOriginal":"","color":"NEGRA","talla":"M","precio":80,"estado":"DISPONIBLE"},"C93":{"categoriaOriginal":"CALZA","descripcionOriginal":"SKULIPIG","color":"NEGRA","talla":"M","precio":80,"estado":"DISPONIBLE"},"C94":{"categoriaOriginal":"CALZA","descripcionOriginal":"NIKE","color":"NEGRA","talla":"M","precio":80,"estado":"DISPONIBLE"},"C95":{"categoriaOriginal":"CALZA","descripcionOriginal":"","color":"GRIS","talla":"M","precio":60,"estado":"DISPONIBLE"},"C96":{"categoriaOriginal":"CALZA","descripcionOriginal":"MEDIANA REEBOOK","color":"AZUL","talla":"M","precio":50,"estado":"DISPONIBLE"},"C97":{"categoriaOriginal":"CALZA","descripcionOriginal":"","color":"AZUL MEDIA VERDE","talla":"M","precio":80,"estado":"DISPONIBLE"},"C98":{"categoriaOriginal":"CALZA","descripcionOriginal":"MEDIANA","color":"NEGRA","talla":"S","precio":70,"estado":"DISPONIBLE"},"C99":{"categoriaOriginal":"CALZA","descripcionOriginal":"MEDIANA ADIDAS","color":"NEGRA","talla":"S","precio":80,"estado":"DISPONIBLE"},"C100":{"categoriaOriginal":"CALZA","descripcionOriginal":"LARGA","color":"MIX DE COLORES","talla":"M","precio":80,"estado":"DISPONIBLE"},"C101":{"categoriaOriginal":"CALZA","descripcionOriginal":"","color":"NEGRA","talla":"M","precio":80,"estado":"DISPONIBLE"},"C102":{"categoriaOriginal":"CALZA","descripcionOriginal":"SKULIPIG","color":"NEGRA","talla":"M","precio":80,"estado":"DISPONIBLE"},"C103":{"categoriaOriginal":"CALZA","descripcionOriginal":"","color":"ADIDAS","talla":"M","precio":100,"estado":"DISPONIBLE"},"C104":{"categoriaOriginal":"CALZA","descripcionOriginal":"MEDIANA","color":"ADIDAS","talla":"M","precio":100,"estado":"DISPONIBLE"},"C105":{"categoriaOriginal":"CALZA","descripcionOriginal":"ELASTICO","color":"NEGRA","talla":"M","precio":70,"estado":"DISPONIBLE"},"C106":{"categoriaOriginal":"CALZA","descripcionOriginal":"PALAZO","color":"NEGRA","talla":"M","precio":80,"estado":"DISPONIBLE"},"C107":{"categoriaOriginal":"CALZA","descripcionOriginal":"FLOREADA","color":"AZUL","talla":"M","precio":50,"estado":"DISPONIBLE"},"C108":{"categoriaOriginal":"CALZA","descripcionOriginal":"","color":"LILA","talla":"M","precio":80,"estado":"DISPONIBLE"},"C109":{"categoriaOriginal":"CALZA","descripcionOriginal":"","color":"NEGR/CELESTE","talla":"M","precio":70,"estado":"DISPONIBLE"},"C110":{"categoriaOriginal":"CALZA","descripcionOriginal":"","color":"NARANJA MEDIO FUTSIA","talla":"L","precio":80,"estado":"DISPONIBLE"},"C111":{"categoriaOriginal":"CALZA","descripcionOriginal":"","color":"NARANJA","talla":"M","precio":80,"estado":"DISPONIBLE"},"C112":{"categoriaOriginal":"CALZA","descripcionOriginal":"PUMA","color":"NEGRA","talla":"M","precio":80,"estado":"DISPONIBLE"},"C113":{"categoriaOriginal":"CALZA","descripcionOriginal":"","color":"CAFÉ","talla":"S","precio":80,"estado":"DISPONIBLE"},"C114":{"categoriaOriginal":"CALZA","descripcionOriginal":"","color":"ROSADA","talla":"L","precio":80,"estado":"DISPONIBLE"},"C115":{"categoriaOriginal":"CALZA","descripcionOriginal":"","color":"NEGRA","talla":"M","precio":80,"estado":"DISPONIBLE"},"C116":{"categoriaOriginal":"CALZA","descripcionOriginal":"","color":"NEGRA","talla":"M","precio":80,"estado":"DISPONIBLE"},"C117":{"categoriaOriginal":"CALZA","descripcionOriginal":"","color":"ROSADO","talla":"M","precio":60,"estado":"DISPONIBLE"},"C118":{"categoriaOriginal":"CALZA","descripcionOriginal":"PLOMO FRIZADO","color":"NEGRA","talla":"M","precio":80,"estado":"DISPONIBLE"},"C119":{"categoriaOriginal":"CALZA","descripcionOriginal":"","color":"ROSADA","talla":"M","precio":80,"estado":"DISPONIBLE"},"C120":{"categoriaOriginal":"CALZA","descripcionOriginal":"ETIQUETA","color":"NEGRA","talla":"M","precio":80,"estado":"DISPONIBLE"},"C121":{"categoriaOriginal":"CALZA","descripcionOriginal":"NIKE","color":"AZUL","talla":"M","precio":80,"estado":"DISPONIBLE"},"C122":{"categoriaOriginal":"CALZA","descripcionOriginal":"2X","color":"GRIS/NEGRO","talla":"M","precio":70,"estado":"DISPONIBLE"},"C123":{"categoriaOriginal":"CALZA","descripcionOriginal":"","color":"VERDE","talla":"M","precio":80,"estado":"DISPONIBLE"},"C124":{"categoriaOriginal":"CALZA","descripcionOriginal":"XEXYMIX","color":"NEGRA","talla":"M","precio":80,"estado":"DISPONIBLE"},"C125":{"categoriaOriginal":"CALZA","descripcionOriginal":"","color":"AZUL/NEGRO","talla":"M","precio":80,"estado":"RESERVADA"},"C126":{"categoriaOriginal":"CALZA","descripcionOriginal":"XEXYMIX","color":"ROSADA","talla":"M","precio":80,"estado":"DISPONIBLE"},"C127":{"categoriaOriginal":"CALZA","descripcionOriginal":"ANDAR","color":"OSCURO","talla":"S","precio":80,"estado":"DISPONIBLE"},"C128":{"categoriaOriginal":"CALZA","descripcionOriginal":"","color":"FUTSIA","talla":"M","precio":80,"estado":"DISPONIBLE"},"C129":{"categoriaOriginal":"CALZA","descripcionOriginal":"TOMMY","color":"AZUL/PLOMO","talla":"M","precio":70,"estado":"DISPONIBLE"},"C130":{"categoriaOriginal":"CALZA","descripcionOriginal":"","color":"AZUL","talla":"XS","precio":80,"estado":"DISPONIBLE"},"C131":{"categoriaOriginal":"CALZA","descripcionOriginal":"FLORES","color":"NEGRA","talla":"M","precio":50,"estado":"DISPONIBLE"},"C132":{"categoriaOriginal":"CALZA","descripcionOriginal":"ZUMBA","color":"BRILLANTE /NEGRO","talla":"M","precio":50,"estado":"DISPONIBLE"},"C133":{"categoriaOriginal":"CALZA","descripcionOriginal":"FOSFORECENTE","color":"AMARILLO","talla":"L","precio":40,"estado":"DISPONIBLE"},"C134":{"categoriaOriginal":"CALZA","descripcionOriginal":"MEDIANA 1 Y 2","color":"PLOMO","talla":"L","precio":40,"estado":"DISPONIBLE"},"C135":{"categoriaOriginal":"CALZA","descripcionOriginal":"","color":"NEGRA","talla":"M","precio":50,"estado":"DISPONIBLE"},"C136":{"categoriaOriginal":"CALZA","descripcionOriginal":"CORTA","color":"NEGRA","talla":"S","precio":55,"estado":"DISPONIBLE"},"C137":{"categoriaOriginal":"CALZA","descripcionOriginal":"REEBOK","color":"NEGRA","talla":"L","precio":40,"estado":"DISPONIBLE"},"C138":{"categoriaOriginal":"CALZA","descripcionOriginal":"","color":"GRIS OSCURO","talla":"S","precio":80,"estado":"DISPONIBLE"},"M1":{"categoriaOriginal":"MANGALARGA","descripcionOriginal":"LETRAS AMARILLAS","color":"PLOMA","talla":"M","precio":80,"estado":"DISPONIBLE"},"M2":{"categoriaOriginal":"MANGALARGA","descripcionOriginal":"LINEAS AMARILLAS","color":"GRIS/PLOMO","talla":"M","precio":80,"estado":"DISPONIBLE"},"M3":{"categoriaOriginal":"MANGALARGA","descripcionOriginal":"NIKE","color":"NEGRA","talla":"S","precio":80,"estado":"RESERVADA"},"M4":{"categoriaOriginal":"MANGALARGA","descripcionOriginal":"V-EXX","color":"GRIS/AZUL","talla":"M","precio":80,"estado":"DISPONIBLE"},"M5":{"categoriaOriginal":"MANGALARGA","descripcionOriginal":"","color":"NEGRA","talla":"M","precio":80,"estado":"DISPONIBLE"},"M6":{"categoriaOriginal":"MANGALARGA","descripcionOriginal":"","color":"NEGRA","talla":"L","precio":80,"estado":"DISPONIBLE"},"M7":{"categoriaOriginal":"MANGALARGA","descripcionOriginal":"ACRUX","color":"BLANCA","talla":"M","precio":80,"estado":"DISPONIBLE"},"M8":{"categoriaOriginal":"MANGALARGA","descripcionOriginal":"","color":"LILA CLARO","talla":"M","precio":80,"estado":"DISPONIBLE"},"M9":{"categoriaOriginal":"MANGALARGA","descripcionOriginal":"","color":"VERDE CLARO","talla":"S","precio":80,"estado":"DISPONIBLE"},"SU1":{"categoriaOriginal":"SUDADERA","descripcionOriginal":"LINEAS ROSADAS","color":"BLANCA","talla":"M","precio":100,"estado":"DISPONIBLE"},"SU2":{"categoriaOriginal":"SUDADERA","descripcionOriginal":"BLANCO/MIX DE COLORES","color":"NEGRA","talla":"M","precio":100,"estado":"DISPONIBLE"},"SU3":{"categoriaOriginal":"SUDADERA","descripcionOriginal":"","color":"NEGRA","talla":"S","precio":90,"estado":"VENDIDA"},"SU4":{"categoriaOriginal":"SUDADERA","descripcionOriginal":"LARGA","color":"LILA","talla":"S","precio":100,"estado":"DISPONIBLE"},"SU5":{"categoriaOriginal":"SUDADERA","descripcionOriginal":"","color":"HUESO","talla":"M","precio":100,"estado":"DISPONIBLE"},"SU6":{"categoriaOriginal":"SUDADERA","descripcionOriginal":"","color":"NARANJA","talla":"L","precio":90,"estado":"DISPONIBLE"},"SU7":{"categoriaOriginal":"SUDADERA","descripcionOriginal":"","color":"BLANCA","talla":"M","precio":120,"estado":"VENDIDA"},"SU8":{"categoriaOriginal":"SUDADERA","descripcionOriginal":"","color":"PLOMA/ROSADA","talla":"M","precio":100,"estado":"DISPONIBLE"},"SU9":{"categoriaOriginal":"SUDADERA","descripcionOriginal":"CORTA","color":"NEGRA","talla":"M","precio":100,"estado":"VENDIDA"},"SU10":{"categoriaOriginal":"SUDADERA","descripcionOriginal":"CORTA","color":"VERDE","talla":"S","precio":100,"estado":"DISPONIBLE"},"SU11":{"categoriaOriginal":"SUDADERA","descripcionOriginal":"COLUMBIA","color":"CELESTE","talla":"M","precio":100,"estado":"DISPONIBLE"},"SU12":{"categoriaOriginal":"SUDADERA","descripcionOriginal":"ROJO","color":"NEGRA","talla":"M","precio":100,"estado":"DISPONIBLE"},"SU13":{"categoriaOriginal":"SUDADERA","descripcionOriginal":"MERRELL","color":"NEGRA","talla":"M","precio":100,"estado":"DISPONIBLE"},"SU14":{"categoriaOriginal":"SUDADERA","descripcionOriginal":"NEPA ACTIVE","color":"PLOMA/CELESTE","talla":"M","precio":100,"estado":"DISPONIBLE"},"SU15":{"categoriaOriginal":"SUDADERA","descripcionOriginal":"VERDE","color":"NEGRA/GRIS","talla":"M","precio":100,"estado":"DISPONIBLE"},"SU16":{"categoriaOriginal":"SUDADERA","descripcionOriginal":"BLANCO","color":"NEGRA/GRIS","talla":"M","precio":100,"estado":"DISPONIBLE"},"SU17":{"categoriaOriginal":"SUDADERA","descripcionOriginal":"DETALLITOS HILOS","color":"AZUL/NARANJA","talla":"L","precio":40,"estado":"DISPONIBLE"},"SO1":{"categoriaOriginal":"SOLERA","descripcionOriginal":"NIKE","color":"LILA","talla":"M","precio":60,"estado":"DISPONIBLE"},"SO2":{"categoriaOriginal":"SOLERA","descripcionOriginal":"","color":"CELESTE","talla":"M","precio":50,"estado":"DISPONIBLE"},"SO3":{"categoriaOriginal":"SOLERA","descripcionOriginal":"ETIQUETA","color":"AZUL","talla":"M","precio":55,"estado":"DISPONIBLE"},"SO4":{"categoriaOriginal":"SOLERA","descripcionOriginal":"","color":"NEGRA/AMARILLA","talla":"S","precio":45,"estado":"DISPONIBLE"},"SO5":{"categoriaOriginal":"SOLERA","descripcionOriginal":"","color":"GRIS/BLANCO","talla":"S","precio":50,"estado":"DISPONIBLE"},"SO6":{"categoriaOriginal":"SOLERA","descripcionOriginal":"CALITZO","color":"CELESTE","talla":"S","precio":55,"estado":"DISPONIBLE"},"SO7":{"categoriaOriginal":"SOLERA","descripcionOriginal":"","color":"NEGRO","talla":"S","precio":55,"estado":"DISPONIBLE"},"SO8":{"categoriaOriginal":"SOLERA","descripcionOriginal":"","color":"NEGRO","talla":"S","precio":55,"estado":"DISPONIBLE"},"SO9":{"categoriaOriginal":"SOLERA","descripcionOriginal":"CRUZADO","color":"NEGRO","talla":"S","precio":50,"estado":"DISPONIBLE"},"SO10":{"categoriaOriginal":"SOLERA","descripcionOriginal":"","color":"PLOMO","talla":"M","precio":45,"estado":"DISPONIBLE"},"SO11":{"categoriaOriginal":"SOLERA","descripcionOriginal":"LINEAS AMARILLAS","color":"AZUL","talla":"S","precio":45,"estado":"DISPONIBLE"},"SO12":{"categoriaOriginal":"SOLERA","descripcionOriginal":"","color":"ROSADA","talla":"M","precio":45,"estado":"DISPONIBLE"},"SO13":{"categoriaOriginal":"SOLERA","descripcionOriginal":"","color":"NEGRA","talla":"M","precio":45,"estado":"DISPONIBLE"},"SO14":{"categoriaOriginal":"SOLERA","descripcionOriginal":"S","color":"NEGRA","talla":"M","precio":55,"estado":"DISPONIBLE"},"SO15":{"categoriaOriginal":"SOLERA","descripcionOriginal":"LINEAS ROSADAS","color":"NEGRA","talla":"M","precio":45,"estado":"DISPONIBLE"},"SO16":{"categoriaOriginal":"SOLERA","descripcionOriginal":"","color":"AMARILLO FUERTE","talla":"M","precio":55,"estado":"DISPONIBLE"},"SO17":{"categoriaOriginal":"SOLERA","descripcionOriginal":"","color":"LILA","talla":"M","precio":45,"estado":"DISPONIBLE"},"SO18":{"categoriaOriginal":"SOLERA","descripcionOriginal":"","color":"AMARILLO","talla":"M","precio":45,"estado":"DISPONIBLE"}};
+  const codigosVendidos = new Set(["T10", "T19", "T29", "T32", "T36", "C4", "C9", "C22", "C40", "SU3", "SU7", "SU9"]);
+  if (typeof productos === 'undefined' || !Array.isArray(productos)) return;
+  const disponibles = productos.filter(p => !codigosVendidos.has(String(p.codigo || '').trim().toUpperCase()));
+  productos.splice(0, productos.length, ...disponibles);
+  productos.forEach(p => {
+    const d = datosPlanilla[String(p.codigo || '').trim().toUpperCase()];
+    if (!d) return;
+    if (d.precio !== null && d.precio !== undefined) p.precio = d.precio;
+    if (d.talla) p.talla = d.talla; else delete p.talla;
+    const partes = [];
+    if (d.descripcionOriginal) partes.push(d.descripcionOriginal);
+    if (d.color) partes.push('Color: ' + d.color);
+    p.descripcion = partes.join(' · ');
+    p.estadoInventario = d.estado;
+  });
+  productosActuales = [...productos];
+  if (typeof mostrarProductos === 'function') mostrarProductos(productosActuales);
+})();
+</script>
+
 </body>
 </html>
